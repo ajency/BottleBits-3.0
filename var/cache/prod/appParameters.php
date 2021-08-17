@@ -1,0 +1,25 @@
+<?php return array (
+  'parameters' => 
+  array (
+    'database_host' => 'localhost',
+    'database_port' => '',
+    'database_name' => 'bottlebits',
+    'database_user' => 'bottlebits',
+    'database_password' => '9Sa02@)gKp',
+    'database_prefix' => 'psaq_',
+    'database_engine' => 'InnoDB',
+    'mailer_transport' => 'smtp',
+    'mailer_host' => '127.0.0.1',
+    'mailer_user' => NULL,
+    'mailer_password' => NULL,
+    'secret' => 'ivbm4byhvewh245oydsapkwdatuvokufjbbmp7lppktfx985iv3zgrll',
+    'ps_caching' => 'CacheMemcache',
+    'ps_cache_enable' => false,
+    'ps_creation_date' => '2021-08-17',
+    'locale' => 'en-US',
+    'use_debug_toolbar' => true,
+    'cookie_key' => 'ynhfodyu8yx67f960wzo2icmfnc8fkgwaeqseonzd0wwcib0jkxaukui',
+    'cookie_iv' => 'yfnba6xybxfmqa8kbbiqecdxfan5ui1g',
+    'new_cookie_key' => 'def000009eb95a39f2d909f500e4a35d38f69b972f5e9b7ca1cff3c82e6e279b5913a4cc003f4175136300119db687fa3269925b7f395cac13a8e46c7e1f9d044c16034f',
+  ),
+);
