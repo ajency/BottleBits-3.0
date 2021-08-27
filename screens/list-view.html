@@ -2,17 +2,17 @@
 	<html>
 		<head>
 			<title>Product Details - Bottle Bits</title>
-			<link href="https://fonts.googleapis.com/css?family=Nunito+Sans:300,400,600,700&display=swap" rel="stylesheet">
 			<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no, maximum-scale=1.0, user-scalable=no">
 			<link type="image/x-icon" href="#" rel="shortcut icon">
 				
 			<link rel="stylesheet" href="css/style.min.css">
 		
 			<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
+			<link href="https://fonts.googleapis.com/css?family=Nunito+Sans:300,400,600,700&display=swap" rel="stylesheet">
 	</head>
 	<body>
 		<header>
-			<div class="d-flex justify-content-between align-items-center">
+			<div class="d-flex justify-content-between align-items-center header-wrapper">
 				<div class="hamburger-wrap">			
 					<div class="hamburger-wrap__block">
 						<div class="bar line1"></div>
@@ -20,6 +20,7 @@
 						<div class="bar line3"></div>
 					</div>
 				</div>
+				<a href="javascript:void(0)" class="link">Browse Bottles</a>
 				<div class="navbar-right account">
 					<img src="images/user.svg" alt="logo" class="logo">
 				</div>
@@ -29,55 +30,79 @@
 			<div class="product-detailed">
 				<div class="shelf">
 					<div class="shelf-block">
-						<div class="shelf-block--label">
-							<span class="tags">Whisky</span>
-							<span class="tags">Single malt</span>
-						</div>
-						<h3 class="shelf-block--title">Ardbeg 1965</h3>
+						<h3 class="shelf-block--title">Dalmore 12 Year</h3>
 						<p class="shelf-block--info">1965, Islay (Scotland)</p>
-						<div class="description">
-							<div class="price dram-price">Price perdram <span>140 GBP</span></div>
-							<img src="images/ardbeg-1.png" alt="ardbeg" class="wine-bottle shelf-block--picture">
-							<div class="price bottle-price">Bottle price <span>19,320 GBP</span></div>
-						</div>
+						<img src="/BottleBits-3.0/images/dalmore.png" alt="dalmore" class="wine-bottle shelf-block--picture">
 					</div>
 					<div class="shelf-block">
-						<div class="shelf-block--label">
-							<span class="tags">Whisky</span>
-							<span class="tags">Single malt</span>
-						</div>
-						<h3 class="shelf-block--title">Ardbeg 1965</h3>
+						<h3 class="shelf-block--title">Hibiki</h3>
 						<p class="shelf-block--info">1965, Islay (Scotland)</p>
-						<div class="description">
-							<div class="price dram-price">Price perdram <span>140 GBP</span></div>
-							<img src="images/ardbeg-2.png" alt="ardbeg" class="wine-bottle shelf-block--picture">
-							<div class="price bottle-price">Bottle price <span>19,320 GBP</span></div>
-						</div>
+						<img src="/BottleBits-3.0/images/hibiki.png" alt="hibiki" class="wine-bottle shelf-block--picture">
 					</div>
 					<div class="shelf-block">
-						<div class="shelf-block--label">
-							<span class="tags">Whisky</span>
-							<span class="tags">Single malt</span>
-						</div>
-						<h3 class="shelf-block--title">Ardbeg 1965</h3>
+						<h3 class="shelf-block--title">Rich & Rare</h3>
 						<p class="shelf-block--info">1965, Islay (Scotland)</p>
-						<div class="description">
-							<div class="price dram-price">Price perdram <span>140 GBP</span></div>
-							<img src="images/ardbeg-3.png" alt="ardbeg" class="wine-bottle shelf-block--picture">
-							<div class="price bottle-price">Bottle price <span>19,320 GBP</span></div>
-						</div>
+						<img src="/BottleBits-3.0/images/rich-rare.png" alt="rich-&-rare" class="wine-bottle shelf-block--picture">
 					</div>
 					<div class="shelf-block">
-						<div class="shelf-block--label">
-							<span class="tags">Whisky</span>
-							<span class="tags">Single malt</span>
-						</div>
-						<h3 class="shelf-block--title">Ardbeg 1965</h3>
+						<h3 class="shelf-block--title">Macallan</h3>
 						<p class="shelf-block--info">1965, Islay (Scotland)</p>
-						<div class="description">
-							<div class="price dram-price">Price perdram <span>140 GBP</span></div>
-							<img src="images/ardbeg-4.png" alt="ardbeg" class="wine-bottle shelf-block--picture">
-							<div class="price bottle-price">Bottle price <span>19,320 GBP</span></div>
+						<img src="/BottleBits-3.0/images/macallan.png" alt="macallan" class="wine-bottle shelf-block--picture">
+					</div>
+				</div>
+				<div class="slider">
+					<div class="product-slider">
+						<div class="shelf-block shelf-block--details">
+							<div class="shelf-block--label">
+								<span class="tags">Whisky</span>
+								<span class="tags">Single malt</span>
+							</div>
+							<h3 class="shelf-block--title">Dalmore 12 Year</h3>
+							<p class="shelf-block--info">1965, Islay (Scotland)</p>
+							<div class="description">
+								<div class="price dram-price">Price per dram <span>140 GBP</span></div>
+								<div class="price bottle-price">Bottle price <span>19,320 GBP</span></div>
+							</div>
+							<img src="/BottleBits-3.0/images/dalmore.png" alt="dalmore" class="wine-bottle shelf-block--picture">
+						</div>
+						<div class="shelf-block  shelf-block--details">
+							<div class="shelf-block--label">
+								<span class="tags">Whisky</span>
+								<span class="tags">Single malt</span>
+							</div>
+							<h3 class="shelf-block--title">Hibiki</h3>
+							<p class="shelf-block--info">1965, Islay (Scotland)</p>
+							<div class="description">
+								<div class="price dram-price">Price per dram <span>140 GBP</span></div>
+								<div class="price bottle-price">Bottle price <span>19,320 GBP</span></div>
+							</div>
+							<img src="/BottleBits-3.0/images/hibiki.png" alt="hibiki" class="wine-bottle shelf-block--picture">
+						</div>
+						<div class="shelf-block  shelf-block--details">
+							<div class="shelf-block--label">
+								<span class="tags">Whisky</span>
+								<span class="tags">Single malt</span>
+							</div>
+							<h3 class="shelf-block--title">Rich & Rare</h3>
+							<p class="shelf-block--info">1965, Islay (Scotland)</p>
+							<div class="description">
+								<div class="price dram-price">Price per dram <span>140 GBP</span></div>
+								<div class="price bottle-price">Bottle price <span>19,320 GBP</span></div>
+							</div>
+							<img src="/BottleBits-3.0/images/rich-rare.png" alt="rich-&-rare" class="wine-bottle shelf-block--picture">
+						</div>
+						<div class="shelf-block shelf-block--details">
+							<div class="shelf-block--label">
+								<span class="tags">Whisky</span>
+								<span class="tags">Single malt</span>
+							</div>
+							<h3 class="shelf-block--title">Macallan</h3>
+							<p class="shelf-block--info">1965, Islay (Scotland)</p>
+							<div class="description">
+								<div class="price dram-price">Price per dram <span>140 GBP</span></div>
+								<div class="price bottle-price">Bottle price <span>19,320 GBP</span></div>
+							</div>
+							<img src="/BottleBits-3.0/images/macallan.png" alt="macallan" class="wine-bottle shelf-block--picture">
 						</div>
 					</div>
 				</div>
