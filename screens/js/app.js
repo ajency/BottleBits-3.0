@@ -109,3 +109,15 @@ $('.tabs ul li').on('click',function(){
 		$('.tabs ul li:nth-child(3)').addClass('disable');
 	}
 });
+
+$(".scrollUpContainer .shelf-block--picture").on('slid.bs.carousel', function (e) {
+ 	e.stopPropagation();
+ 	e.preventDefault();
+});
+
+$(".scrollUpContainer .carousel").swipe({
+	    swipe: function (event, direction, distance, duration, fingerCount, fingerData) {
+	 	e.stopPropagation();
+	 	e.preventDefault();
+ 	}
+});
