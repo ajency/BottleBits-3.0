@@ -65,6 +65,8 @@ var $carousel = $('.carousel'),
 });
 
 $(".pointer-events-none").off('slid.bs.carousel');
+$(".scrollUp").off('slid.bs.carousel');
+$(".scrollUp .shelf-block--picture").off('slid.bs.carousel');
 
 $(window).scroll(function() {    
     var scroll = $(window).scrollTop();    
