@@ -1,9 +1,12 @@
 
 $(document).ready(function(){	
 	$(".shelf .shelf-block").addClass(function(i) { return "block" + (i + 1) })
+	$(".product-detailed").addClass('loading');
+
 
 	$('.shelf .shelf-block').on('click', function(){
-		$(".carousel .shelf-block").addClass('show_bg');
+		$(".shelf-block-bg").addClass('show_bg');
+		$(".shelf").addClass('hidden');
 		$(".carousel .shelf-block .shelf-block--wrap").addClass('shelf-block--slider');
 
 		if($(this).hasClass('block1')){
@@ -36,7 +39,7 @@ $(".carousel").swipe({
         if (direction == 'left') $(this).carousel('next');
         if (direction == 'right') $(this).carousel('prev');
     },
-    allowPageScroll: "vertical"
+    allowPageScroll: "horizontal"
 });
 
 
@@ -58,4 +61,37 @@ var $carousel = $('.carousel'),
 		$('.carousel').find('.shelf-block--details .shelf-block--wrap.wrap4').addClass('prev');
 	}
 	$active.prev().addClass('prev');
+});
+
+
+$(window).scroll(function() {    
+    var scroll = $(window).scrollTop();    
+    if (scroll <= 500) {
+        $(".shelf-block--slider.active").addClass("scrollUp");
+         if($(".shelf-block--slider").hasClass("active")){
+        	$(".tabs").addClass("showTab");
+    	}
+    }
+});
+var container = $('.shelf-block--region'),
+    scrollTo = $('.disterllery');
+
+	container.animate({
+    scrollTop: scrollTo.offset().top - container.offset().top + container.scrollTop()
+});
+
+$('.tabs ul li').on('click',function(){
+	$('.tabs ul li').removeClass('active');
+	$(this).addClass('active');
+	if($('.tabs ul li:nth-child(2)').hasClass('active')){
+		$('.shelf-block--region > .region').addClass('slide_up');
+		$('.disterllery').addClass('showDetails');
+	}
+	if($('.tabs ul li:nth-child(4)').hasClass('active')){
+		$('.podium').hide();
+		$('.shelf-block-bg.show_bg').addClass('small_block');
+		$('.disterllery').hide();
+		$('.shelf-block--region > .region').hide();
+		$('.bottle-details').removeClass('hide').fadeIn();
+	}
 });
