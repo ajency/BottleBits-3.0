@@ -307,8 +307,8 @@ $(".back-arrow").on('click', function(){
   	$(".vertical-slider").addClass("hide").fadeOut(1000);
 	$(".slide-item.active").removeClass("SWIPE_UP");
 	$(".shelf-block-bg").removeClass("scrollUpContainer");
-	$('.slide-dots .dot:nth-child(1)').addClass('dot-active');
 	$('.slide-dots .dot').removeClass('dot-active');
+	$('.slide-dots .dot:nth-child(1)').addClass('dot-active');
 
 	$(".region").removeClass("slide_up");
 	$(".disterllery").removeClass("showDisterlleryDetails");
