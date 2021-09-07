@@ -228,8 +228,10 @@ var incrementPlus = buttonPlus.click(function(e) {
 		$(".glass4 .glass-filled").addClass("active");
 	}
 	if(amount == 5){
-		buttonPlus.addClass('inactive');
 		$(".glass5 .glass-filled").addClass("active");
+	}
+	if(amount == 138){
+		buttonPlus.addClass('inactive');
 	}
 });
 
@@ -254,7 +256,6 @@ var incrementMinus = buttonMinus.click(function() {
 		$(".glass4 .glass-filled").removeClass("active");
 	}
 	if(amount == 5){
-		buttonPlus.removeClass('inactive');
 		$(".glass5 .glass-filled").removeClass("active");
 	}
 });
@@ -299,4 +300,43 @@ $(".cart--buttons .primary-button").on('click', function(){
 	$(".congratulate_bg").addClass("animateBg");
 	$(".shelf-block--picture").addClass("animatePicture");
 	$(".outline-button").fadeIn();
+});
+
+$(".back-arrow").on('click', function(){
+  
+  	$(".vertical-slider").addClass("hide").fadeOut(1000);
+	$(".slide-item.active").removeClass("SWIPE_UP");
+	$(".shelf-block-bg").removeClass("scrollUpContainer");
+	$('.slide-dots .dot:nth-child(1)').addClass('dot-active');
+	$('.slide-dots .dot').removeClass('dot-active');
+
+	$(".region").removeClass("slide_up");
+	$(".disterllery").removeClass("showDisterlleryDetails");
+	$(".tabs .region").addClass("selected");
+	$(".tabs .dest1").removeClass("selected");
+	$(".shadow").addClass("hide").fadeOut(1000);
+
+
+  	$(".disterllery").removeClass("showDisterlleryDetails");
+  	$(".disterllery").removeClass("hideDisterlleryDetails");
+	$(".disterllery2").removeClass("showDisterlleryDetails1");
+	$(".tabs .dest1").removeClass("selected");
+	$(".tabs .dist2").removeClass("selected");
+
+  	$(".disterllery2").removeClass("showDisterlleryDetails1");
+  	$(".disterllery2").removeClass("hideDisterlleryDetails1");
+	$(".bottle_story").removeClass("showBottleStoryDetails");
+	$(".tabs .dist2").removeClass("selected");
+	$(".tabs .bottleStory").removeClass("selected");
+
+
+	$(".bottle_story").removeClass("showBottleStoryDetails");
+	$(".show_bg").removeClass("small_block");
+	$(".tabs .bottleStory").removeClass("selected");
+	$(".tabs .details").removeClass("selected");
+	$(".podium").addClass("podium-animate");
+	$(".bottle-details").addClass("hide");
+	$("header").css({position: "relative"});
+	$(".slide-item.active .content").css({position: "unset"});
+
 });
