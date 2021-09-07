@@ -87,17 +87,29 @@ var $carousel = $('.carousel'),
     $carouselItems.removeClass('prev next');
     //Find current slide
     var $active = $(e.relatedTarget);
-    
+    if(($active).hasClass('wrap2')){
+    	$('.vertical-slider').find('.slide-item').removeClass('active');
+    	$('.vertical-slider').find('.slide-item.wrap2').addClass('active');
+ 	}
+ 	if(($active).hasClass('wrap3')){
+    	$('.vertical-slider').find('.slide-item').removeClass('active');
+    	$('.vertical-slider').find('.slide-item.wrap3').addClass('active');
+ 	}    
     if(($active).hasClass('wrap4')){
     	$('.carousel').find('.shelf-block--details .shelf-block--wrap.wrap1').addClass('next');
+    	$('.vertical-slider').find('.slide-item').removeClass('active');
+    	$('.vertical-slider').find('.slide-item.wrap4').addClass('active');
     }else{
     	$active.next().addClass('next');
 	}
 	if(($active).hasClass('wrap1')){
 		$('.carousel').find('.shelf-block--details .shelf-block--wrap.wrap4').addClass('prev');
+    	$('.vertical-slider').find('.slide-item').removeClass('active');
+    	$('.vertical-slider').find('.slide-item.wrap1').addClass('active');
 	}
 	$active.prev().addClass('prev');
 });
+
 
 $(".SWIPE_UP .shelf-block--picture").on('slid.bs.carousel', function (e) {
  	if (event.cancelable) e.stopPropagation();
