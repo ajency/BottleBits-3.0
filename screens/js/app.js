@@ -4,6 +4,7 @@ $(document).ready(function(){
 
 	$(".shelf .shelf-block").addClass(function(i) { return "block" + (i + 1) })
 	$(".product-detailed").addClass('loading');
+	$(".my-collection").addClass('loading');
 
 	$(".vertical-slider .slide-item").fadeOut();
 
@@ -688,6 +689,17 @@ $(".shelf-wrapper .block").on("click", function(){
 
 $(".shelf-wrapper--expanded .block .picture").on("click", function(){
 	$(".shelf-wrapper--expanded").fadeOut();
-	$(".shelf-bottle-details").removeClass("hide").fadeIn();
+	$(".shelf-bottle-details").fadeIn();
 	$("header").css({position: "fixed"});
+});
+
+$(".back-to-main-shelf").on("click", function(){
+	$(".collection-blocks").fadeIn();
+	$(".shelf-wrapper--expanded").fadeOut();
+	$(".fixed-image").fadeIn();
+});
+
+$(".back-to-single-view").on("click", function(){
+	$(".shelf-wrapper--expanded").fadeIn();
+	$(".shelf-bottle-details").fadeOut();
 });
