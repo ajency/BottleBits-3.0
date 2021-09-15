@@ -309,7 +309,7 @@ var incrementMinus = buttonMinus.click(function() {
 
 
 
-$(".floating-btn .primary-button").on('click', function(){
+$(".product-detailed .floating-btn .primary-button").on('click', function(){
 	$(".bottle-details").addClass("hide");
 	$(".tab--name").fadeOut();
 	$(".button").fadeOut();
@@ -689,7 +689,7 @@ $(".shelf-wrapper .block").on("click", function(){
 
 $(".shelf-wrapper--expanded .block .picture").on("click", function(){
 	$(".shelf-wrapper--expanded").fadeOut();
-	$(".shelf-bottle-details").fadeIn();
+	$(".shelf-bottle-details").fadeIn().addClass("show-details");
 	$("header").css({position: "fixed"});
 });
 
@@ -701,5 +701,5 @@ $(".back-to-main-shelf").on("click", function(){
 
 $(".back-to-single-view").on("click", function(){
 	$(".shelf-wrapper--expanded").fadeIn();
-	$(".shelf-bottle-details").fadeOut();
+	$(".shelf-bottle-details").fadeOut().removeClass("show-details");;
 });
