@@ -111,14 +111,14 @@ $(document).ready(function(){
 });
 
 
-$(".carousel").swipe({
+$(".shelf-block-bg .carousel").swipe({
     swipe: function (event, direction, distance, duration, fingerCount, fingerData) {
         if (direction == 'left') $(this).carousel('next');
         if (direction == 'right') $(this).carousel('prev');
     },
 });
 
-var $carousel = $('.carousel'),
+var $carousel = $('.shelf-block-bg .carousel'),
     $carouselItems = $('.carousel-item', $carousel);
 
 //This event is fired when the carousel has completed its slide transition.
@@ -612,40 +612,40 @@ $(".tab_option--block .item.bottle-details-wrapper").on("click", function(){
 	$(".swiper-slide.bottle-details-wrapper").css({opacity: "1", transition: "opacity 1s ease-in"});
 });
 
-const container = document.querySelector('.swiper-wrapper');
+// const container = document.querySelector('.swiper-wrapper');
                 
-let startY;
-let scrollLeft;
-let scrollTop;
-let isDown;
+// let startY;
+// let scrollLeft;
+// let scrollTop;
+// let isDown;
 
-container.addEventListener('mousedown',e => mouseIsDown(e));  
-container.addEventListener('mouseup',e => mouseUp(e))
-container.addEventListener('mouseleave',e=>mouseLeave(e));
-container.addEventListener('mousemove',e=>mouseMove(e));
+// container.addEventListener('mousedown',e => mouseIsDown(e));  
+// container.addEventListener('mouseup',e => mouseUp(e))
+// container.addEventListener('mouseleave',e=>mouseLeave(e));
+// container.addEventListener('mousemove',e=>mouseMove(e));
 
-function mouseIsDown(e){
-  isDown = true;
-  startY = e.pageY - container.offsetTop;
-  scrollLeft = container.scrollLeft;
-  scrollTop = container.scrollTop; 
-}
-function mouseUp(e){
-  isDown = false;
-}
-function mouseLeave(e){
-  isDown = false;
-}
-function mouseMove(e){
-  if(isDown){
-    e.preventDefault();
-    //Move vertcally
-    const y = e.pageY - container.offsetTop;
-    const walkY = y - startY;
-    container.scrollTop = scrollTop - walkY;
+// function mouseIsDown(e){
+//   isDown = true;
+//   startY = e.pageY - container.offsetTop;
+//   scrollLeft = container.scrollLeft;
+//   scrollTop = container.scrollTop; 
+// }
+// function mouseUp(e){
+//   isDown = false;
+// }
+// function mouseLeave(e){
+//   isDown = false;
+// }
+// function mouseMove(e){
+//   if(isDown){
+//     e.preventDefault();
+//     //Move vertcally
+//     const y = e.pageY - container.offsetTop;
+//     const walkY = y - startY;
+//     container.scrollTop = scrollTop - walkY;
 
-  }
-}
+//   }
+// }
 
 $(".cartWrap .primary-button").on('click', function(){
 	$(".vertical-slider-desktop").addClass("hide");
@@ -653,4 +653,41 @@ $(".cartWrap .primary-button").on('click', function(){
 	$(".congratulations-desktop .congratulate_bg").addClass("animateBg");
 	$(".congratulations-desktop .congratulate_bg .shelf-block--picture").addClass("animatePicture");
 	$(".shelf-block-bg.show_bg").addClass("hide");
+});
+
+/* My Collection */
+
+$(".shelf-wrapper--expanded").fadeOut();
+
+$(".shelf-wrapper .block").on("click", function(){
+	$(".fixed-image").fadeOut();
+	$(".collection-blocks").fadeOut();
+
+	$(".shelf-wrapper--expanded").fadeIn(2000);
+	$("body").addClass("single-view");
+
+	if($(this).hasClass('block1')){
+		$(".shelf-wrapper--expanded .block").fadeOut();
+		$(".shelf-wrapper--expanded .block-expand1").addClass("active-block").fadeIn();
+		$("footer").removeClass("hide").fadeIn();
+
+	}
+
+	if($(this).hasClass('block2')){
+		$(".shelf-wrapper--expanded .block-expand2").addClass("active-block");
+	}
+
+	if($(this).hasClass('block3')){
+		$(".shelf-wrapper--expanded .block-expand3").addClass("active-block");
+	}
+
+	if($(this).hasClass('block4')){
+		$(".shelf-wrapper--expanded .block-expand4").addClass("active-block");
+	}
+});
+
+$(".shelf-wrapper--expanded .block .picture").on("click", function(){
+	$(".shelf-wrapper--expanded").fadeOut();
+	$(".shelf-bottle-details").removeClass("hide").fadeIn();
+	$("header").css({position: "fixed"});
 });
