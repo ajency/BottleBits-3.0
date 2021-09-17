@@ -5,6 +5,7 @@ $(document).ready(function(){
 	$(".shelf .shelf-block").addClass(function(i) { return "block" + (i + 1) })
 	$(".product-detailed").addClass('loading');
 	$(".my-collection").addClass('loading');
+	$(".sharing-view").addClass('loading');
 
 	$(".vertical-slider .slide-item").fadeOut();
 
@@ -241,9 +242,11 @@ if ($(window).width() < 767) {
 
 $(".hamburger-wrap").on("click", function(){
 	$(".mobile-menu--overlay").addClass("open");
+	$("#content").fadeOut();
 });
 $(".cross").on("click", function(){
 	$(".mobile-menu--overlay").removeClass("open");
+	$("#content").fadeIn();
 });
 
 $('.menu_list--items li').on('click', function(){
@@ -662,8 +665,8 @@ $(".shelf-wrapper--expanded").fadeOut();
 
 $(".shelf-wrapper .block").on("click", function(){
 	$(".fixed-image").fadeOut();
-	$(".collection-blocks").fadeOut();
-
+	$(".collection-blocks").fadeOut(1000);
+	$(".tool-tip").removeClass("show-customize");
 	$(".shelf-wrapper--expanded").fadeIn(2000);
 	$("body").addClass("single-view");
 
@@ -675,15 +678,21 @@ $(".shelf-wrapper .block").on("click", function(){
 	}
 
 	if($(this).hasClass('block2')){
-		$(".shelf-wrapper--expanded .block-expand2").addClass("active-block");
+		$(".shelf-wrapper--expanded .block").fadeOut();
+		$(".shelf-wrapper--expanded .block-expand2").addClass("active-block").fadeIn();
+		$("footer").removeClass("hide").fadeIn();
 	}
 
 	if($(this).hasClass('block3')){
-		$(".shelf-wrapper--expanded .block-expand3").addClass("active-block");
+		$(".shelf-wrapper--expanded .block").fadeOut();
+		$(".shelf-wrapper--expanded .block-expand3").addClass("active-block").fadeIn();
+		$("footer").removeClass("hide").fadeIn();
 	}
 
 	if($(this).hasClass('block4')){
-		$(".shelf-wrapper--expanded .block-expand4").addClass("active-block");
+		$(".shelf-wrapper--expanded .block").fadeOut();
+		$(".shelf-wrapper--expanded .block-expand4").addClass("active-block").fadeIn();
+		$("footer").removeClass("hide").fadeIn();
 	}
 });
 
@@ -691,6 +700,7 @@ $(".shelf-wrapper--expanded .block .picture").on("click", function(){
 	$(".shelf-wrapper--expanded").fadeOut();
 	$(".shelf-bottle-details").fadeIn().addClass("show-details");
 	$("header").css({position: "fixed"});
+	$(".themes-button").removeClass("show-buttons");
 });
 
 $(".back-to-main-shelf").on("click", function(){
@@ -702,4 +712,190 @@ $(".back-to-main-shelf").on("click", function(){
 $(".back-to-single-view").on("click", function(){
 	$(".shelf-wrapper--expanded").fadeIn();
 	$(".shelf-bottle-details").fadeOut().removeClass("show-details");;
+});
+
+/* sharing */
+
+$(".slide-image").on("click", function(){
+	$("body").addClass("rotation-sharing");
+	$(".shelf").addClass("hide-collection");
+	$(".my-collection").fadeOut();
+	$(".sharing-view").fadeIn();
+	$(".image-rotation").removeClass("hide").addClass("show-screen-view");
+	$("footer").fadeOut();
+});
+
+$(document).ready(function(){
+    $(".sharing").on("click", function(){
+        $(".shelf-bottle-details").fadeOut();
+        $(".single-sharing").fadeIn(2000);
+        $("body").addClass("sharing-screen");
+    });
+    $(".return-back").on("click", function(){
+        $(".single-sharing").fadeOut();
+        $(".shelf-bottle-details").fadeIn(1000);
+        $("body").removeClass("sharing-screen");
+    });
+});
+
+
+$(".image-rotation--header .cross").on("click", function(){
+	$(".sharing-view").fadeOut();
+	$(".my-collection").fadeIn();
+	$(".shelf").removeClass("hide-collection");
+	$("body").removeClass("rotation-sharing");
+	$("footer").fadeIn();
+});
+
+
+  (function() {
+  var el = document.querySelector(".product-viewer");
+  var mc = new Hammer(el, {
+    domEvents: true
+  });
+
+  var currentScale = 1;
+  var currentLeft = 0;
+  var currentTop = 0;
+
+  // zoom
+  mc.get("pinch").set({ enable: true });
+  mc.on("pinchstart", function(ev) {
+    // on pinch zoom we eliminate the panning event listener
+    //so that we dont have that weird movement after we end pinching
+    mc.off("pan");
+  });
+  mc.on("pinch", function(ev) {
+    el.style.transform =
+      "scale(" +
+      currentScale * ev.scale +
+      ")";
+  });
+  mc.on("pinchend", function(ev) {
+    currentScale = currentScale * ev.scale;
+
+    // once we have ended pinch zooming we fire off the panning event once again
+    window.setTimeout(hammerPan, 50);
+  });
+
+  // panning function
+  function hammerPan() {
+    mc.on("pan", function(ev) {
+      el.style.transform =
+        "scale(" +
+        currentScale +
+        ")";
+    });
+  }
+
+  hammerPan();
+  mc.on("panend", function(ev) {
+    currentLeft = currentLeft + ev.deltaX / currentScale;
+    currentTop = currentTop + ev.deltaY / currentScale;
+  });
+
+})();
+
+$(".ui-loader").fadeOut();
+
+$(".customize").on("click", function(){
+	$(".tool-tip").addClass("show-customize");
+});
+
+$(".tool-tip span").on("click", function(){
+	$(".themes-button").addClass("show-buttons");
+});
+
+$(".themes-button .cross").on("click", function(){
+	$(".tool-tip").removeClass("show-customize");
+	$(".themes-button").removeClass("show-buttons");
+});
+
+jquerySwipeHandler.handleSwipe(".button", [
+ jquerySwipeHandler.CLICK
+], function (event) {
+  	event.preventDefault();
+});
+
+jquerySwipeHandler.handleSwipe(".button.brown", [
+ jquerySwipeHandler.SWIPE_LEFT
+], function (direction) {
+	$(".button").removeClass(direction);
+	$(".button").removeClass("active");
+	$(".button.green").addClass("active");
+	$(".button.active").addClass(direction).removeClass("CLICK");
+	$(".button.yellow").css({left: "150px", transition: "left 100ms ease-in"});
+	$(".button.green").css({left: "0px", transition: "left 100ms ease-in"});
+	$(".button.brown").css({left: "-150px", transition: "left 100ms ease-in"});
+
+	$(".my-collection .shelf-wrapper--expanded .block").addClass("green");
+	$(".my-collection .shelf .info-tab").addClass("green");
+	$(".my-collection .shelf .collection-blocks .shelf-wrapper .block").addClass("green");
+	$(".my-collection .shelf .collection-blocks .shelf-wrapper").addClass("green");
+
+	$(".tool-tip").removeClass("show-customize");
+	$(".fixed-image").removeClass("brown").addClass("green");
+});
+
+
+jquerySwipeHandler.handleSwipe(".button.green", [
+ jquerySwipeHandler.SWIPE_LEFT
+], function (direction) {
+	$(".button").removeClass(direction);
+	$(".button").removeClass("active");
+	$(".button.yellow").addClass("active");
+	$(".button.active").addClass(direction).removeClass("CLICK");
+	$(".button.yellow").css({left: "0px", transition: "left 100ms ease-in"});
+	$(".button.brown").css({left: "-300px", transition: "left 100ms ease-in"});
+	$(".button.green").css({left: "-150px", transition: "left 100ms ease-in"});
+
+	$(".my-collection .shelf-wrapper--expanded .block").addClass("yellow").removeClass("green");
+	$(".my-collection .shelf .info-tab").addClass("yellow").removeClass("green");
+	$(".my-collection .shelf .collection-blocks .shelf-wrapper .block").addClass("yellow").removeClass("green");
+	$(".my-collection .shelf .collection-blocks .shelf-wrapper").addClass("yellow").removeClass("green");
+
+	$(".tool-tip").removeClass("show-customize");
+	$(".fixed-image").removeClass("green").addClass("yellow");
+});
+
+
+jquerySwipeHandler.handleSwipe(".button.green", [
+ jquerySwipeHandler.SWIPE_RIGHT
+], function (direction) {
+	$(".button").removeClass(direction);
+	$(".button").removeClass("active");
+	$(".button.brown").addClass("active");
+	$(".button.active").addClass(direction).removeClass("CLICK");
+	$(".button.green").css({left: "150px", transition: "left 100ms ease-in"});
+	$(".button.brown").css({left: "0px", transition: "left 100ms ease-in"});
+	$(".button.yellow").css({left: "300px", transition: "left 100ms ease-in"});
+
+	$(".my-collection .shelf-wrapper--expanded .block").removeClass("green");
+	$(".my-collection .shelf .info-tab").removeClass("green");
+	$(".my-collection .shelf .collection-blocks .shelf-wrapper .block").removeClass("green");
+	$(".my-collection .shelf .collection-blocks .shelf-wrapper").removeClass("green");
+
+	$(".tool-tip").removeClass("show-customize");
+	$(".fixed-image").removeClass("green").addClass("brown");
+});
+
+
+jquerySwipeHandler.handleSwipe(".button.yellow", [
+ jquerySwipeHandler.SWIPE_RIGHT
+], function (direction) {
+	$(".button").removeClass(direction);
+	$(".button").removeClass("active");
+	$(".button.green").addClass("active");
+	$(".button.active").addClass(direction).removeClass("CLICK");
+	$(".button.green").css({left: "0px", transition: "left 100ms ease-in"});
+	$(".button.brown").css({left: "-150px", transition: "left 100ms ease-in"});
+	$(".button.yellow").css({left: "150px", transition: "left 100ms ease-in"});
+
+	$(".my-collection .shelf-wrapper--expanded .block").removeClass("yellow").addClass("green");
+	$(".my-collection .shelf .info-tab").removeClass("yellow").removeClass("yellow").addClass("green");
+	$(".my-collection .shelf .collection-blocks .shelf-wrapper .block").removeClass("yellow").addClass("green");
+	$(".my-collection .shelf .collection-blocks .shelf-wrapper").removeClass("yellow").addClass("green");
+
+	$(".tool-tip").removeClass("show-customize");
+	$(".fixed-image").removeClass("yellow").addClass("green");
 });
