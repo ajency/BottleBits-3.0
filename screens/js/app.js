@@ -616,40 +616,6 @@ $(".tab_option--block .item.bottle-details-wrapper").on("click", function(){
 	$(".swiper-slide.bottle-details-wrapper").css({opacity: "1", transition: "opacity 1s ease-in"});
 });
 
-// const container = document.querySelector('.swiper-wrapper');
-                
-// let startY;
-// let scrollLeft;
-// let scrollTop;
-// let isDown;
-
-// container.addEventListener('mousedown',e => mouseIsDown(e));  
-// container.addEventListener('mouseup',e => mouseUp(e))
-// container.addEventListener('mouseleave',e=>mouseLeave(e));
-// container.addEventListener('mousemove',e=>mouseMove(e));
-
-// function mouseIsDown(e){
-//   isDown = true;
-//   startY = e.pageY - container.offsetTop;
-//   scrollLeft = container.scrollLeft;
-//   scrollTop = container.scrollTop; 
-// }
-// function mouseUp(e){
-//   isDown = false;
-// }
-// function mouseLeave(e){
-//   isDown = false;
-// }
-// function mouseMove(e){
-//   if(isDown){
-//     e.preventDefault();
-//     //Move vertcally
-//     const y = e.pageY - container.offsetTop;
-//     const walkY = y - startY;
-//     container.scrollTop = scrollTop - walkY;
-
-//   }
-// }
 
 $(".cartWrap .primary-button").on('click', function(){
 	$(".vertical-slider-desktop").addClass("hide");
@@ -665,9 +631,9 @@ $(".shelf-wrapper--expanded").fadeOut();
 
 $(".shelf-wrapper .block").on("click", function(){
 	$(".fixed-image").fadeOut();
-	$(".collection-blocks").fadeOut(1000);
+	$(".collection-blocks").fadeOut();
 	$(".tool-tip").removeClass("show-customize");
-	$(".shelf-wrapper--expanded").fadeIn(2000);
+	$(".shelf-wrapper--expanded").fadeIn();
 	$("body").addClass("single-view");
 
 	if($(this).hasClass('block1')){
@@ -726,15 +692,17 @@ $(".slide-image").on("click", function(){
 });
 
 $(document).ready(function(){
-    $(".sharing").on("click", function(){
-        $(".shelf-bottle-details").fadeOut();
+    $(".sharing-details").on("click", function(){
+        $(".shelf-bottle-details").removeClass("show-details");
         $(".single-sharing").fadeIn(2000);
+        $(".themes-button").fadeOut();
         $("body").addClass("sharing-screen");
     });
     $(".return-back").on("click", function(){
         $(".single-sharing").fadeOut();
-        $(".shelf-bottle-details").fadeIn(1000);
+        $(".shelf-bottle-details").addClass("show-details");
         $("body").removeClass("sharing-screen");
+        $(".themes-button").fadeIn();
     });
 });
 
@@ -835,6 +803,8 @@ jquerySwipeHandler.handleSwipe(".button.brown", [
 
 	$(".tool-tip").removeClass("show-customize");
 	$(".fixed-image").removeClass("brown").addClass("green");
+
+	$(".collection-blocks").addClass("green");
 });
 
 
@@ -856,6 +826,7 @@ jquerySwipeHandler.handleSwipe(".button.green", [
 
 	$(".tool-tip").removeClass("show-customize");
 	$(".fixed-image").removeClass("green").addClass("yellow");
+	$(".collection-blocks").removeClass("green").addClass("yellow");
 });
 
 
@@ -877,6 +848,7 @@ jquerySwipeHandler.handleSwipe(".button.green", [
 
 	$(".tool-tip").removeClass("show-customize");
 	$(".fixed-image").removeClass("green").addClass("brown");
+	$(".collection-blocks").removeClass("green");
 });
 
 
@@ -898,4 +870,139 @@ jquerySwipeHandler.handleSwipe(".button.yellow", [
 
 	$(".tool-tip").removeClass("show-customize");
 	$(".fixed-image").removeClass("yellow").addClass("green");
+
+	$(".collection-blocks").removeClass("yellow").addClass("green");
+
+});
+
+$( ".theme--yellow" ).on( "swipeleft", function(){
+    $(this).css({transform: "translateX(-70px)", transition: "transform 300ms ease-in"});
+    $( ".theme--green" ).css({transform: "translateX(-70px)", transition: "transform 300ms ease-in"});
+    $( ".theme--brown" ).css({transform: "translateX(-70px)", transition: "transform 300ms ease-in"});
+    $( ".theme--black" ).css({transform: "translateX(-70px)", transition: "transform 300ms ease-in"});
+    $( ".theme--camera").css({transform: "translateX(-70px)", transition: "transform 300ms ease-in"});
+    $( ".theme--upload").css({transform: "translateX(-70px)", transition: "transform 300ms ease-in"});
+    $(this).removeClass("theme--active-theme").next().addClass("theme--active-theme");
+     $(".theme--yellow .active-mark").removeClass("active-mark--show");
+    $(".theme--green .active-mark").addClass("active-mark--show");
+    $(".single-sharing").removeClass("yellow");
+    $(".single-sharing").addClass("green");
+});
+
+$( ".theme--green" ).on( "swipeleft", function(){
+  	$(this).css({transform: "translateX(-140px)", transition: "transform 300ms ease-in"});
+    $( ".theme--yellow" ).css({transform: "translateX(-140px)", transition: "transform 300ms ease-in"});
+    $( ".theme--brown" ).css({transform: "translateX(-140px)", transition: "transform 300ms ease-in"});
+    $( ".theme--black" ).css({transform: "translateX(-140px)", transition: "transform 300ms ease-in"});
+    $( ".theme--camera").css({transform: "translateX(-140px)", transition: "transform 300ms ease-in"});
+    $( ".theme--upload").css({transform: "translateX(-140px)", transition: "transform 300ms ease-in"});
+    $(this).removeClass("theme--active-theme").next().addClass("theme--active-theme");
+     $(".theme--green .active-mark").removeClass("active-mark--show");
+    $(".theme--brown .active-mark").addClass("active-mark--show");
+
+    $(".single-sharing").removeClass("green");
+    $(".single-sharing").addClass("brown");
+});
+
+
+$( ".theme--brown" ).on( "swipeleft", function(){
+ 	$(this).css({transform: "translateX(-210px)", transition: "transform 300ms ease-in"});
+    $( ".theme--yellow" ).css({transform: "translateX(-210px)", transition: "transform 300ms ease-in"});
+    $( ".theme--green" ).css({transform: "translateX(-210px)", transition: "transform 300ms ease-in"});
+    $( ".theme--black" ).css({transform: "translateX(-210px)", transition: "transform 300ms ease-in"});
+    $( ".theme--camera").css({transform: "translateX(-210px)", transition: "transform 300ms ease-in"});
+    $( ".theme--upload").css({transform: "translateX(-210px)", transition: "transform 300ms ease-in"});
+    $(this).removeClass("theme--active-theme").next().addClass("theme--active-theme");
+ 	$(".theme--brown .active-mark").removeClass("active-mark--show");
+    $(".theme--black .active-mark").addClass("active-mark--show");
+
+	$(".single-sharing").removeClass("brown");
+    $(".single-sharing").addClass("black");
+});
+
+
+$( ".theme--black" ).on( "swipeleft", function(){
+ 	$(this).css({transform: "translateX(-280px)", transition: "transform 300ms ease-in"});
+    $( ".theme--yellow" ).css({transform: "translateX(-280px)", transition: "transform 300ms ease-in"});
+    $( ".theme--brown" ).css({transform: "translateX(-280px)", transition: "transform 300ms ease-in"});
+    $( ".theme--green" ).css({transform: "translateX(-280px)", transition: "transform 300ms ease-in"});
+    $( ".theme--camera").css({transform: "translateX(-280px)", transition: "transform 300ms ease-in"});
+    $( ".theme--upload").css({transform: "translateX(-280px)", transition: "transform 300ms ease-in"});
+    $(this).removeClass("theme--active-theme").next().addClass("theme--active-theme");
+     $(".theme--brown .active-mark").removeClass("active-mark--show");
+    $(".theme--black .active-mark").addClass("active-mark--show");
+});
+
+
+$( ".theme--yellow" ).on( "swiperight", function(){
+    $(this).css({transform: "translateX(70px)", transition: "transform 300ms ease-in"});
+    $( ".theme--green" ).css({transform: "translateX(70px)", transition: "transform 300ms ease-in"});
+    $( ".theme--brown" ).css({transform: "translateX(70px)", transition: "transform 300ms ease-in"});
+    $( ".theme--black" ).css({transform: "translateX(70px)", transition: "transform 300ms ease-in"});
+    $( ".theme--camera").css({transform: "translateX(70px)", transition: "transform 300ms ease-in"});
+    $( ".theme--upload").css({transform: "translateX(70px)", transition: "transform 300ms ease-in"});
+    $(".theme--green .active-mark").removeClass("active-mark--show");
+
+});
+
+$( ".theme--green" ).on( "swiperight", function(){
+  	$(this).css({transform: "translateX(0px)", transition: "transform 300ms ease-in"});
+    $( ".theme--yellow" ).css({transform: "translateX(0px)", transition: "transform 300ms ease-in"});
+    $( ".theme--brown" ).css({transform: "translateX(0px)", transition: "transform 300ms ease-in"});
+    $( ".theme--black" ).css({transform: "translateX(0px)", transition: "transform 300ms ease-in"});
+    $( ".theme--camera").css({transform: "translateX(0px)", transition: "transform 300ms ease-in"});
+    $( ".theme--upload").css({transform: "translateX(0px)", transition: "transform 300ms ease-in"});
+    $(this).removeClass("theme--active-theme").prev().addClass("theme--active-theme");
+ 	$(".theme--yellow .active-mark").addClass("active-mark--show");
+    $(".theme--green .active-mark").removeClass("active-mark--show");
+
+    $(".single-sharing").removeClass("green");
+    $(".single-sharing").addClass("yellow");
+});
+
+
+$( ".theme--brown" ).on( "swiperight", function(){
+ 	$(this).css({transform: "translateX(-70px)", transition: "transform 300ms ease-in"});
+    $( ".theme--yellow" ).css({transform: "translateX(-70px)", transition: "transform 300ms ease-in"});
+    $( ".theme--green" ).css({transform: "translateX(-70px)", transition: "transform 300ms ease-in"});
+    $( ".theme--black" ).css({transform: "translateX(-70px)", transition: "transform 300ms ease-in"});
+    $( ".theme--camera").css({transform: "translateX(-70px)", transition: "transform 300ms ease-in"});
+    $( ".theme--upload").css({transform: "translateX(-70px)", transition: "transform 300ms ease-in"});
+    $(this).removeClass("theme--active-theme").prev().addClass("theme--active-theme");
+ 	$(".theme--green .active-mark").addClass("active-mark--show");
+    $(".theme--brown .active-mark").removeClass("active-mark--show");
+
+    $(".single-sharing").removeClass("brown");
+    $(".single-sharing").addClass("green");
+});
+
+
+$( ".theme--black" ).on( "swiperight", function(){
+ 	$(this).css({transform: "translateX(-140px)", transition: "transform 300ms ease-in"});
+    $( ".theme--yellow" ).css({transform: "translateX(-140px)", transition: "transform 300ms ease-in"});
+    $( ".theme--brown" ).css({transform: "translateX(-140px)", transition: "transform 300ms ease-in"});
+    $( ".theme--green" ).css({transform: "translateX(-140px)", transition: "transform 300ms ease-in"});
+    $( ".theme--camera").css({transform: "translateX(-140px)", transition: "transform 300ms ease-in"});
+    $( ".theme--upload").css({transform: "translateX(-140px)", transition: "transform 300ms ease-in"});
+    $(this).removeClass("theme--active-theme").prev().addClass("theme--active-theme");
+ 	$(".theme--brown .active-mark").addClass("active-mark--show");
+    $(".theme--black .active-mark").removeClass("active-mark--show");
+
+    $(".single-sharing").removeClass("black");
+    $(".single-sharing").addClass("brown");
+});
+
+
+
+
+$( ".theme--camera" ).on( "swipeleft", function(){
+    $(this).css({transform: "translateX(-70px)"});
+});
+
+$( ".theme--upload").on( "swipeleft", function(){
+    $(this).css({transform: "translateX(-70px)"});
+});
+
+$(".carousel-control.right").on("click", function(){
+	$(".carousel-control.left").addClass("left-active");
 });
