@@ -793,11 +793,13 @@ $(".customize").on("click", function(){
 
 $(".tool-tip span, .sharing").on("click", function(){
 	$(".themes-button").addClass("show-buttons");
+	$(".my-collection").css('pointer-events','none');
 });
 
 $(".themes-button .cross").on("click", function(){
 	$(".tool-tip").removeClass("show-customize");
 	$(".themes-button").removeClass("show-buttons");
+	$(".my-collection").css('pointer-events','auto');
 });
 
 $(".button").on( "swipeleft", function(){
@@ -1071,18 +1073,19 @@ $(".icon-3d-wrap img").on("click", function(){
 });
 
 $(".theme--black").on("click", function(){
-	$(".popup").css({opacity: "1", transition: "opacity 400ms ease-in-out"}).fadeIn();
+	$(".popup").css({opacity: "1", height: "100vh", transition: "opacity 400ms ease-in-out"}).fadeIn();
 	$(".cd-product-viewer-handle").addClass("show-handle");
 	$(".handle").css({left: "96.8%", transition: "left 50ms ease-in-out"});
 });
 
 $(".share-popup--close .cross").on("click", function(){
-	$(".popup").css({opacity: "0", transition: "opacity 400ms ease-in-out"});
+	$(".popup").css({opacity: "0", height: "0", transition: "opacity 400ms ease-in-out"});
 	$(".themes-button .cross").removeClass("remove-cross");
 	$(".themes-button--wrapper").removeClass("remove-buttons");
 	$(".button").removeClass("remove-buttons-group , active").removeAttr("style");
 	$(".button.brown").addClass("active");
 	$(".themes-button").removeClass("show-buttons");
+	$(".my-collection").css('pointer-events','auto');
 });
 
 $(".button.yellow").on("click", function(){
@@ -1091,7 +1094,7 @@ $(".button.yellow").on("click", function(){
 	$(".my-collection .shelf .collection-blocks .shelf-wrapper .block").removeClass("yellow");
 	$(".my-collection .shelf .collection-blocks .shelf-wrapper").removeClass("yellow");
 
-	$(".popup").css({opacity: "1", transition: "opacity 400ms ease-in-out"}).fadeIn();
+	$(".popup").css({opacity: "1", height: "100vh", transition: "opacity 400ms ease-in-out"}).fadeIn();
 	$(".fixed-image").removeClass("yellow").addClass("brown");
 	$(".collection-blocks").removeClass("yellow");
 	$(".themes-button .cross").addClass("remove-cross");
