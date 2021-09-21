@@ -800,83 +800,84 @@ $(".themes-button .cross").on("click", function(){
 	$(".themes-button").removeClass("show-buttons");
 });
 
-$(".button.brown").on( "swipeleft", function(){
-	$(".button").removeClass("active");
-	$(".button.green").addClass("active");
+$(".button").on( "swipeleft", function(){
+	if($(".button.brown").hasClass("active")){
 
-	$(".button.yellow").css({transform: "translateX(80px)", transition: "transform 300ms ease-in"});
-	$(".button.green").css({transform: "translateX(0px)", transition: "transform 300ms ease-in"});
-	$(".button.brown").css({transform: "translateX(-80px)", transition: "transform 300ms ease-in"});
+		$(".button").removeClass("active");
+		$(".button.green").addClass("active");
 
-	$(".my-collection .shelf-wrapper--expanded .block").addClass("green");
-	$(".my-collection .shelf .info-tab").addClass("green");
-	$(".my-collection .shelf .collection-blocks .shelf-wrapper .block").addClass("green");
-	$(".my-collection .shelf .collection-blocks .shelf-wrapper").addClass("green");
+		$(".button.yellow").css({transform: "translateX(80px)", transition: "transform 300ms ease-in"});
+		$(".button.green").css({transform: "translateX(0px)", transition: "transform 300ms ease-in"});
+		$(".button.brown").css({transform: "translateX(-80px)", transition: "transform 300ms ease-in"});
 
-	$(".tool-tip").removeClass("show-customize");
-	$(".fixed-image").removeClass("brown").addClass("green");
+		$(".my-collection .shelf-wrapper--expanded .block").addClass("green");
+		$(".my-collection .shelf .info-tab").addClass("green");
+		$(".my-collection .shelf .collection-blocks .shelf-wrapper .block").addClass("green");
+		$(".my-collection .shelf .collection-blocks .shelf-wrapper").addClass("green");
 
-	$(".collection-blocks").addClass("green");
+		$(".tool-tip").removeClass("show-customize");
+		$(".fixed-image").removeClass("brown").addClass("green");
+
+		$(".collection-blocks").addClass("green");
+	}
+	else if($(".button.green").hasClass("active")){
+
+		$(".button").removeClass("active");
+		$(".button.yellow").addClass("active");
+
+		$(".button.yellow").css({transform: "translateX(0px)", transition: "transform 300ms ease-in"});
+		$(".button.brown").css({transform: "translateX(-150px)", transition: "transform 300ms ease-in"});
+		$(".button.green").css({transform: "translateX(-80px)", transition: "transform 300ms ease-in"});
+
+		$(".my-collection .shelf-wrapper--expanded .block").addClass("yellow").removeClass("green");
+		$(".my-collection .shelf .info-tab").addClass("yellow").removeClass("green");
+		$(".my-collection .shelf .collection-blocks .shelf-wrapper .block").addClass("yellow").removeClass("green");
+		$(".my-collection .shelf .collection-blocks .shelf-wrapper").addClass("yellow").removeClass("green");
+
+		$(".tool-tip").removeClass("show-customize");
+		$(".fixed-image").removeClass("green").addClass("yellow");
+		$(".collection-blocks").removeClass("green").addClass("yellow");
+	}
 });
 
+$(".button").on( "swiperight", function(){
+	if($(".button.green").hasClass("active")){
+		$(".button").removeClass("active");
+		$(".button.brown").addClass("active");
 
-$(".button.green").on( "swipeleft", function(){
-	$(".button").removeClass("active");
-	$(".button.yellow").addClass("active");
+		$(".button.green").css({transform: "translateX(80px)", transition: "transform 300ms ease-in"});
+		$(".button.brown").css({transform: "translateX(0px)", transition: "transform 300ms ease-in"});
+		$(".button.yellow").css({transform: "translateX(150px)", transition: "transform 300ms ease-in"});
 
-	$(".button.yellow").css({transform: "translateX(0px)", transition: "transform 300ms ease-in"});
-	$(".button.brown").css({transform: "translateX(-150px)", transition: "transform 300ms ease-in"});
-	$(".button.green").css({transform: "translateX(-80px)", transition: "transform 300ms ease-in"});
+		$(".my-collection .shelf-wrapper--expanded .block").removeClass("green");
+		$(".my-collection .shelf .info-tab").removeClass("green");
+		$(".my-collection .shelf .collection-blocks .shelf-wrapper .block").removeClass("green");
+		$(".my-collection .shelf .collection-blocks .shelf-wrapper").removeClass("green");
 
-	$(".my-collection .shelf-wrapper--expanded .block").addClass("yellow").removeClass("green");
-	$(".my-collection .shelf .info-tab").addClass("yellow").removeClass("green");
-	$(".my-collection .shelf .collection-blocks .shelf-wrapper .block").addClass("yellow").removeClass("green");
-	$(".my-collection .shelf .collection-blocks .shelf-wrapper").addClass("yellow").removeClass("green");
+		$(".tool-tip").removeClass("show-customize");
+		$(".fixed-image").removeClass("green").addClass("brown");
+		$(".collection-blocks").removeClass("green");
 
-	$(".tool-tip").removeClass("show-customize");
-	$(".fixed-image").removeClass("green").addClass("yellow");
-	$(".collection-blocks").removeClass("green").addClass("yellow");
+	} else if($(".button.yellow").hasClass("active")){
+		$(".button").removeClass("active");
+		$(".button.green").addClass("active");
+
+		$(".button.green").css({transform: "translateX(0px)", transition: "transform 300ms ease-in"});
+		$(".button.brown").css({transform: "translateX(-80px)", transition: "transform 300ms ease-in"});
+		$(".button.yellow").css({transform: "translateX(80px)", transition: "transform 300ms ease-in"});
+
+		$(".my-collection .shelf-wrapper--expanded .block").removeClass("yellow").addClass("green");
+		$(".my-collection .shelf .info-tab").removeClass("yellow").removeClass("yellow").addClass("green");
+		$(".my-collection .shelf .collection-blocks .shelf-wrapper .block").removeClass("yellow").addClass("green");
+		$(".my-collection .shelf .collection-blocks .shelf-wrapper").removeClass("yellow").addClass("green");
+
+		$(".tool-tip").removeClass("show-customize");
+		$(".fixed-image").removeClass("yellow").addClass("green");
+
+		$(".collection-blocks").removeClass("yellow").addClass("green");
+	}
 });
 
-
-$(".button.green").on( "swiperight", function(){	
-	$(".button").removeClass("active");
-	$(".button.brown").addClass("active");
-
-	$(".button.green").css({transform: "translateX(80px)", transition: "transform 300ms ease-in"});
-	$(".button.brown").css({transform: "translateX(0px)", transition: "transform 300ms ease-in"});
-	$(".button.yellow").css({transform: "translateX(150px)", transition: "transform 300ms ease-in"});
-
-	$(".my-collection .shelf-wrapper--expanded .block").removeClass("green");
-	$(".my-collection .shelf .info-tab").removeClass("green");
-	$(".my-collection .shelf .collection-blocks .shelf-wrapper .block").removeClass("green");
-	$(".my-collection .shelf .collection-blocks .shelf-wrapper").removeClass("green");
-
-	$(".tool-tip").removeClass("show-customize");
-	$(".fixed-image").removeClass("green").addClass("brown");
-	$(".collection-blocks").removeClass("green");
-});
-
-
-$(".button.yellow").on( "swiperight", function(){	
-	$(".button").removeClass("active");
-	$(".button.green").addClass("active");
-
-	$(".button.green").css({transform: "translateX(0px)", transition: "transform 300ms ease-in"});
-	$(".button.brown").css({transform: "translateX(-80px)", transition: "transform 300ms ease-in"});
-	$(".button.yellow").css({transform: "translateX(80px)", transition: "transform 300ms ease-in"});
-
-	$(".my-collection .shelf-wrapper--expanded .block").removeClass("yellow").addClass("green");
-	$(".my-collection .shelf .info-tab").removeClass("yellow").removeClass("yellow").addClass("green");
-	$(".my-collection .shelf .collection-blocks .shelf-wrapper .block").removeClass("yellow").addClass("green");
-	$(".my-collection .shelf .collection-blocks .shelf-wrapper").removeClass("yellow").addClass("green");
-
-	$(".tool-tip").removeClass("show-customize");
-	$(".fixed-image").removeClass("yellow").addClass("green");
-
-	$(".collection-blocks").removeClass("yellow").addClass("green");
-
-});
 
 $( ".theme--yellow" ).on( "swipeleft", function(){
     $(this).css({transform: "translateX(-70px)", transition: "transform 300ms ease-in"});
