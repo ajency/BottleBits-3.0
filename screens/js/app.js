@@ -1022,7 +1022,7 @@ $( ".theme--camera" ).on( "swipeleft", function(){
 	$(".theme .active-mark").removeClass("active-mark--show");
  	$(".theme--yellow .active-mark").addClass("active-mark--show");
     
-    $(".single-sharing").removeClass("camera").addClass("yellow");
+    $(".single-sharing").removeClass("camera upload").addClass("yellow");
 });
 
 $( ".theme--camera" ).on( "swiperight", function(){
@@ -1037,7 +1037,7 @@ $( ".theme--camera" ).on( "swiperight", function(){
     $(".theme").removeClass("theme--active-theme");
     $(this).removeClass("theme--active-theme").prev().addClass("theme--active-theme");
     
-    $(".single-sharing").addClass("camera");
+    $(".single-sharing").removeClass("camera").addClass("upload");
 
 });
 
@@ -1053,7 +1053,7 @@ $( ".theme--upload" ).on( "swipeleft", function(){
     $(".theme").removeClass("theme--active-theme");
     $(this).removeClass("theme--active-theme").next().addClass("theme--active-theme");
     
-    $(".single-sharing").addClass("camera");
+    $(".single-sharing").removeClass("upload").addClass("camera");
 
 });
 
@@ -1115,14 +1115,14 @@ $(document).ready(function() {
     });
     
     var readURL1 = function(input) {
-        if (input.files1 && input.files1[0]) {
+        if (input.files && input.files[0]) {
             var reader1 = new FileReader();
 
             reader1.onload = function (e) {
                 $('.uploaded-bg').attr('src', e.target.result);
             }
     
-            reader.readAsDataURL(input.files1[0]);
+            reader1.readAsDataURL(input.files[0]);
         }
     }
     $(".upload").on('change', function(){
@@ -1130,8 +1130,8 @@ $(document).ready(function() {
         $(".single-sharing").addClass("upload");
     });
 
-    $(".upload-button").on('click', function() {
-       $(".upload").click();
-    });
+    // $(".theme--upload").on('click', function() {
+    //    $(".upload").click();
+    // });
 });
 
