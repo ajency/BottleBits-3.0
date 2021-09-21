@@ -791,6 +791,12 @@ $(".customize").on("click", function(){
 	$(".tool-tip").addClass("show-customize");
 });
 
+$('html').on('click', function (e) {
+	if(!$(e.target).is('.tool-tip') && $(e.target).closest('.customize').length == 0) {
+	$(".tool-tip").removeClass("show-customize");
+	}
+});
+
 $(".tool-tip span, .sharing").on("click", function(){
 	$(".themes-button").addClass("show-buttons");
 	$(".my-collection").css('pointer-events','none');
