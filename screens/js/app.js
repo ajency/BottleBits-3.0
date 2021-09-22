@@ -886,186 +886,196 @@ $(".button").on( "swiperight", function(){
 	}
 });
 
+$( ".theme" ).on( "swipeleft", function(){
+	if($(".theme.theme--upload").hasClass("theme--active-theme")){
 
-$( ".theme--yellow" ).on( "swipeleft", function(){
-    $(this).css({transform: "translateX(-70px)", transition: "transform 300ms ease-in"});
-    $( ".theme--green" ).css({transform: "translateX(-70px)", transition: "transform 300ms ease-in"});
-    $( ".theme--brown" ).css({transform: "translateX(-70px)", transition: "transform 300ms ease-in"});
-    $( ".theme--black" ).css({transform: "translateX(-70px)", transition: "transform 300ms ease-in"});
-    $( ".theme--camera").css({transform: "translateX(-70px)", transition: "transform 300ms ease-in"});
-    $( ".theme--upload").css({transform: "translateX(-70px)", transition: "transform 300ms ease-in"});
+	  	$(".theme--upload").css({transform: "translateX(70px)", transition: "transform 300ms ease-in"});
+	    $( ".theme--yellow" ).css({transform: "translateX(70px)", transition: "transform 300ms ease-in"});
+	    $( ".theme--brown" ).css({transform: "translateX(70px)", transition: "transform 300ms ease-in"});
+	    $( ".theme--green" ).css({transform: "translateX(70px)", transition: "transform 300ms ease-in"});
+	    $( ".theme--camera").css({transform: "translateX(70px)", transition: "transform 300ms ease-in"});
+	    $(".theme").removeClass("theme--active-theme");
+	    $(".theme--upload").removeClass("theme--active-theme").next().addClass("theme--active-theme");
+	    $(".single-sharing").removeClass("upload").addClass("camera");
 
- 	$(".theme").removeClass("theme--active-theme");    
-    $(this).removeClass("theme--active-theme").next().addClass("theme--active-theme");
+	}
+	else if($(".theme.theme--camera").hasClass("theme--active-theme")){
 
-    $(".theme .active-mark").removeClass("active-mark--show");
-    $(".theme--green .active-mark").addClass("active-mark--show");
-    $(".single-sharing").removeClass("yellow");
-    $(".single-sharing").addClass("green");
-});
+	    $(".theme--camera").css({transform: "translateX(-70px)", transition: "transform 300ms ease-in"});
 
-$( ".theme--green" ).on( "swipeleft", function(){
-  	$(this).css({transform: "translateX(-140px)", transition: "transform 300ms ease-in"});
-    $( ".theme--yellow" ).css({transform: "translateX(-140px)", transition: "transform 300ms ease-in"});
-    $( ".theme--brown" ).css({transform: "translateX(-140px)", transition: "transform 300ms ease-in"});
-    $( ".theme--black" ).css({transform: "translateX(-140px)", transition: "transform 300ms ease-in"});
-    $( ".theme--camera").css({transform: "translateX(-140px)", transition: "transform 300ms ease-in"});
-    $( ".theme--upload").css({transform: "translateX(-140px)", transition: "transform 300ms ease-in"});
+	    $( ".theme--yellow" ).css({transform: "translateX(0px)", transition: "transform 300ms ease-in"});
+	    $( ".theme--brown" ).css({transform: "translateX(0px)", transition: "transform 300ms ease-in"});
+	    $( ".theme--green" ).css({transform: "translateX(0px)", transition: "transform 300ms ease-in"});
+	    $( ".theme--camera").css({transform: "translateX(0px)", transition: "transform 300ms ease-in"});
+	    $( ".theme--upload").css({transform: "translateX(0px)", transition: "transform 300ms ease-in"});
 
- 	$(".theme").removeClass("theme--active-theme");    
-    $(this).removeClass("theme--active-theme").next().addClass("theme--active-theme");
+	    $(".theme").removeClass("theme--active-theme");
+	    $(".theme--camera").removeClass("theme--active-theme").next().addClass("theme--active-theme");
 
-    $(".theme .active-mark").removeClass("active-mark--show");
-    $(".theme--brown .active-mark").addClass("active-mark--show");
+		$(".theme .active-mark").removeClass("active-mark--show");
+	 	$(".theme--yellow .active-mark").addClass("active-mark--show");
+	    $(".single-sharing").removeClass("camera upload").addClass("yellow");
 
-    $(".single-sharing").removeClass("green");
-    $(".single-sharing").addClass("brown");
-});
+	}else if($(".theme.theme--yellow").hasClass("theme--active-theme")){
 
+	 	$(".theme--yellow").css({transform: "translateX(-70px)", transition: "transform 300ms ease-in"});
+	    $( ".theme--green" ).css({transform: "translateX(-70px)", transition: "transform 300ms ease-in"});
+	    $( ".theme--brown" ).css({transform: "translateX(-70px)", transition: "transform 300ms ease-in"});
+	    $( ".theme--black" ).css({transform: "translateX(-70px)", transition: "transform 300ms ease-in"});
+	    $( ".theme--camera").css({transform: "translateX(-70px)", transition: "transform 300ms ease-in"});
+	    $( ".theme--upload").css({transform: "translateX(-70px)", transition: "transform 300ms ease-in"});
 
-$( ".theme--brown" ).on( "swipeleft", function(){
- 	$(this).css({transform: "translateX(-210px)", transition: "transform 300ms ease-in"});
-    $( ".theme--yellow" ).css({transform: "translateX(-210px)", transition: "transform 300ms ease-in"});
-    $( ".theme--green" ).css({transform: "translateX(-210px)", transition: "transform 300ms ease-in"});
-    $( ".theme--black" ).css({transform: "translateX(-210px)", transition: "transform 300ms ease-in"});
-    $( ".theme--camera").css({transform: "translateX(-210px)", transition: "transform 300ms ease-in"});
-    $( ".theme--upload").css({transform: "translateX(-210px)", transition: "transform 300ms ease-in"});
+	 	$(".theme").removeClass("theme--active-theme");    
+	    $(".theme--yellow").removeClass("theme--active-theme").next().addClass("theme--active-theme");
 
- 	$(".theme").removeClass("theme--active-theme");    
-    $(this).removeClass("theme--active-theme").next().addClass("theme--active-theme");
+	    $(".theme .active-mark").removeClass("active-mark--show");
+	    $(".theme--green .active-mark").addClass("active-mark--show");
+	    $(".single-sharing").removeClass("yellow");
+	    $(".single-sharing").addClass("green");
 
- 	$(".theme .active-mark").removeClass("active-mark--show");
-    $(".theme--black .active-mark").addClass("active-mark--show");
+	}else if($(".theme.theme--green").hasClass("theme--active-theme")){
 
-	$(".single-sharing").removeClass("brown");
-    $(".single-sharing").addClass("black");
-});
+	  	$(".theme--green").css({transform: "translateX(-140px)", transition: "transform 300ms ease-in"});
+	    $( ".theme--yellow" ).css({transform: "translateX(-140px)", transition: "transform 300ms ease-in"});
+	    $( ".theme--brown" ).css({transform: "translateX(-140px)", transition: "transform 300ms ease-in"});
+	    $( ".theme--black" ).css({transform: "translateX(-140px)", transition: "transform 300ms ease-in"});
+	    $( ".theme--camera").css({transform: "translateX(-140px)", transition: "transform 300ms ease-in"});
+	    $( ".theme--upload").css({transform: "translateX(-140px)", transition: "transform 300ms ease-in"});
 
+	 	$(".theme").removeClass("theme--active-theme");    
+	    $(".theme--green").removeClass("theme--active-theme").next().addClass("theme--active-theme");
 
-$( ".theme--yellow" ).on( "swiperight", function(){
-    $(this).css({transform: "translateX(70px)", transition: "transform 300ms ease-in"});
-    $( ".theme--green" ).css({transform: "translateX(70px)", transition: "transform 300ms ease-in"});
-    $( ".theme--brown" ).css({transform: "translateX(70px)", transition: "transform 300ms ease-in"});
-    $( ".theme--black" ).css({transform: "translateX(70px)", transition: "transform 300ms ease-in"});
-    $( ".theme--camera").css({transform: "translateX(70px)", transition: "transform 300ms ease-in"});
-    $( ".theme--upload").css({transform: "translateX(70px)", transition: "transform 300ms ease-in"});
+	    $(".theme .active-mark").removeClass("active-mark--show");
+	    $(".theme--brown .active-mark").addClass("active-mark--show");
 
- 	$(".theme").removeClass("theme--active-theme");  
- 	$(this).removeClass("theme--active-theme").prev().addClass("theme--active-theme");
-  
-    $(".theme .active-mark").removeClass("active-mark--show");
-    $(".single-sharing").removeClass("yellow").addClass("camera");
+	    $(".single-sharing").removeClass("green");
+	    $(".single-sharing").addClass("brown");
 
-});
+	}else if($(".theme.theme--brown").hasClass("theme--active-theme")){
 
-$( ".theme--green" ).on( "swiperight", function(){
-  	$(this).css({transform: "translateX(0px)", transition: "transform 300ms ease-in"});
-    $( ".theme--yellow" ).css({transform: "translateX(0px)", transition: "transform 300ms ease-in"});
-    $( ".theme--brown" ).css({transform: "translateX(0px)", transition: "transform 300ms ease-in"});
-    $( ".theme--black" ).css({transform: "translateX(0px)", transition: "transform 300ms ease-in"});
-    $( ".theme--camera").css({transform: "translateX(0px)", transition: "transform 300ms ease-in"});
-    $( ".theme--upload").css({transform: "translateX(0px)", transition: "transform 300ms ease-in"});
+	 	$(".theme--brown").css({transform: "translateX(-210px)", transition: "transform 300ms ease-in"});
+	    $( ".theme--yellow" ).css({transform: "translateX(-210px)", transition: "transform 300ms ease-in"});
+	    $( ".theme--green" ).css({transform: "translateX(-210px)", transition: "transform 300ms ease-in"});
+	    $( ".theme--black" ).css({transform: "translateX(-210px)", transition: "transform 300ms ease-in"});
+	    $( ".theme--camera").css({transform: "translateX(-210px)", transition: "transform 300ms ease-in"});
+	    $( ".theme--upload").css({transform: "translateX(-210px)", transition: "transform 300ms ease-in"});
 
- 	$(".theme").removeClass("theme--active-theme");    
-    $(this).removeClass("theme--active-theme").prev().addClass("theme--active-theme");
+	 	$(".theme").removeClass("theme--active-theme");    
+	    $(".theme--brown").removeClass("theme--active-theme").next().addClass("theme--active-theme");
 
- 	$(".theme .active-mark").removeClass("active-mark--show");
- 	$(".theme--yellow .active-mark").addClass("active-mark--show");
+	 	$(".theme .active-mark").removeClass("active-mark--show");
+	    $(".theme--black .active-mark").addClass("active-mark--show");
 
-    $(".single-sharing").removeClass("green");
-    $(".single-sharing").addClass("yellow");
-});
+		$(".single-sharing").removeClass("brown");
+	    $(".single-sharing").addClass("black");	
 
+	}else if($(".theme.theme--black").hasClass("theme--active-theme")){
 
-$( ".theme--brown" ).on( "swiperight", function(){
- 	$(this).css({transform: "translateX(-70px)", transition: "transform 300ms ease-in"});
-    $( ".theme--yellow" ).css({transform: "translateX(-70px)", transition: "transform 300ms ease-in"});
-    $( ".theme--green" ).css({transform: "translateX(-70px)", transition: "transform 300ms ease-in"});
-    $( ".theme--black" ).css({transform: "translateX(-70px)", transition: "transform 300ms ease-in"});
-    $( ".theme--camera").css({transform: "translateX(-70px)", transition: "transform 300ms ease-in"});
-    $( ".theme--upload").css({transform: "translateX(-70px)", transition: "transform 300ms ease-in"});
+	 	$(this).css({transform: "translateX(-210px)", transition: "transform 300ms ease-in"});
+	    $( ".theme--yellow" ).css({transform: "translateX(-210px)", transition: "transform 300ms ease-in"});
+	    $( ".theme--green" ).css({transform: "translateX(-210px)", transition: "transform 300ms ease-in"});
+	    $( ".theme--black" ).css({transform: "translateX(-210px)", transition: "transform 300ms ease-in"});
+	    $( ".theme--camera").css({transform: "translateX(-210px)", transition: "transform 300ms ease-in"});
+	    $( ".theme--upload").css({transform: "translateX(-210px)", transition: "transform 300ms ease-in"});
 
- 	$(".theme").removeClass("theme--active-theme");
-    $(this).removeClass("theme--active-theme").prev().addClass("theme--active-theme");
+	 	$(".theme").removeClass("theme--active-theme");    
+	    $(this).removeClass("theme--active-theme").next().addClass("theme--active-theme");
 
-    $(".theme .active-mark").removeClass("active-mark--show");
- 	$(".theme--green .active-mark").addClass("active-mark--show");
+	 	$(".theme .active-mark").removeClass("active-mark--show");
+	    $(".theme--black .active-mark").addClass("active-mark--show");
 
-    $(".single-sharing").removeClass("brown");
-    $(".single-sharing").addClass("green");
+		$(".single-sharing").removeClass("brown");
+	    $(".single-sharing").addClass("black");		
+
+	}
 });
 
 
-$( ".theme--black" ).on( "swiperight", function(){
- 	$(this).css({transform: "translateX(-140px)", transition: "transform 300ms ease-in"});
-    $( ".theme--yellow" ).css({transform: "translateX(-140px)", transition: "transform 300ms ease-in"});
-    $( ".theme--brown" ).css({transform: "translateX(-140px)", transition: "transform 300ms ease-in"});
-    $( ".theme--green" ).css({transform: "translateX(-140px)", transition: "transform 300ms ease-in"});
-    $( ".theme--camera").css({transform: "translateX(-140px)", transition: "transform 300ms ease-in"});
-    $( ".theme--upload").css({transform: "translateX(-140px)", transition: "transform 300ms ease-in"});
+$( ".theme" ).on( "swiperight", function(){
+	if($(".theme.theme--camera").hasClass("theme--active-theme")){
+
+	    $(".theme--camera").css({transform: "translateX(-140px)", transition: "transform 300ms ease-in"});
+
+	    $( ".theme--yellow").css({transform: "translateX(140px)", transition: "transform 300ms ease-in"});
+	    $( ".theme--brown").css({transform: "translateX(140px)", transition: "transform 300ms ease-in"});
+	    $( ".theme--green").css({transform: "translateX(140px)", transition: "transform 300ms ease-in"});
+	    $( ".theme--camera").css({transform: "translateX(140px)", transition: "transform 300ms ease-in"});
+	    $( ".theme--upload").css({transform: "translateX(140px)", transition: "transform 300ms ease-in"});
+
+	    $(".theme").removeClass("theme--active-theme");
+	    $(".theme--camera").removeClass("theme--active-theme").prev().addClass("theme--active-theme");
+	    
+	    $(".single-sharing").removeClass("camera").addClass("upload");
+    }
+	else if($(".theme.theme--yellow").hasClass("theme--active-theme")){
+	    $(".theme--yellow").css({transform: "translateX(70px)", transition: "transform 300ms ease-in"});
+	    $( ".theme--green" ).css({transform: "translateX(70px)", transition: "transform 300ms ease-in"});
+	    $( ".theme--brown" ).css({transform: "translateX(70px)", transition: "transform 300ms ease-in"});
+	    $( ".theme--black" ).css({transform: "translateX(70px)", transition: "transform 300ms ease-in"});
+	    $( ".theme--camera").css({transform: "translateX(70px)", transition: "transform 300ms ease-in"});
+	    $( ".theme--upload").css({transform: "translateX(70px)", transition: "transform 300ms ease-in"});
+
+	 	$(".theme").removeClass("theme--active-theme");  
+	 	$(".theme--yellow").removeClass("theme--active-theme").prev().addClass("theme--active-theme");
+	  
+	    $(".theme .active-mark").removeClass("active-mark--show");
+	    $(".single-sharing").removeClass("yellow").addClass("camera");
+
+    } else if ($(".theme.theme--green").hasClass("theme--active-theme")){
+
+	  	$(".theme--green").css({transform: "translateX(0px)", transition: "transform 300ms ease-in"});
+	    $( ".theme--yellow" ).css({transform: "translateX(0px)", transition: "transform 300ms ease-in"});
+	    $( ".theme--brown" ).css({transform: "translateX(0px)", transition: "transform 300ms ease-in"});
+	    $( ".theme--black" ).css({transform: "translateX(0px)", transition: "transform 300ms ease-in"});
+	    $( ".theme--camera").css({transform: "translateX(0px)", transition: "transform 300ms ease-in"});
+	    $( ".theme--upload").css({transform: "translateX(0px)", transition: "transform 300ms ease-in"});
+
+	 	$(".theme").removeClass("theme--active-theme");    
+	    $(".theme--green").removeClass("theme--active-theme").prev().addClass("theme--active-theme");
+
+	 	$(".theme .active-mark").removeClass("active-mark--show");
+	 	$(".theme--yellow .active-mark").addClass("active-mark--show");
+
+	    $(".single-sharing").removeClass("green");
+	    $(".single-sharing").addClass("yellow");
+
+    } else if($(".theme.theme--brown").hasClass("theme--active-theme")){
+	 	$(".theme--brown").css({transform: "translateX(-70px)", transition: "transform 300ms ease-in"});
+	    $( ".theme--yellow" ).css({transform: "translateX(-70px)", transition: "transform 300ms ease-in"});
+	    $( ".theme--green" ).css({transform: "translateX(-70px)", transition: "transform 300ms ease-in"});
+	    $( ".theme--black" ).css({transform: "translateX(-70px)", transition: "transform 300ms ease-in"});
+	    $( ".theme--camera").css({transform: "translateX(-70px)", transition: "transform 300ms ease-in"});
+	    $( ".theme--upload").css({transform: "translateX(-70px)", transition: "transform 300ms ease-in"});
+
+	 	$(".theme").removeClass("theme--active-theme");
+	    $(".theme--brown").removeClass("theme--active-theme").prev().addClass("theme--active-theme");
+
+	    $(".theme .active-mark").removeClass("active-mark--show");
+	 	$(".theme--green .active-mark").addClass("active-mark--show");
+
+	    $(".single-sharing").removeClass("brown");
+	    $(".single-sharing").addClass("green");
+
+    } else if($(".theme.theme--black").hasClass("theme--active-theme")){
+	 	$(".theme--black").css({transform: "translateX(-140px)", transition: "transform 300ms ease-in"});
+	    $( ".theme--yellow" ).css({transform: "translateX(-140px)", transition: "transform 300ms ease-in"});
+	    $( ".theme--brown" ).css({transform: "translateX(-140px)", transition: "transform 300ms ease-in"});
+	    $( ".theme--green" ).css({transform: "translateX(-140px)", transition: "transform 300ms ease-in"});
+	    $( ".theme--camera").css({transform: "translateX(-140px)", transition: "transform 300ms ease-in"});
+	    $( ".theme--upload").css({transform: "translateX(-140px)", transition: "transform 300ms ease-in"});
 
 
-    $(".theme").removeClass("theme--active-theme");
-    $(this).removeClass("theme--active-theme").prev().addClass("theme--active-theme");
+	    $(".theme").removeClass("theme--active-theme");
+	    $(".theme--black").removeClass("theme--active-theme").prev().addClass("theme--active-theme");
 
-	$(".theme .active-mark").removeClass("active-mark--show");
- 	$(".theme--brown .active-mark").addClass("active-mark--show");
-    
-    $(".single-sharing").removeClass("black");
-    $(".single-sharing").addClass("brown");
+		$(".theme .active-mark").removeClass("active-mark--show");
+	 	$(".theme--brown .active-mark").addClass("active-mark--show");
+	    
+	    $(".single-sharing").removeClass("black");
+	    $(".single-sharing").addClass("brown");
 
+    }
 });
-
-$( ".theme--camera" ).on( "swipeleft", function(){
-    $(this).css({transform: "translateX(-70px)", transition: "transform 300ms ease-in"});
-
-    $( ".theme--yellow" ).css({transform: "translateX(0px)", transition: "transform 300ms ease-in"});
-    $( ".theme--brown" ).css({transform: "translateX(0px)", transition: "transform 300ms ease-in"});
-    $( ".theme--green" ).css({transform: "translateX(0px)", transition: "transform 300ms ease-in"});
-    $( ".theme--camera").css({transform: "translateX(0px)", transition: "transform 300ms ease-in"});
-    $( ".theme--upload").css({transform: "translateX(0px)", transition: "transform 300ms ease-in"});
-
-    $(".theme").removeClass("theme--active-theme");
-    $(this).removeClass("theme--active-theme").next().addClass("theme--active-theme");
-
-	$(".theme .active-mark").removeClass("active-mark--show");
- 	$(".theme--yellow .active-mark").addClass("active-mark--show");
-    
-    $(".single-sharing").removeClass("camera upload").addClass("yellow");
-});
-
-$( ".theme--camera" ).on( "swiperight", function(){
-    $(this).css({transform: "translateX(-140px)", transition: "transform 300ms ease-in"});
-
-    $( ".theme--yellow").css({transform: "translateX(140px)", transition: "transform 300ms ease-in"});
-    $( ".theme--brown").css({transform: "translateX(140px)", transition: "transform 300ms ease-in"});
-    $( ".theme--green").css({transform: "translateX(140px)", transition: "transform 300ms ease-in"});
-    $( ".theme--camera").css({transform: "translateX(140px)", transition: "transform 300ms ease-in"});
-    $( ".theme--upload").css({transform: "translateX(140px)", transition: "transform 300ms ease-in"});
-
-    $(".theme").removeClass("theme--active-theme");
-    $(this).removeClass("theme--active-theme").prev().addClass("theme--active-theme");
-    
-    $(".single-sharing").removeClass("camera").addClass("upload");
-
-});
-
-
-$( ".theme--upload" ).on( "swipeleft", function(){
-    $(this).css({transform: "translateX(70px)", transition: "transform 300ms ease-in"});
-
-    $( ".theme--yellow" ).css({transform: "translateX(70px)", transition: "transform 300ms ease-in"});
-    $( ".theme--brown" ).css({transform: "translateX(70px)", transition: "transform 300ms ease-in"});
-    $( ".theme--green" ).css({transform: "translateX(70px)", transition: "transform 300ms ease-in"});
-    $( ".theme--camera").css({transform: "translateX(70px)", transition: "transform 300ms ease-in"});
-
-    $(".theme").removeClass("theme--active-theme");
-    $(this).removeClass("theme--active-theme").next().addClass("theme--active-theme");
-    
-    $(".single-sharing").removeClass("upload").addClass("camera");
-
-});
-
 
 
 $(".carousel-control.right").on("click", function(){
