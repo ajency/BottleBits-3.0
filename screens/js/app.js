@@ -674,8 +674,8 @@ $(".shelf-wrapper .block").on("click", function(){
 		$(".shelf-wrapper--expanded .block-expand4").addClass("active-block").fadeIn();
 		$("footer").removeClass("hide").fadeIn();
 		$("#myCarousel").fadeOut();
+		$("#myCarousel1").fadeOut();
 		$("#myCarousel2").fadeOut();
-		$("#myCarousel3").fadeOut();
 		$("#myCarousel3").fadeIn();
 	}
 });
