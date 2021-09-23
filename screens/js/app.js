@@ -643,24 +643,40 @@ $(".shelf-wrapper .block").on("click", function(){
 		$(".shelf-wrapper--expanded .block").fadeOut();
 		$(".shelf-wrapper--expanded .block-expand1").addClass("active-block").fadeIn();
 		$("footer").removeClass("hide").fadeIn();
+		$("#myCarousel1").fadeOut();
+		$("#myCarousel2").fadeOut();
+		$("#myCarousel3").fadeOut();
+		$("#myCarousel").fadeIn();
 	}
 
 	if($(this).hasClass('block2')){
 		$(".shelf-wrapper--expanded .block").fadeOut();
 		$(".shelf-wrapper--expanded .block-expand2").addClass("active-block").fadeIn();
 		$("footer").removeClass("hide").fadeIn();
+		$("#myCarousel").fadeOut();
+		$("#myCarousel2").fadeOut();
+		$("#myCarousel3").fadeOut();
+		$("#myCarousel1").fadeIn();
 	}
 
 	if($(this).hasClass('block3')){
 		$(".shelf-wrapper--expanded .block").fadeOut();
 		$(".shelf-wrapper--expanded .block-expand3").addClass("active-block").fadeIn();
 		$("footer").removeClass("hide").fadeIn();
+		$("#myCarousel").fadeOut();
+		$("#myCarousel1").fadeOut();
+		$("#myCarousel3").fadeOut();
+		$("#myCarousel2").fadeIn();
 	}
 
 	if($(this).hasClass('block4')){
 		$(".shelf-wrapper--expanded .block").fadeOut();
 		$(".shelf-wrapper--expanded .block-expand4").addClass("active-block").fadeIn();
 		$("footer").removeClass("hide").fadeIn();
+		$("#myCarousel").fadeOut();
+		$("#myCarousel2").fadeOut();
+		$("#myCarousel3").fadeOut();
+		$("#myCarousel3").fadeIn();
 	}
 });
 
@@ -671,6 +687,22 @@ $(".shelf-wrapper--expanded .block .picture").on("click", function(){
 	$(".shelf").css({position: "fixed"});
 	$("header").css({position: "fixed"});
 	$(".my-collection .shelf .info-tab").removeClass("yellow green");
+	$(".item").removeClass("active");
+	if($(this).hasClass("cardhu")){
+		$(".item.cardhu").addClass("active");
+	}
+	else if($(this).hasClass("dalmore")){
+		$(".item.dalmore").addClass("active");
+	}
+	else if($(this).hasClass("hibiki")){
+		$(".item.hibiki").addClass("active");
+	}
+	else if($(this).hasClass("macallan")){
+		$(".item.macallan").addClass("active");
+	}
+	else if($(this).hasClass("arbelour")){
+		$(".item.arbelour").addClass("active");
+	}
 });
 
 $(".back-to-main-shelf").on("click", function(){
@@ -678,6 +710,7 @@ $(".back-to-main-shelf").on("click", function(){
 	$(".shelf-wrapper--expanded").fadeOut();
 	$(".fixed-image").fadeIn();
 });
+
 
 $(".back-to-single-view").on("click", function(){
 	$(".shelf-wrapper--expanded").fadeIn();
