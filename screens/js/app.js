@@ -388,7 +388,7 @@ $(".back-arrow").on('click', function(){
 	$(".tabs .details").removeClass("selected");
 	$(".podium").addClass("podium-animate");
 	$(".bottle-details").addClass("hide");
-	$("header").css({position: "relative"});
+	$("header").css({position: "fixed"});
 	$(".slide-item.active .content").css({position: "unset"});
 
 });
