@@ -739,8 +739,56 @@ $(".image-rotation--header .cross").on("click", function(){
 });
 
 
+// (function() {
+//   var el = document.querySelector(".product-viewer");
+//   var mc = new Hammer(el, {
+//     domEvents: true
+//   });
+
+//   var currentScale = 1;
+//   var currentLeft = 0;
+//   var currentTop = 0;
+
+//   // zoom
+//   mc.get("pinch").set({ enable: true });
+//   mc.on("pinchstart", function(ev) {
+//     // on pinch zoom we eliminate the panning event listener
+//     //so that we dont have that weird movement after we end pinching
+//     mc.off("pan");
+//   });
+//   mc.on("pinch", function(ev) {
+//     el.style.transform =
+//       "scale(" +
+//       currentScale * ev.scale +
+//       ")";
+//   });
+//   mc.on("pinchend", function(ev) {
+//     currentScale = currentScale * ev.scale;
+
+//     // once we have ended pinch zooming we fire off the panning event once again
+//     window.setTimeout(hammerPan, 50);
+//   });
+
+//   // panning function
+//   function hammerPan() {
+//     mc.on("pan", function(ev) {
+//       el.style.transform =
+//         "scale(" +
+//         currentScale +
+//         ")";
+//     });
+//   }
+
+//   hammerPan();
+//   mc.on("panend", function(ev) {
+//     currentLeft = currentLeft + ev.deltaX / currentScale;
+//     currentTop = currentTop + ev.deltaY / currentScale;
+//   });
+
+// })();
+
 (function() {
-  var el = document.querySelector(".product-viewer");
+  var el = document.querySelectorAll(".product-viewer");
   var mc = new Hammer(el, {
     domEvents: true
   });
