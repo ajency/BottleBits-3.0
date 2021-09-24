@@ -1111,20 +1111,13 @@ $( ".theme" ).on( "swiperight", function(){
 });
 
 
+
 $(".carousel-control.right").on("click", function(){
 	$(".carousel-control.left").addClass("left-active");
 });
 
-$(".icon-3d-wrap img").on("click", function(){
-	if($(".theme.theme--black").hasClass("theme--active-theme")){
-		$(".cd-product-viewer-handle").addClass("show-handle");
-	}
-});
-
 $(".theme--black").on("click", function(){
 	$(".popup").css({opacity: "1", height: "100vh", transition: "opacity 400ms ease-in-out"}).fadeIn();
-	$(".cd-product-viewer-handle").addClass("show-handle");
-	$(".handle").css({left: "96.8%", transition: "left 50ms ease-in-out"});
 });
 
 $(".share-popup--close .cross").on("click", function(){
@@ -1183,8 +1176,6 @@ $(document).ready(function() {
         $(".single-sharing").addClass("upload");
     });
 
-    // $(".theme--upload").on('click', function() {
-    //    $(".upload").click();
-    // });
 });
+
 
