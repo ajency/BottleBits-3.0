@@ -1,4 +1,9 @@
 
+window.addEventListener('popstate', function(event) {
+	$(".vertical-slider-desktop").fadeOut();
+	$("footer").addClass("hide");
+	$(".cartWrap").fadeOut();
+});
 
 $(document).ready(function(){	
 
