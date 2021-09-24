@@ -1245,20 +1245,22 @@ $( ".theme" ).on( "click", function(){
 
 	}else if($(".theme.theme--black").hasClass("theme--active-theme")){
 
-	 	$(this).css({transform: "translateX(-210px)", transition: "transform 300ms ease-in"});
-	    $( ".theme--yellow" ).css({transform: "translateX(-210px)", transition: "transform 300ms ease-in"});
-	    $( ".theme--green" ).css({transform: "translateX(-210px)", transition: "transform 300ms ease-in"});
-	    $( ".theme--black" ).css({transform: "translateX(-210px)", transition: "transform 300ms ease-in"});
-	    $( ".theme--camera").css({transform: "translateX(-210px)", transition: "transform 300ms ease-in"});
-	    $( ".theme--upload").css({transform: "translateX(-210px)", transition: "transform 300ms ease-in"});
+	 	$(this).css({transform: "translateX(0px)", transition: "transform 300ms ease-in"});
+	 	$(".theme--brown").css({transform: "translateX(0px)", transition: "transform 300ms ease-in"});
+	    $( ".theme--yellow" ).css({transform: "translateX(0px)", transition: "transform 300ms ease-in"});
+	    $( ".theme--green" ).css({transform: "translateX(0px)", transition: "transform 300ms ease-in"});
+	    $( ".theme--camera").css({transform: "translateX(0px)", transition: "transform 300ms ease-in"});
+	    $( ".theme--upload").css({transform: "translateX(0px)", transition: "transform 300ms ease-in"});
 
-	 	$(".theme").removeClass("theme--active-theme");    
 
-	 	$(".theme .active-mark").removeClass("active-mark--show");
-	    $(".theme--black .active-mark").addClass("active-mark--show");
+	    $(".theme").removeClass("theme--active-theme");
+	    $(".theme--camera").removeClass("theme--active-theme").next().addClass("theme--active-theme");
 
-		$(".single-sharing").removeClass("brown");
-	    $(".single-sharing").addClass("black");		
+		$(".theme .active-mark").removeClass("active-mark--show");
+	 	$(".theme--yellow .active-mark").addClass("active-mark--show");
+	    $(".single-sharing").removeClass("black").addClass("yellow");	
+
+	}
 
 	}
 });
