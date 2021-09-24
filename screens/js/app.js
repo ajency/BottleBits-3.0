@@ -3,6 +3,8 @@ window.addEventListener('popstate', function(event) {
 	$(".vertical-slider-desktop").fadeOut();
 	$("footer").addClass("hide");
 	$(".cartWrap").fadeOut();
+	$(".congratulations").fadeOut();
+	$(".congratulations-desktop").fadeOut();
 });
 
 $(document).ready(function(){	
@@ -1303,3 +1305,4 @@ $(document).ready(function() {
 	// 	$(".shelf-wrapper").removeClass("blureffect");
 	// });
 });
+
