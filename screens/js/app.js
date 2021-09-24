@@ -304,6 +304,8 @@ $(".arrow").on('click', function(){
 });
 
 $(".cart--buttons .primary-button").on('click', function(){
+	$(".shelf-block-bg.small_block").css({background:"white"});
+	$(".shelf-block-bg.small_block .shelf-block").addClass("hide");
 	$(".cart-wrapper").addClass("hide");
 	$(".shelf-block-bg").addClass("animateBlock");
 	$(".congratulations").removeClass("hide").fadeIn(1500);
