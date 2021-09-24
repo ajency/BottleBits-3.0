@@ -1261,8 +1261,6 @@ $( ".theme" ).on( "click", function(){
 	    $(".single-sharing").removeClass("black").addClass("yellow");	
 
 	}
-
-	}
 });
 
 
