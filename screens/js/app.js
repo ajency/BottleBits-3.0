@@ -428,7 +428,6 @@ $(document).ready(function(){
 		$(".tabs .bottleStory").removeClass("selected");
 		$(".tabs .details").removeClass("selected");
 		$(".podium").addClass("podium-animate");
-		$(".bottle-details").removeClass("hide");
 		$("header").css({position: "absolute"});
 		$(".slide-item.active .content").css({position: "unset"});
 
@@ -460,7 +459,6 @@ $(document).ready(function(){
 		$(".tabs .bottleStory").removeClass("selected");
 		$(".tabs .details").removeClass("selected");
 		$(".podium").addClass("podium-animate");
-		$(".bottle-details").removeClass("hide");
 		$("header").css({position: "absolute"});
 		$(".slide-item.active .content").css({position: "unset"});
 
@@ -490,7 +488,6 @@ $(document).ready(function(){
 		$(".tabs .bottleStory").removeClass("selected");
 		$(".tabs .details").removeClass("selected");
 		$(".podium").addClass("podium-animate");
-		$(".bottle-details").removeClass("hide");
 		$("header").css({position: "absolute"});
 		$(".slide-item.active .content").css({position: "unset"});
 	});
@@ -653,6 +650,7 @@ $(".shelf-wrapper--expanded .block .picture").on("click", function(){
 	$(".themes-button").removeClass("show-buttons");
 	$(".shelf").css({position: "fixed"});
 	$("header").css({position: "fixed"});
+	$(".info-tab").css({position: "fixed",top:"79px"});
 	$(".my-collection .shelf .info-tab").removeClass("yellow green");
 	$(".item").removeClass("active");
 
@@ -688,6 +686,7 @@ $(".back-to-single-view").on("click", function(){
 	$(".shelf-bottle-details").fadeOut().removeClass("show-details");
 	$(".shelf").css({position: "relative"});
 	$("header").css({position: "absolute"});
+	$(".info-tab").css({position: "unset",top:"0"});
 	if($(".block").hasClass("green")){
 		$(".my-collection .shelf .info-tab").addClass("green");
 	}
@@ -1270,9 +1269,9 @@ $(".carousel-control.right").on("click", function(){
 	$(".carousel-control.left").addClass("left-active");
 });
 
-$(".theme--black").on("click", function(){
-	$(".popup").css({opacity: "1", height: "100vh", transition: "opacity 400ms ease-in-out"}).fadeIn();
-});
+// $(".theme--black").on("click", function(){
+// 	$(".popup").css({opacity: "1", height: "100vh", transition: "opacity 400ms ease-in-out"}).fadeIn();
+// });
 
 $(".share-popup--close .cross").on("click", function(){
 	$(".popup").css({opacity: "0", height: "0", transition: "opacity 400ms ease-in-out"});
