@@ -14966,21 +14966,21 @@ body.page footer {
 
 .pageWrapper .explore-section .product-section {
   position: relative;
-  padding-bottom: 0;
+  padding-bottom: 60px;
 }
 
 .pageWrapper .explore-section .product-section--row {
   justify-content: center;
   backdrop-filter: blur(20px);
-  filter: blur(20px);
-  -webkit-filter: blur(20px);
+  filter: blur(5px);
+  -webkit-filter: blur(5px);
 }
 
 .pageWrapper .explore-section .product-section--item {
   display: block;
 }
 
-.pageWrapper .explore-section .product-section--item:before, .pageWrapper .explore-section .product-section--item:after {
+.pageWrapper .explore-section .product-section--item:before {
   display: none;
 }
 
@@ -14993,7 +14993,7 @@ body.page footer {
 .pageWrapper .explore-section .product-section .info {
   font-family: "AbhayaLibre-ExtraBold";
   position: absolute;
-  top: 25%;
+  top: 28%;
   left: 0;
   right: 0;
   margin: 0 auto;
@@ -15024,7 +15024,7 @@ body.page footer {
 
 @media (max-width: 767px) {
   .pageWrapper .explore-section .product-section .info {
-    top: 20%;
+    top: 23%;
     width: 295px;
   }
 }
@@ -15070,11 +15070,5 @@ body.page footer {
 @media (max-width: 768px) {
   .pageWrapper .explore-section .product-section:after {
     background: rgba(0, 0, 0, 0.5);
-  }
-}
-
-@media (max-width: 767px) {
-  .pageWrapper .explore-section .product-section {
-    padding-bottom: 60px;
   }
 }
