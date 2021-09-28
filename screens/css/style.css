@@ -15060,6 +15060,7 @@ body.page footer {
   line-height: 19px;
   color: #000000;
   margin: 0px 10px 0px;
+  cursor: pointer;
 }
 
 @media (max-width: 767px) {
