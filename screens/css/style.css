@@ -15317,3 +15317,146 @@ body.page footer {
     padding: 100px 0;
   }
 }
+
+.pageWrapper .exclusive-bar {
+  background: #FEF8EC;
+  padding: 100px 0;
+}
+
+.pageWrapper .exclusive-bar .image-layer {
+  max-width: 991px;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  background: #FFFFFF;
+}
+
+.pageWrapper .exclusive-bar .image-layer--item {
+  width: 50%;
+}
+
+.pageWrapper .exclusive-bar .image-layer--item img {
+  object-fit: contain;
+}
+
+@media (max-width: 767px) {
+  .pageWrapper .exclusive-bar .image-layer--item {
+    display: none;
+  }
+}
+
+.pageWrapper .exclusive-bar .image-layer--content {
+  width: 50%;
+  padding: 0 70px;
+}
+
+.pageWrapper .exclusive-bar .image-layer--content h4 {
+  font-family: "AbhayaLibre-ExtraBold";
+  font-style: normal;
+  font-weight: 800;
+  font-size: 56px;
+  line-height: 66px;
+  letter-spacing: -0.01em;
+  color: #000000;
+  margin: 0 0 30px;
+}
+
+@media (max-width: 991px) {
+  .pageWrapper .exclusive-bar .image-layer--content h4 {
+    font-size: 38px;
+    line-height: 50px;
+  }
+}
+
+@media (max-width: 767px) {
+  .pageWrapper .exclusive-bar .image-layer--content h4 {
+    font-family: "AbhayaLibre-ExtraBold";
+    font-style: normal;
+    font-weight: 800;
+    font-size: 24px;
+    line-height: 103.97%;
+    text-align: center;
+    color: #FFFFFF;
+  }
+}
+
+.pageWrapper .exclusive-bar .image-layer--content .primary-button--dark {
+  margin: 0;
+  padding: 15px 0;
+  width: 200px;
+}
+
+.pageWrapper .exclusive-bar .image-layer--content .primary-button--dark a {
+  font-family: "AbhayaLibre-SemiBold";
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 19px;
+  letter-spacing: -0.01em;
+  color: #FFFFFF;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.pageWrapper .exclusive-bar .image-layer--content .primary-button--dark a img {
+  margin-left: 12px;
+  object-fit: contain;
+}
+
+@media (max-width: 767px) {
+  .pageWrapper .exclusive-bar .image-layer--content .primary-button {
+    display: none;
+  }
+}
+
+.pageWrapper .exclusive-bar .image-layer--content .outline-button {
+  padding: 15px 0;
+  border: 1px solid #FFFFFF;
+}
+
+.pageWrapper .exclusive-bar .image-layer--content .outline-button a {
+  font-family: "AbhayaLibre-SemiBold";
+  font-style: normal;
+  font-weight: 600;
+  font-size: 18px;
+  line-height: 21px;
+  letter-spacing: -0.01em;
+  color: #FFFFFF;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.pageWrapper .exclusive-bar .image-layer--content .outline-button a img.left {
+  margin-left: 9px;
+}
+
+@media (min-width: 768px) {
+  .pageWrapper .exclusive-bar .image-layer--content .outline-button {
+    display: none;
+  }
+}
+
+@media (max-width: 767px) {
+  .pageWrapper .exclusive-bar .image-layer--content {
+    width: 100%;
+  }
+}
+
+@media (max-width: 767px) {
+  .pageWrapper .exclusive-bar .image-layer {
+    background: transparent;
+  }
+}
+
+@media (max-width: 767px) {
+  .pageWrapper .exclusive-bar {
+    background: url(../images/home/exclusive-bar.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    height: 729px;
+    display: flex;
+    align-items: center;
+  }
+}
