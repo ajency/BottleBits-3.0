@@ -14857,6 +14857,12 @@ body.page footer {
   line-height: 24px;
 }
 
+@media (min-width: 768px) {
+  .pageWrapper .product-section--item__title .first-text {
+    font-size: 18px;
+  }
+}
+
 .pageWrapper .product-section--item__title .big-text {
   font-family: "AbhayaLibre-Bold";
   font-weight: 700;
@@ -14865,11 +14871,24 @@ body.page footer {
   text-transform: uppercase;
 }
 
+@media (min-width: 768px) {
+  .pageWrapper .product-section--item__title .big-text {
+    line-height: 42px;
+  }
+}
+
 .pageWrapper .product-section--item__title .last-text {
   font-family: "AbhayaLibre-Bold";
   font-weight: 700;
   font-size: 14px;
   line-height: 24px;
+}
+
+@media (min-width: 768px) {
+  .pageWrapper .product-section--item__title .last-text {
+    font-size: 18px;
+    line-height: 24px;
+  }
 }
 
 @media (min-width: 768px) {
