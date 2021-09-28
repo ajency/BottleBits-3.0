@@ -15384,13 +15384,14 @@ body.page footer {
   margin: 0;
   padding: 15px 0;
   width: 200px;
+  cursor: pointer;
 }
 
 .pageWrapper .exclusive-bar .image-layer--content .primary-button--dark a {
   font-family: "AbhayaLibre-SemiBold";
   font-weight: 600;
   font-size: 16px;
-  line-height: 19px;
+  line-height: 12px;
   letter-spacing: -0.01em;
   color: #FFFFFF;
   display: flex;
@@ -15412,6 +15413,9 @@ body.page footer {
 .pageWrapper .exclusive-bar .image-layer--content .outline-button {
   padding: 15px 0;
   border: 1px solid #FFFFFF;
+  width: 150px;
+  margin-top: 0;
+  cursor: pointer;
 }
 
 .pageWrapper .exclusive-bar .image-layer--content .outline-button a {
@@ -15440,6 +15444,10 @@ body.page footer {
 @media (max-width: 767px) {
   .pageWrapper .exclusive-bar .image-layer--content {
     width: 100%;
+    padding: 0 50px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
   }
 }
 
