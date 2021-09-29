@@ -15358,10 +15358,12 @@ body.page footer {
   max-width: 370px;
   display: flex;
   align-items: flex-start;
+  position: relative;
+  z-index: 1;
 }
 
 .pageWrapper .how-it-works .working-process .process .image-block {
-  width: 96px;
+  width: 124px;
   height: 96px;
 }
 
@@ -15437,6 +15439,25 @@ body.page footer {
   }
 }
 
+@media (min-width: 768px) {
+  .pageWrapper .how-it-works .working-process .process:nth-child(1) {
+    order: 1;
+    margin: 0 0px 55px 75px;
+  }
+  .pageWrapper .how-it-works .working-process .process:nth-child(2) {
+    order: 2;
+  }
+  .pageWrapper .how-it-works .working-process .process:nth-child(3) {
+    order: 3;
+  }
+  .pageWrapper .how-it-works .working-process .process:nth-child(4) {
+    order: 5;
+  }
+  .pageWrapper .how-it-works .working-process .process:nth-child(5) {
+    order: 4;
+  }
+}
+
 @media (max-width: 767px) {
   .pageWrapper .how-it-works .working-process {
     background: url(../images/home/pathway.svg);
@@ -15444,6 +15465,26 @@ body.page footer {
     background-size: auto;
     background-position: center;
     height: 886px;
+  }
+}
+
+@media (min-width: 1200px) {
+  .pageWrapper .how-it-works .working-process {
+    max-width: 1200px;
+    margin-top: 80px;
+  }
+  .pageWrapper .how-it-works .working-process:after {
+    content: '';
+    background: url(../images/home/pathway-d.svg);
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center;
+    position: absolute;
+    top: 78px;
+    left: 0;
+    right: 0;
+    width: 100%;
+    height: 340px;
   }
 }
 
