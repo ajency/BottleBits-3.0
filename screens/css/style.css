@@ -15367,7 +15367,7 @@ body.page footer {
   height: 96px;
 }
 
-@media (max-width: 767px) {
+@media (max-width: 991px) {
   .pageWrapper .how-it-works .working-process .process .image-block {
     width: 80px;
     height: 80px;
@@ -15388,7 +15388,7 @@ body.page footer {
   color: #FFFDFD;
 }
 
-@media (max-width: 767px) {
+@media (max-width: 991px) {
   .pageWrapper .how-it-works .working-process .process .content-block .process-title {
     font-size: 18px;
     margin-top: 0;
@@ -15406,17 +15406,26 @@ body.page footer {
   margin-bottom: 0;
 }
 
-@media (max-width: 767px) {
+@media (max-width: 991px) {
   .pageWrapper .how-it-works .working-process .process .content-block {
     width: 250px;
     padding-right: 20px;
   }
 }
 
-@media (max-width: 767px) {
+@media (min-width: 992px) and (max-width: 1200px) {
+  .pageWrapper .how-it-works .working-process .process .content-block {
+    padding: 0 20px 0 30px;
+  }
+}
+
+@media (max-width: 991px) {
   .pageWrapper .how-it-works .working-process .process {
     max-width: 100%;
     padding-left: 35px;
+    max-width: 100%;
+    width: 100%;
+    justify-content: center;
   }
   .pageWrapper .how-it-works .working-process .process:nth-child(1) {
     margin-top: 34px;
@@ -15439,7 +15448,31 @@ body.page footer {
   }
 }
 
-@media (min-width: 768px) {
+@media (min-width: 992px) and (max-width: 1200px) {
+  .pageWrapper .how-it-works .working-process .process {
+    width: 300px;
+  }
+  .pageWrapper .how-it-works .working-process .process:nth-child(1) {
+    order: 1;
+    margin: 0 0px 55px 30px;
+  }
+  .pageWrapper .how-it-works .working-process .process:nth-child(2) {
+    order: 2;
+  }
+  .pageWrapper .how-it-works .working-process .process:nth-child(3) {
+    order: 3;
+  }
+  .pageWrapper .how-it-works .working-process .process:nth-child(4) {
+    order: 5;
+    width: 350px;
+  }
+  .pageWrapper .how-it-works .working-process .process:nth-child(5) {
+    order: 4;
+    width: 350px;
+  }
+}
+
+@media (min-width: 1201px) {
   .pageWrapper .how-it-works .working-process .process:nth-child(1) {
     order: 1;
     margin: 0 0px 55px 75px;
@@ -15458,13 +15491,34 @@ body.page footer {
   }
 }
 
-@media (max-width: 767px) {
+@media (max-width: 991px) {
   .pageWrapper .how-it-works .working-process {
     background: url(../images/home/pathway.svg);
     background-repeat: no-repeat;
     background-size: auto;
     background-position: center;
     height: 886px;
+  }
+}
+
+@media (min-width: 992px) {
+  .pageWrapper .how-it-works .working-process {
+    max-width: 1200px;
+    margin-top: 80px;
+  }
+  .pageWrapper .how-it-works .working-process:after {
+    content: '';
+    background: url(../images/home/pathway-d.svg);
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center;
+    position: absolute;
+    top: 100px;
+    left: 0;
+    right: 0;
+    width: 96%;
+    height: 340px;
+    margin: 0 auto;
   }
 }
 
@@ -15488,7 +15542,7 @@ body.page footer {
   }
 }
 
-@media (max-width: 767px) {
+@media (max-width: 991px) {
   .pageWrapper .how-it-works {
     padding: 80px 0;
   }
