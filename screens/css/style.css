@@ -15975,6 +15975,16 @@ body.page footer {
   width: 100%;
 }
 
+.about-us .banner--image .back {
+  position: absolute;
+  top: 30px;
+  left: 20px;
+  padding: 8px;
+  width: 24px;
+  transform: rotate(180deg);
+  cursor: pointer;
+}
+
 .about-us .banner--content {
   background: #E1B96B;
   width: 300px;
@@ -16003,7 +16013,7 @@ body.page footer {
 
 .about-us .our-story {
   max-width: 1024px;
-  margin: 0 auto;
+  margin: 160px auto 0;
 }
 
 .about-us .our-story--featured-image {
@@ -16041,7 +16051,6 @@ body.page footer {
 @media (max-width: 991px) {
   .about-us .our-story {
     padding: 24px 30px 0;
-    margin-top: 160px;
   }
 }
 
@@ -16059,6 +16068,78 @@ body.page footer {
 @media (max-width: 767px) {
   .about-us .about-bottlebits {
     padding: 20px 30px 10px;
+  }
+}
+
+.about-us .store-houses {
+  max-width: 1024px;
+  margin: 0 auto;
+}
+
+.about-us .store-houses--main {
+  overflow: auto;
+}
+
+.about-us .store-houses--wrapper__item {
+  margin-right: 50px;
+}
+
+.about-us .store-houses--wrapper__item:last-child {
+  margin-right: 0px;
+}
+
+@media (max-width: 475px) {
+  .about-us .store-houses--wrapper__item {
+    margin-right: 20px;
+  }
+}
+
+@media (max-width: 767px) {
+  .about-us .store-houses--wrapper {
+    display: flex;
+    flex-wrap: nowrap;
+    width: 900px;
+  }
+}
+
+@media (max-width: 475px) {
+  .about-us .store-houses--wrapper {
+    width: 700px;
+  }
+}
+
+@media (max-width: 375px) {
+  .about-us .store-houses--wrapper {
+    width: 680px;
+  }
+}
+
+@media (min-width: 768px) {
+  .about-us .store-houses--wrapper {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 80px;
+  }
+}
+
+.about-us .store-houses--wrapper::-webkit-scrollbar {
+  width: 0;
+  background: transparent;
+}
+
+.about-us .store-houses--heading {
+  font-family: "AbhayaLibre-ExtraBold";
+  font-weight: 800;
+  font-size: 24px;
+  line-height: 30px;
+  color: #000000;
+  margin-top: 50px;
+  margin-bottom: 55px;
+}
+
+@media (max-width: 991px) {
+  .about-us .store-houses {
+    padding: 24px 30px 0;
   }
 }
 
@@ -16105,8 +16186,21 @@ body.page footer {
 }
 
 @media (max-width: 767px) {
+  .about-us .blog-listing--block__item .post-title {
+    font-size: 18px;
+    line-height: 24px;
+  }
+}
+
+@media (max-width: 767px) {
   .about-us .blog-listing--block__item {
     width: 31%;
+  }
+}
+
+@media (max-width: 450px) {
+  .about-us .blog-listing--block {
+    width: 600px;
   }
 }
 
