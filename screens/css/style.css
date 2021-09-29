@@ -164,6 +164,10 @@ a:hover {
   text-decoration: none;
 }
 
+a:focus {
+  text-decoration: none;
+}
+
 a:not([href]):not([tabindex]) {
   color: inherit;
   text-decoration: none;
@@ -9800,7 +9804,7 @@ body .product-detailed.loading {
   body .product-detailed {
     background-color: #FEF8EC;
   }
-  body .product-detailed.product-catalog{
+  body .product-detailed.product-catalog {
     background-color: #e1b96b;
   }
 }
@@ -9814,7 +9818,7 @@ body .my-collection.loading {
   transition: opacity 600ms cubic-bezier(0.75, 0.09, 0.61, 0.98);
 }
 
-body .sharing-view-block{
+body .sharing-view-block {
   opacity: 0;
   height: 0;
 }
@@ -10095,8 +10099,13 @@ img {
   height: 100%;
 }
 
+.product-detailed .shelf-block:hover {
+  text-decoration: none;
+}
+
 .product-detailed .shelf-block:focus {
   outline: none;
+  text-decoration: none;
 }
 
 .product-detailed .shelf:focus {
@@ -11922,6 +11931,7 @@ img {
   padding-top: 80px;
   padding-bottom: 20px;
 }
+
 @media (min-width: 768px) {
   .congratulations .congratulate_bg {
     height: auto;
@@ -13513,14 +13523,14 @@ img {
     top: 28%;
   }
 }
-.my-collection .shelf-bottle-details--wrapper .filled-button {
-}
+
 .my-collection .shelf-bottle-details--wrapper .filled-button .primary-button--dark {
   padding: 20px 30px;
   width: 100%;
   margin-left: 0;
 }
-@media(min-width: 768px){
+
+@media (min-width: 768px) {
   .my-collection .shelf-bottle-details--wrapper .filled-button {
     width: 500px;
     height: 300px;
@@ -13563,16 +13573,17 @@ img {
 
 .my-collection .shelf-bottle-details .bottle-details {
   padding: 30px 30px 0;
-  height: calc(100vh - 80px);
+  height: calc(100vh - 340px);
 }
 
-.my-collection .shelf-bottle-details .bottle-details .floating-btn{
+.my-collection .shelf-bottle-details .bottle-details .floating-btn {
   position: sticky;
   margin: 0 -30px;
 }
 
 .my-collection .shelf-bottle-details .bottle-details .comments {
-  height: 750px;
+  height: auto;
+  margin-bottom: 40px;
 }
 
 .my-collection .shelf-bottle-details .bottle-details .floating-btn .primary-button {
@@ -14003,8 +14014,7 @@ img {
   display: none;
 }
 
-
-.rotation-sharing .my-collection{
+.rotation-sharing .my-collection {
   padding-top: 0;
   transition: padding-top 300ms ease-in-out;
 }
@@ -15442,6 +15452,7 @@ body.page footer {
 
 .pageWrapper .how-it-works .working-process .process .content-block .process-description {
   margin-bottom: 0;
+  color: white;
 }
 
 @media (max-width: 991px) {
