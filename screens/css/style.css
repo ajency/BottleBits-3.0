@@ -16416,6 +16416,187 @@ body.page footer {
   }
 }
 
+.contact-us {
+  background: radial-gradient(76.55% 50% at 50% 50%, #FFDA94 0%, #B48427 100%);
+  padding-bottom: 135px;
+}
+
+.contact-us .content-wrapper {
+  max-width: 1024px;
+  margin: 0 auto;
+}
+
+.contact-us .content-wrapper--header {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 37px;
+  position: relative;
+}
+
+.contact-us .content-wrapper--header h1 {
+  font-family: "AbhayaLibre-ExtraBold";
+  font-style: normal;
+  font-weight: 800;
+  font-size: 32px;
+  line-height: 103.97%;
+  text-align: center;
+  color: #FFFFFF;
+}
+
+@media (max-width: 767px) {
+  .contact-us .content-wrapper--header h1 {
+    width: 250px;
+  }
+}
+
+.contact-us .content-wrapper--header p {
+  font-family: 'Nunito Sans', sans-serif;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 14px;
+  line-height: 20px;
+  text-align: center;
+  letter-spacing: 0.01em;
+  color: #FFFFFF;
+}
+
+.contact-us .content-wrapper--header .back-icon {
+  height: 76px;
+  width: auto;
+  display: block;
+}
+
+@media (min-width: 768px) {
+  .contact-us .content-wrapper--header .back-icon .back {
+    left: -5px;
+  }
+}
+
+.contact-us .content-wrapper--section__popup {
+  width: auto;
+  margin: 0 30px;
+  background: #FEF8EC;
+  box-shadow: 5px 5px 30px rgba(0, 0, 0, 0.15);
+  border-radius: 1px;
+}
+
+.contact-us .content-wrapper--section__popup .contact-form {
+  padding: 30px;
+}
+
+.contact-us .content-wrapper--section__popup .contact-form .input-wrapper {
+  margin-bottom: 24px;
+}
+
+.contact-us .content-wrapper--section__popup .contact-form .input-wrapper .name {
+  font-family: "AbhayaLibre-Regular";
+  font-weight: normal;
+  font-size: 20px;
+  line-height: 103.97%;
+  color: #181A1E;
+  margin-bottom: 10px;
+  width: 100%;
+}
+
+.contact-us .content-wrapper--section__popup .contact-form .input-wrapper .value {
+  width: 100%;
+  border: 0;
+  border-bottom: 0.5px solid rgba(24, 26, 30, 0.14);
+  background: transparent;
+  font-family: 'Nunito Sans', sans-serif;
+  font-weight: normal;
+  font-size: 14px;
+  line-height: 24px;
+  letter-spacing: -0.01em;
+}
+
+.contact-us .content-wrapper--section__popup .contact-form .input-wrapper .value::-webkit-input-placeholder {
+  /* Edge */
+  color: #000000;
+  opacity: 0.24;
+  font-family: 'Nunito Sans', sans-serif;
+  font-weight: normal;
+  font-size: 14px;
+  line-height: 24px;
+  letter-spacing: -0.01em;
+}
+
+.contact-us .content-wrapper--section__popup .contact-form .input-wrapper .value:-ms-input-placeholder {
+  /* Internet Explorer 10-11 */
+  color: #000000;
+  opacity: 0.24;
+  font-family: 'Nunito Sans', sans-serif;
+  font-weight: normal;
+  font-size: 14px;
+  line-height: 24px;
+  letter-spacing: -0.01em;
+}
+
+.contact-us .content-wrapper--section__popup .contact-form .input-wrapper .value::placeholder {
+  color: #000000;
+  opacity: 0.24;
+  font-family: 'Nunito Sans', sans-serif;
+  font-weight: normal;
+  font-size: 14px;
+  line-height: 24px;
+  letter-spacing: -0.01em;
+}
+
+.contact-us .content-wrapper--section__popup .contact-form .input-wrapper .value:focus {
+  outline: 0;
+}
+
+.contact-us .content-wrapper--section__popup .contact-form .input-wrapper textarea {
+  resize: none;
+  height: auto !important;
+}
+
+.contact-us .content-wrapper--section__popup .contact-form .primary-button {
+  padding: 20px 0 19px;
+  margin: 48px 0 0;
+}
+
+.contact-us .content-wrapper--section__popup .contact-form .primary-button a {
+  font-family: "AbhayaLibre-SemiBold";
+  font-style: normal;
+  font-weight: 600;
+  font-size: 18px;
+  line-height: 21px;
+  text-align: center;
+  letter-spacing: -0.01em;
+  color: #FFFFFF;
+}
+
+.contact-us .content-wrapper--section__popup .form-heading {
+  padding: 30px 30px 19px;
+}
+
+.contact-us .content-wrapper--section__popup .form-heading .main-heading {
+  font-family: "AbhayaLibre-Bold";
+  font-style: normal;
+  font-weight: bold;
+  font-size: 32px;
+  line-height: 103.97%;
+  color: #181A1E;
+}
+
+.contact-us .content-wrapper--section__popup .form-heading .sub-heading {
+  font-family: 'Nunito Sans', sans-serif;
+  font-weight: normal;
+  font-size: 14px;
+  line-height: 20px;
+  letter-spacing: 0.01em;
+  color: #000000;
+  opacity: 0.7;
+}
+
+@media (min-width: 1058px) {
+  .contact-us .content-wrapper--section__popup {
+    margin: 0;
+  }
+}
+
 ::-webkit-scrollbar {
   width: 3px;
 }
