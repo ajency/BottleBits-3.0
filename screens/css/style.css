@@ -14833,6 +14833,11 @@ footer .social-share img {
 }
 
 /* Page CSS */
+body.page .pull-left {
+  margin-left: -15px;
+  padding: 0 !important;
+}
+
 body.page footer {
   position: relative;
   margin-left: 0px;
@@ -16374,7 +16379,7 @@ body.page footer {
   right: 20px;
   top: 25px;
   background-repeat: repeat;
-  transform: rotate(0deg);
+  transform: rotate(180deg);
   transition: transform 400ms ease-in-out;
 }
 
@@ -16385,7 +16390,7 @@ body.page footer {
 }
 
 .faq .content-wrapper .panel-title .accordion-toggle.collapsed:after {
-  transform: rotate(180deg);
+  transform: rotate(0deg);
   transition: transform 400ms ease-in-out;
 }
 
@@ -16509,6 +16514,7 @@ body.page footer {
   font-size: 14px;
   line-height: 24px;
   letter-spacing: -0.01em;
+  padding-bottom: 10px;
 }
 
 .contact-us .content-wrapper--section__popup .contact-form .input-wrapper .value::-webkit-input-placeholder {
@@ -16596,6 +16602,98 @@ body.page footer {
   .contact-us .content-wrapper--section__popup {
     margin: 0;
   }
+}
+
+.contact-us.member .content-wrapper--header {
+  margin-bottom: 20px;
+}
+
+.contact-us.member .content-wrapper--header h1 {
+  margin-bottom: 0;
+}
+
+.contact-us.member .content-wrapper--header p {
+  margin-bottom: 0;
+}
+
+.signup header, .signup .shelf-block--details {
+  backdrop-filter: blur(20px);
+  filter: blur(5px);
+  -webkit-filter: blur(5px);
+}
+
+.signup--popup {
+  position: absolute;
+  background: #FEF8EC;
+  top: 410px;
+  left: 0;
+  right: 0;
+  margin: 0 30px;
+  padding: 30px;
+}
+
+.signup--popup__title {
+  font-family: "AbhayaLibre-Bold";
+  font-weight: 700;
+  font-size: 32px;
+  line-height: 103.97%;
+  color: #181A1E;
+  margin: 0 0 8px;
+}
+
+.signup--popup__tagline {
+  font-family: 'Nunito Sans', sans-serif;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 14px;
+  line-height: 20px;
+  letter-spacing: 0.01em;
+  color: #000000;
+  opacity: 0.7;
+}
+
+.signup--popup .primary-button {
+  padding: 20px 0 19px;
+  margin: 48px 0 0;
+}
+
+.signup--popup .primary-button a {
+  font-family: "AbhayaLibre-SemiBold";
+  font-style: normal;
+  font-weight: 600;
+  font-size: 18px;
+  line-height: 21px;
+  text-align: center;
+  letter-spacing: -0.01em;
+  color: #FFFFFF;
+}
+
+.signup--popup .primary-button a:hover, .signup--popup .primary-button a:focus {
+  text-decoration: none;
+}
+
+.signup--popup .footer-text {
+  text-align: center;
+}
+
+.signup--popup .footer-text p {
+  margin-top: 30px;
+  margin-bottom: 0;
+  font-family: "AbhayaLibre-Regular";
+  font-weight: normal;
+  font-size: 18px;
+  line-height: 103.97%;
+  color: #000000;
+}
+
+.signup--popup .footer-text p a {
+  font-family: "AbhayaLibre-SemiBold";
+  font-weight: 600;
+  color: #CBA55E;
+}
+
+.signup--popup .footer-text p a:hover, .signup--popup .footer-text p a:focus {
+  text-decoration: none;
 }
 
 ::-webkit-scrollbar {
