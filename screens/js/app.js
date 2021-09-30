@@ -130,14 +130,32 @@ $(document).ready(function(){
 	});
 });
 
+
+
 if ($(window).width() < 767) {
 
 	$(document).ready(function (e) {
 
-		jquerySwipeHandler.handleSwipe(".carousel-item", [
+		jquerySwipeHandler.handleSwipe(".carousel-item .podium", [
 	     jquerySwipeHandler.CLICK
 	    ], function (direction) {
-		  	e.preventDefault();
+	    	$("header").css({position:"fixed"});
+			$(".shelf-block-bg").addClass("small_block cart");
+			$(".carousel-item").addClass("hide");
+			$(".vertical-slider").removeClass('hide');
+			$(".slide-item").addClass("SWIPE_UP");
+			$(".shelf-block--region").addClass("hide");
+			$(".slide-dots").fadeOut();
+			$(".tab--name").fadeOut();
+			$(".button").fadeOut();
+			$(".arrow").removeClass("hide");
+			$(".shelf-block--info").fadeIn();
+			$(".wrap4 .bottle-details").fadeOut();
+			$(".cart-wrapper").removeClass("hide");
+			$(".podium").removeClass("podium-animate");
+			$('.slide-dots').removeClass('slide-dots-active').fadeOut(1000);
+			var title = "Home";
+		    $('#title').text(title);
 		});
 
 
@@ -307,6 +325,8 @@ $(".arrow").on('click', function(){
 	$(".tab--name").fadeIn();
 	$(".button").fadeIn();
 	$(".arrow").addClass("hide");
+	$(".tab--name span").removeClass("selected");
+	$(".details").addClass("selected");
 	$(".shelf-block--info").fadeOut();
 	$(".shelf-block-bg").removeClass("cart");
 	$(".wrap4 .bottle-details").fadeIn();

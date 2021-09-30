@@ -10173,7 +10173,6 @@ img {
   right: 0;
   top: 0;
   display: block;
-  height: 814px;
   background: #E1B96B;
 }
 
@@ -11390,6 +11389,7 @@ img {
 
 .podium-animate {
   display: flex;
+  pointer-events: auto;
   opacity: 1;
   visibility: visible;
   transition: opacity 800ms cubic-bezier(0.16, 0.32, 0.21, 0.93), visibility 800ms cubic-bezier(0.16, 0.32, 0.21, 0.93);
