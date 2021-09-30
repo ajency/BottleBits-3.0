@@ -15191,6 +15191,14 @@ body.page footer {
   }
 }
 
+@medi (max-width: 399px) {
+  .pageWrapper .explore-section .product-section .info {
+    top: 16%;
+    width: 100%;
+    padding: 0 20px;
+  }
+}
+
 .pageWrapper .explore-section .product-section:after {
   content: '';
   position: absolute;
@@ -15359,6 +15367,10 @@ body.page footer {
     font-size: 32px;
     margin-bottom: 10px;
   }
+}
+
+.pageWrapper .about-bottlebits .content-block p.light-text {
+  line-height: 24px;
 }
 
 .pageWrapper .about-bottlebits .content-block--wrap {
