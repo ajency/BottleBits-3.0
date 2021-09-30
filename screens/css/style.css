@@ -16574,6 +16574,97 @@ body.page footer {
   color: #FFFFFF;
 }
 
+.contact-us .content-wrapper--section__popup .contact-form .frm_checkbox {
+  margin-bottom: 25px;
+}
+
+.contact-us .content-wrapper--section__popup .contact-form .frm_checkbox label {
+  font-family: "AbhayaLibre-Regular";
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 103.97%;
+  color: #333333;
+  position: relative;
+  padding-left: 34px;
+  pointer-events: none;
+}
+
+.contact-us .content-wrapper--section__popup .contact-form .frm_checkbox label a {
+  font-family: "AbhayaLibre-Regular";
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 24px;
+  color: #CBA55E;
+  pointer-events: auto;
+}
+
+.contact-us .content-wrapper--section__popup .contact-form .frm_checkbox label a:hover, .contact-us .content-wrapper--section__popup .contact-form .frm_checkbox label a:focus {
+  outline: none;
+  text-decoration: none;
+}
+
+.contact-us .content-wrapper--section__popup .contact-form .frm_checkbox label input[type="checkbox"] {
+  height: 20px;
+  width: 20px;
+  margin-bottom: 0;
+  cursor: pointer;
+  background-clip: padding-box;
+  pointer-events: auto;
+  margin-left: -32px;
+  margin-top: 1px;
+  opacity: 0;
+  pointer-events: auto;
+}
+
+.contact-us .content-wrapper--section__popup .contact-form .frm_checkbox label:before {
+  content: '';
+  -webkit-appearance: none;
+  background-color: transparent;
+  border: 2px solid #98958E;
+  border-radius: 30px;
+  padding: 10px;
+  display: inline-block;
+  position: relative;
+  vertical-align: middle;
+  cursor: pointer;
+  margin-right: 8px;
+  position: absolute;
+  left: 0;
+  top: 0px;
+  pointer-events: auto;
+}
+
+.contact-us .content-wrapper--section__popup .contact-form .frm_checkbox label.checked:before {
+  content: '';
+  -webkit-appearance: none;
+  background: linear-gradient(102.8deg, #181A1E 19.63%, #35373D 96.27%);
+  border: 2px solid #98958E;
+  border-radius: 30px;
+  padding: 10px;
+  display: inline-block;
+  position: relative;
+  vertical-align: middle;
+  cursor: pointer;
+  margin-right: 8px;
+  position: absolute;
+  left: 0;
+  top: 0px;
+  pointer-events: auto;
+}
+
+.contact-us .content-wrapper--section__popup .contact-form .frm_checkbox label.checked:after {
+  content: '';
+  display: block;
+  position: absolute;
+  top: 6px;
+  left: 10px;
+  width: 5px;
+  height: 10px;
+  border: solid #FFFFFF;
+  border-width: 0 2px 2px 0;
+  transform: rotate(45deg);
+}
+
 .contact-us .content-wrapper--section__popup .form-heading {
   padding: 30px 30px 19px;
 }
@@ -16604,6 +16695,10 @@ body.page footer {
   }
 }
 
+.contact-us.member {
+  padding-bottom: 50px;
+}
+
 .contact-us.member .content-wrapper--header {
   margin-bottom: 20px;
 }
@@ -16614,6 +16709,35 @@ body.page footer {
 
 .contact-us.member .content-wrapper--header p {
   margin-bottom: 0;
+}
+
+.contact-us.member .content-wrapper--section__popup .contact-form .primary-button {
+  padding: 20px 0 19px;
+  margin: 34px 0 0;
+}
+
+.contact-us.member .content-wrapper .footer-text {
+  text-align: center;
+}
+
+.contact-us.member .content-wrapper .footer-text p {
+  margin-top: 30px;
+  margin-bottom: 0;
+  font-family: "AbhayaLibre-Regular";
+  font-weight: normal;
+  font-size: 18px;
+  line-height: 103.97%;
+  color: #000000;
+}
+
+.contact-us.member .content-wrapper .footer-text p a {
+  font-family: "AbhayaLibre-SemiBold";
+  font-weight: 600;
+  color: white;
+}
+
+.contact-us.member .content-wrapper .footer-text p a:hover, .contact-us.member .content-wrapper .footer-text p a:focus {
+  text-decoration: none;
 }
 
 .signup header, .signup .shelf-block--details {

@@ -1408,3 +1408,12 @@ $(document).ready(function() {
 	// 	$(".shelf-wrapper").removeClass("blureffect");
 	// });
 });
+$("input[type='checkbox']").change(function() {
+    if(this.checked) {
+      $(this).attr( 'checked', 'checked' );
+      $(this).parent().addClass('checked');
+    }else{
+      $(this).removeAttr( 'checked', 'checked' );
+      $(this).parent().removeClass('checked');
+    }
+});
