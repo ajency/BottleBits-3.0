@@ -16705,6 +16705,7 @@ body.page footer {
 
 .contact-us.member .content-wrapper--header h1 {
   margin-bottom: 0;
+  width: 100%;
 }
 
 .contact-us.member .content-wrapper--header p {
