@@ -11739,6 +11739,8 @@ img {
 .cart-wrapper {
   background: white;
   height: auto;
+  position: relative;
+  z-index: -1;
 }
 
 .cart-wrapper .drams-details {
