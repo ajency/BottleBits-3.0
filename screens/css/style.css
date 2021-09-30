@@ -16378,12 +16378,6 @@ body.page footer {
   transition: transform 400ms ease-in-out;
 }
 
-@media (min-width: 1201px) {
-  .faq .content-wrapper .panel-title .accordion-toggle:after {
-    right: 135px;
-  }
-}
-
 .faq .content-wrapper .panel-title .accordion-toggle.collapsed {
   background: #fef8ec;
   transition: background 400ms ease-in-out;
@@ -16414,6 +16408,12 @@ body.page footer {
   letter-spacing: 0.01em;
   color: rgba(0, 0, 0, 0.8);
   padding: 20px;
+}
+
+@media (min-width: 1024px) {
+  .faq .content-wrapper .panel {
+    max-width: 1024px;
+  }
 }
 
 ::-webkit-scrollbar {
