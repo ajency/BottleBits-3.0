@@ -145,6 +145,7 @@ if ($(window).width() < 767) {
 			$(".vertical-slider").removeClass('hide');
 			$(".slide-item").addClass("SWIPE_UP");
 			$(".shelf-block--region").addClass("hide");
+			$(".content").css({position:"fixed"});
 			$(".slide-dots").fadeOut();
 			$(".tab--name").fadeOut();
 			$(".button").fadeOut();
