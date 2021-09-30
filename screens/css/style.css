@@ -11928,7 +11928,7 @@ img {
 
 .congratulations .congratulate_bg {
   opacity: 0;
-  height: 100%;
+  height: auto;
   position: relative;
   padding-top: 80px;
   padding-bottom: 20px;
@@ -12063,7 +12063,7 @@ img {
 
 @media (min-width: 1300px) {
   .congratulations .congratulate_bg.animateBg .shelf-block--picture.animatePicture {
-    bottom: 330px;
+    bottom: 280px;
     left: 300px;
     height: 385px;
   }
@@ -12081,7 +12081,7 @@ img {
     text-align: center;
     margin-left: -15%;
     position: relative;
-    margin-top: 140px;
+    margin-top: 115px;
   }
   .congratulations-desktop .outline-button {
     width: 200px;
@@ -15186,12 +15186,12 @@ body.page footer {
 
 @media (max-width: 767px) {
   .pageWrapper .explore-section .product-section .info {
-    top: 23%;
+    top: 18%;
     width: 306px;
   }
 }
 
-@medi (max-width: 399px) {
+@media (max-width: 399px) {
   .pageWrapper .explore-section .product-section .info {
     top: 16%;
     width: 100%;
