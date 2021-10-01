@@ -14139,10 +14139,24 @@ img {
   height: 100%;
   /* our image sprite is composed by 16 frames */
   width: 1300%;
-  background: url(../images/img-sprite.png) no-repeat center center;
-  background-size: 100%;
+  object-fit: contain;
   touch-action: none;
   opacity: 0;
+  -webkit-transition: opacity 0.3s;
+  -moz-transition: opacity 0.3s;
+  transition: opacity 0.3s;
+}
+
+.cd-product-viewer-wrapper .product-sprite .rotate-img {
+  position: absolute;
+  z-index: 2;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 1300%;
+  object-fit: contain;
+  touch-action: none;
+  opacity: 1;
   -webkit-transition: opacity 0.3s;
   -moz-transition: opacity 0.3s;
   transition: opacity 0.3s;
