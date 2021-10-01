@@ -14060,13 +14060,13 @@ img {
   position: relative;
   left: 6px;
   z-index: 1;
-  width: 130px;
+  width: 120px;
   height: 465px;
 }
 
 @media (min-width: 768px) {
   .cd-product-viewer-wrapper img {
-    width: 130px;
+    width: 120px;
     height: 465px;
   }
 }
