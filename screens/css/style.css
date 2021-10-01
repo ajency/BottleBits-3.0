@@ -12595,7 +12595,7 @@ img {
 @media (max-width: 374px) {
   .my-collection .shelf .collection-blocks .shelf-wrapper .border-image--rectangle:before {
     height: 78px;
-    width: calc(100% - 49px);
+    width: calc(100% - 43px);
   }
 }
 
@@ -12646,7 +12646,7 @@ img {
 @media (max-width: 374px) {
   .my-collection .shelf .collection-blocks .shelf-wrapper .border-image--rectangle:after {
     height: 84px;
-    width: calc(100% - 45px);
+    width: calc(100% - 38px);
   }
 }
 
