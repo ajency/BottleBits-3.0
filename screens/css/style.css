@@ -17254,8 +17254,13 @@ body.page footer {
   display: flex;
   justify-content: space-between;
   align-items: flex-start;
-  padding: 25px 0 63px;
-  background: radial-gradient(76.55% 45.76% at 50% 45.76%, #FFDA94 0%, #B48427 100%);
+  padding: 25px 0 50px;
+  position: relative;
+}
+
+.profile-header .back-icon {
+  position: relative;
+  z-index: 1;
 }
 
 .profile-header .back-icon .icon {
@@ -17269,6 +17274,8 @@ body.page footer {
   display: flex;
   flex-direction: column;
   align-items: center;
+  position: relative;
+  z-index: 1;
 }
 
 .profile-header .user-info--initial {
@@ -17312,8 +17319,28 @@ body.page footer {
   color: rgba(24, 26, 30, 0.7);
 }
 
+.profile-header .setting {
+  position: relative;
+  z-index: 1;
+}
+
 .profile-header .setting img {
   margin: 0 10px;
+}
+
+.profile-header:after {
+  content: '';
+  background: url(../images/home/profile-bg.png);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  width: 100%;
+  height: 362px;
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: -150px;
+  z-index: 0;
 }
 
 .profile-tabs {
@@ -17327,15 +17354,6 @@ body.page footer {
   align-items: center;
   justify-content: space-between;
   margin-bottom: 25px;
-}
-
-.profile-tabs .header .title {
-  font-family: "AbhayaLibre-ExtraBold";
-  font-style: normal;
-  font-weight: 800;
-  font-size: 24px;
-  line-height: 103.97%;
-  color: #000000;
 }
 
 .profile-tabs .header a {
@@ -17430,6 +17448,174 @@ body.page footer {
 
 .profile-tabs a.get-drams:hover, .profile-tabs a.get-drams:focus {
   color: #FFFFFF;
+}
+
+.profile .title {
+  font-family: "AbhayaLibre-ExtraBold";
+  font-style: normal;
+  font-weight: 800;
+  font-size: 24px;
+  line-height: 103.97%;
+  color: #000000;
+}
+
+.profile.settings .profile-header {
+  background: transparent;
+  padding-bottom: 34px;
+}
+
+.profile.settings .profile-header:after {
+  content: '';
+  display: none;
+}
+
+.profile.settings .settings-content {
+  padding-left: 30px;
+  padding-right: 30px;
+}
+
+.profile.settings .settings-content h2 {
+  font-family: "AbhayaLibre-ExtraBold";
+  font-style: normal;
+  font-weight: 800;
+  font-size: 32px;
+  line-height: 103.97%;
+  color: #000000;
+}
+
+.profile.settings .settings-content .title {
+  margin-top: 40px;
+}
+
+.profile.settings .settings-content .title-md {
+  margin-top: 16px;
+}
+
+.profile.settings .settings-content .light-text {
+  line-height: 24px;
+  margin-bottom: 24px;
+}
+
+.profile.settings .settings-content a {
+  font-family: "AbhayaLibre-Regular";
+  font-style: normal;
+  font-weight: normal;
+  font-size: 14px;
+  line-height: 24px;
+  letter-spacing: -0.01em;
+  color: #000000;
+}
+
+.profile.settings .settings-content a .primary-button {
+  width: 88px;
+  padding: 6px;
+  margin: 0;
+}
+
+.profile.settings .form {
+  margin: 50px 0 150px;
+  padding: 0 30px;
+}
+
+.profile.settings .form .input-wrapper {
+  margin-bottom: 26px;
+}
+
+.profile.settings .form .input-wrapper .name {
+  font-family: "AbhayaLibre-Regular";
+  font-weight: normal;
+  font-size: 20px;
+  line-height: 103.97%;
+  color: #181A1E;
+  margin-bottom: 10px;
+  width: 100%;
+}
+
+.profile.settings .form .input-wrapper .value {
+  width: 100%;
+  border: 0;
+  border-bottom: 1px solid #EBEBEB;
+  background: transparent;
+  font-family: 'Nunito Sans', sans-serif;
+  font-weight: normal;
+  font-size: 14px;
+  line-height: 24px;
+  letter-spacing: -0.01em;
+  padding-bottom: 10px;
+  color: rgba(0, 0, 0, 0.7);
+}
+
+.profile.settings .form .input-wrapper .value::-webkit-input-placeholder {
+  /* Edge */
+  color: #000;
+  opacity: 0.44;
+  font-family: 'Nunito Sans', sans-serif;
+  font-weight: normal;
+  font-size: 14px;
+  line-height: 24px;
+  letter-spacing: -0.01em;
+}
+
+.profile.settings .form .input-wrapper .value:-ms-input-placeholder {
+  /* Internet Explorer 10-11 */
+  color: #000;
+  opacity: 0.44;
+  font-family: 'Nunito Sans', sans-serif;
+  font-weight: normal;
+  font-size: 14px;
+  line-height: 24px;
+  letter-spacing: -0.01em;
+}
+
+.profile.settings .form .input-wrapper .value::placeholder {
+  color: #000;
+  opacity: 0.44;
+  font-family: 'Nunito Sans', sans-serif;
+  font-weight: normal;
+  font-size: 14px;
+  line-height: 24px;
+  letter-spacing: -0.01em;
+}
+
+.profile.settings .form .input-wrapper .value:focus {
+  outline: 0;
+}
+
+.profile.settings .form .link {
+  font-family: "AbhayaLibre-Regular";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 103.97%;
+  color: #CBA55E;
+  margin-bottom: 40px;
+  display: block;
+  text-align: left;
+}
+
+.profile.settings .form a {
+  font-family: "AbhayaLibre-SemiBold";
+  font-weight: 600;
+  font-size: 18px;
+  line-height: 21px;
+  text-align: center;
+  letter-spacing: -0.01em;
+  color: #000000;
+}
+
+.profile.settings .form a .primary-button {
+  padding: 18px 0;
+  margin: 0;
+}
+
+.profile.settings .form a .primary-button--dark {
+  margin-bottom: 30px;
+  padding: 20px 0 19px;
+  color: white;
+}
+
+.profile.settings .form a:hover, .profile.settings .form a:focus {
+  text-decoration: none;
 }
 
 ::-webkit-scrollbar {
