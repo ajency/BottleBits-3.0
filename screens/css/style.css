@@ -10374,14 +10374,11 @@ img {
   -webkit-transition: transform 2s cubic-bezier(0.16, 0.32, 0.21, 0.93);
 }
 
-.shelf-block-bg .vertical-slider .shelf-block .slide-item .shelf-block--region .map {
-  background-image: url("../images/scotland.png");
-  background-repeat: no-repeat;
-  background-size: contain;
-  background-position-y: center;
+.shelf-block-bg .vertical-slider .shelf-block .slide-item .shelf-block--region .map .map-image {
   width: 100%;
-  height: 380px;
-  left: 25px;
+  height: 350px;
+  object-fit: contain;
+  left: 0;
   position: absolute;
   top: 16%;
   z-index: -2;
@@ -10417,13 +10414,11 @@ img {
   -webkit-transition: transform 2s cubic-bezier(0.16, 0.32, 0.21, 0.93), opacity 2s cubic-bezier(0.16, 0.32, 0.21, 0.93);
 }
 
-.shelf-block-bg .vertical-slider .shelf-block .slide-item .shelf-block--region .disterllery .map-disterllery {
-  background-image: url("../images/disterllery.png");
-  background-repeat: no-repeat;
-  background-size: contain;
+.shelf-block-bg .vertical-slider .shelf-block .slide-item .shelf-block--region .disterllery .map-disterllery .disterllery-image {
+  object-fit: contain;
   background-position-y: center;
   width: 100%;
-  left: 50px;
+  left: 0px;
   height: 315px;
   position: absolute;
   top: 1%;
@@ -10455,13 +10450,11 @@ img {
   -webkit-transition: transform 2s cubic-bezier(0.16, 0.32, 0.21, 0.93), opacity 2s cubic-bezier(0.16, 0.32, 0.21, 0.93);
 }
 
-.shelf-block-bg .vertical-slider .shelf-block .slide-item .shelf-block--region .disterllery2 .map-disterllery {
-  background-image: url("../images/disterllery.png");
-  background-repeat: no-repeat;
-  background-size: contain;
+.shelf-block-bg .vertical-slider .shelf-block .slide-item .shelf-block--region .disterllery2 .map-disterllery .disterllery-image {
+  object-fit: contain;
   background-position-y: center;
   width: 100%;
-  left: 75px;
+  left: 0px;
   height: 295px;
   position: absolute;
   top: -3%;
@@ -10565,14 +10558,11 @@ img {
   -webkit-transition: transform 2s cubic-bezier(0.16, 0.32, 0.21, 0.93), opacity 2s cubic-bezier(0.16, 0.32, 0.21, 0.93);
 }
 
-.shelf-block-bg .vertical-slider .shelf-block .slide-item .shelf-block--region .bottle_story .map {
-  background-image: url("../images/scotland.png");
-  background-repeat: no-repeat;
-  background-size: contain;
-  background-position-y: center;
+.shelf-block-bg .vertical-slider .shelf-block .slide-item .shelf-block--region .bottle_story .map .map-image {
+  object-fit: contain;
   width: 100%;
   height: 380px;
-  left: 25px;
+  left: 0px;
   position: absolute;
   top: -4% !important;
   opacity: 0;
@@ -10718,8 +10708,8 @@ img {
   -webkit-transition: opacity 1s cubic-bezier(0.16, 0.32, 0.21, 0.93);
 }
 
-.shelf-block-bg .vertical-slider .shelf-block .slide-item.active.SWIPE_UP .shelf-block--region .map {
-  top: -9%;
+.shelf-block-bg .vertical-slider .shelf-block .slide-item.active.SWIPE_UP .shelf-block--region .map .map-image {
+  top: -8%;
   opacity: 1;
   transition: top 1s cubic-bezier(0.16, 0.32, 0.21, 0.93), opacity 1s cubic-bezier(0.16, 0.32, 0.21, 0.93);
   -webkit-transition: top 1s cubic-bezier(0.16, 0.32, 0.21, 0.93), opacity 1s cubic-bezier(0.16, 0.32, 0.21, 0.93);
@@ -17240,6 +17230,76 @@ body.page footer {
 
 .pageWrapper.password-set .content .form a:hover, .pageWrapper.password-set .content .form a:focus {
   text-decoration: none;
+}
+
+.profile {
+  background: #FEF8EC;
+}
+
+.profile-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  padding: 38px 0 63px;
+  background: radial-gradient(76.55% 45.76% at 50% 45.76%, #FFDA94 0%, #B48427 100%);
+}
+
+.profile-header .back-icon .icon {
+  width: 24px;
+  margin-left: 26px;
+  padding: 12px 15px 15px 0px;
+}
+
+.profile-header .user-info {
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.profile-header .user-info--initial {
+  border: 0.5px solid #FFFFFF;
+  border-radius: 100%;
+  width: 82px;
+  height: 82px;
+  margin-bottom: 11px;
+}
+
+.profile-header .user-info--initial .first-letter {
+  background: linear-gradient(335.52deg, #E1B96B 31.29%, #AA8641 69.03%);
+  box-shadow: 0px 10px 4px rgba(0, 0, 0, 0.25);
+  width: 70px;
+  height: 70px;
+  border-radius: 70px;
+  margin: 4px 5px;
+  font-family: "AbhayaLibre-SemiBold";
+  font-style: normal;
+  font-weight: 600;
+  font-size: 40px;
+  line-height: 103.97%;
+  text-align: center;
+  color: #FFFFFF;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.profile-header .user-info--name {
+  font-family: "AbhayaLibre-ExtraBold";
+  font-style: normal;
+  font-weight: 800;
+  font-size: 24px;
+  line-height: 103.97%;
+  text-align: center;
+  color: #000000;
+}
+
+.profile-header .user-info .email-id {
+  color: rgba(24, 26, 30, 0.7);
+}
+
+.profile-header .setting img {
+  margin: 0 10px;
 }
 
 ::-webkit-scrollbar {
