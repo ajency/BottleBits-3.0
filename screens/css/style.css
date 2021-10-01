@@ -161,11 +161,11 @@ a {
 
 a:hover {
   color: #494f54;
-  text-decoration: none;
+  text-decoration: none !important;
 }
 
 a:focus {
-  text-decoration: none;
+  text-decoration: none !important;
 }
 
 a:not([href]):not([tabindex]) {
@@ -16580,12 +16580,7 @@ body.page footer {
   height: auto !important;
 }
 
-.contact-us .content-wrapper--section__popup .contact-form .primary-button {
-  padding: 20px 0 19px;
-  margin: 48px 0 0;
-}
-
-.contact-us .content-wrapper--section__popup .contact-form .primary-button a {
+.contact-us .content-wrapper--section__popup .contact-form a {
   font-family: "AbhayaLibre-SemiBold";
   font-style: normal;
   font-weight: 600;
@@ -16593,6 +16588,15 @@ body.page footer {
   line-height: 21px;
   text-align: center;
   letter-spacing: -0.01em;
+  color: #FFFFFF;
+}
+
+.contact-us .content-wrapper--section__popup .contact-form a .primary-button {
+  padding: 20px 0 19px;
+  margin: 48px 0 0;
+}
+
+.contact-us .content-wrapper--section__popup .contact-form a:hover, .contact-us .content-wrapper--section__popup .contact-form a:focus {
   color: #FFFFFF;
 }
 
@@ -16799,12 +16803,7 @@ body.page footer {
   opacity: 0.7;
 }
 
-.signup--popup .primary-button {
-  padding: 20px 0 19px;
-  margin: 48px 0 0;
-}
-
-.signup--popup .primary-button a {
+.signup--popup a {
   font-family: "AbhayaLibre-SemiBold";
   font-style: normal;
   font-weight: 600;
@@ -16815,8 +16814,14 @@ body.page footer {
   color: #FFFFFF;
 }
 
-.signup--popup .primary-button a:hover, .signup--popup .primary-button a:focus {
+.signup--popup a .primary-button {
+  padding: 20px 0 19px;
+  margin: 48px 0 0;
+}
+
+.signup--popup a:hover, .signup--popup a:focus {
   text-decoration: none;
+  color: #FFFFFF;
 }
 
 .signup--popup .footer-text {
@@ -16959,13 +16964,7 @@ body.page footer {
   height: auto !important;
 }
 
-.pageWrapper.login .content-wrapper--section .form .secondary-btn--gold {
-  width: 100%;
-  margin: 55px auto 74px;
-  text-align: center;
-}
-
-.pageWrapper.login .content-wrapper--section .form .secondary-btn--gold a {
+.pageWrapper.login .content-wrapper--section .form a {
   font-family: "AbhayaLibre-SemiBold";
   font-style: normal;
   font-weight: 600;
@@ -16976,7 +16975,13 @@ body.page footer {
   color: #000000;
 }
 
-.pageWrapper.login .content-wrapper--section .form .secondary-btn--gold a:hover, .pageWrapper.login .content-wrapper--section .form .secondary-btn--gold a:focus {
+.pageWrapper.login .content-wrapper--section .form a .secondary-btn--gold {
+  width: 100%;
+  margin: 55px auto 74px;
+  text-align: center;
+}
+
+.pageWrapper.login .content-wrapper--section .form a:hover, .pageWrapper.login .content-wrapper--section .form a:focus {
   outline: 0;
   text-decoration: none;
 }
@@ -17118,12 +17123,7 @@ body.page footer {
   outline: 0;
 }
 
-.pageWrapper.password-set .content .form .primary-button {
-  padding: 18px 0;
-  margin: 0;
-}
-
-.pageWrapper.password-set .content .form .primary-button a {
+.pageWrapper.password-set .content .form a {
   font-family: "AbhayaLibre-SemiBold";
   font-weight: 600;
   font-size: 18px;
@@ -17133,17 +17133,19 @@ body.page footer {
   color: #000000;
 }
 
-.pageWrapper.password-set .content .form .primary-button a:hover, .pageWrapper.password-set .content .form .primary-button a:focus {
-  text-decoration: none;
+.pageWrapper.password-set .content .form a .primary-button {
+  padding: 18px 0;
+  margin: 0;
 }
 
-.pageWrapper.password-set .content .form .primary-button--dark {
+.pageWrapper.password-set .content .form a .primary-button--dark {
   margin-bottom: 30px;
   padding: 20px 0 19px;
+  color: white;
 }
 
-.pageWrapper.password-set .content .form .primary-button--dark a {
-  color: #FFFFFF;
+.pageWrapper.password-set .content .form a:hover, .pageWrapper.password-set .content .form a:focus {
+  text-decoration: none;
 }
 
 ::-webkit-scrollbar {
