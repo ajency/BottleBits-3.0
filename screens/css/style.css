@@ -13647,8 +13647,8 @@ img {
 }
 
 .my-collection .shelf-bottle-details .bottle-details .floating-btn {
-  position: fixed;
-  top: 650px;
+  position: sticky;
+  top: 0px;
   padding: 20px;
   width: 100%;
   margin: 0;
@@ -13659,7 +13659,7 @@ img {
 
 .my-collection .shelf-bottle-details .bottle-details .comments {
   height: auto;
-  margin-bottom: 40px;
+  margin-bottom: 70px;
 }
 
 .my-collection .shelf-bottle-details .bottle-details .floating-btn .primary-button {
