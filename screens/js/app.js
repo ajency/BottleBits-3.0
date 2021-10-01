@@ -1418,3 +1418,23 @@ $("input[type='checkbox']").change(function() {
       $(this).parent().removeClass('checked');
     }
 });
+
+var $window = $(window),
+    $document = $(document),
+    button = $('.tnc .primary-button');
+
+button.css({
+    opacity: 1
+});
+
+$window.on('scroll', function () {
+    if (($window.scrollTop() + $window.height()) == $document.height()) {
+        button.stop(true).animate({
+            opacity: 0
+        }, 250);
+    } else {
+        button.stop(true).animate({
+            opacity: 1
+        }, 250);
+    }
+});
