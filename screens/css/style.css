@@ -17240,7 +17240,7 @@ body.page footer {
   display: flex;
   justify-content: space-between;
   align-items: flex-start;
-  padding: 38px 0 63px;
+  padding: 25px 0 63px;
   background: radial-gradient(76.55% 45.76% at 50% 45.76%, #FFDA94 0%, #B48427 100%);
 }
 
@@ -17300,6 +17300,122 @@ body.page footer {
 
 .profile-header .setting img {
   margin: 0 10px;
+}
+
+.profile-tabs {
+  padding: 0 30px;
+  margin-top: 56px;
+  margin-bottom: 70px;
+}
+
+.profile-tabs .header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 25px;
+}
+
+.profile-tabs .header .title {
+  font-family: "AbhayaLibre-ExtraBold";
+  font-style: normal;
+  font-weight: 800;
+  font-size: 24px;
+  line-height: 103.97%;
+  color: #000000;
+}
+
+.profile-tabs .header a {
+  font-family: "AbhayaLibre-Regular";
+  font-style: normal;
+  font-weight: normal;
+  font-size: 14px;
+  line-height: 24px;
+  letter-spacing: -0.01em;
+  color: #000000;
+}
+
+.profile-tabs .header a .primary-button {
+  padding: 6px 10px;
+  border: 1px solid #000000;
+  width: 142px;
+  margin: 0;
+}
+
+.profile-tabs--content {
+  margin-bottom: 40px;
+}
+
+.profile-tabs--content__item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 1px solid #D0D0D0;
+  padding-bottom: 20px;
+  padding-top: 24px;
+}
+
+.profile-tabs--content__item .left-side .name {
+  font-family: "AbhayaLibre-Regular";
+  font-style: normal;
+  font-weight: normal;
+  font-size: 20px;
+  line-height: 24px;
+  letter-spacing: -0.01em;
+  color: #6C6C6C;
+  margin-bottom: 10px;
+}
+
+.profile-tabs--content__item .left-side .date {
+  font-family: 'Nunito Sans', sans-serif;
+  font-style: normal;
+  font-weight: 300;
+  font-size: 14px;
+  line-height: 22px;
+  color: #000000;
+  opacity: 0.7;
+}
+
+.profile-tabs--content__item .right-side .price {
+  font-family: "AbhayaLibre-Bold";
+  font-style: normal;
+  font-weight: bold;
+  font-size: 20px;
+  line-height: 24px;
+  text-align: right;
+  letter-spacing: -0.01em;
+  color: #000000;
+  margin-bottom: 10px;
+}
+
+.profile-tabs--content__item .right-side .dram {
+  font-family: 'Nunito Sans', sans-serif;
+  font-style: normal;
+  font-weight: 300;
+  font-size: 14px;
+  line-height: 22px;
+  color: #000000;
+  opacity: 0.7;
+  text-align: right;
+}
+
+.profile-tabs a.get-drams {
+  font-family: "AbhayaLibre-SemiBold";
+  font-style: normal;
+  font-weight: 600;
+  font-size: 18px;
+  line-height: 21px;
+  text-align: center;
+  letter-spacing: -0.01em;
+  color: #FFFFFF;
+}
+
+.profile-tabs a.get-drams .primary-button {
+  margin: 40px 0px 70px;
+  padding: 20px 0 19px;
+}
+
+.profile-tabs a.get-drams:hover, .profile-tabs a.get-drams:focus {
+  color: #FFFFFF;
 }
 
 ::-webkit-scrollbar {
