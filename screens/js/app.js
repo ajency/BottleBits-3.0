@@ -1298,7 +1298,7 @@ $( ".theme" ).on( "click", function(){
 
 	}else if($(".theme.theme--black").hasClass("theme--active-theme")){
 
-	 	$(this).css({transform: "translateX(0px)", transition: "transform 300ms ease-in"});
+	 	$(".theme--black").css({transform: "translateX(0px)", transition: "transform 300ms ease-in"});
 	 	$(".theme--brown").css({transform: "translateX(0px)", transition: "transform 300ms ease-in"});
 	    $( ".theme--yellow" ).css({transform: "translateX(0px)", transition: "transform 300ms ease-in"});
 	    $( ".theme--green" ).css({transform: "translateX(0px)", transition: "transform 300ms ease-in"});
