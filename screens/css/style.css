@@ -13580,10 +13580,14 @@ img {
 }
 
 .my-collection .shelf-bottle-details .bottle-details .floating-btn {
-  position: sticky;
-  padding: 20px 0;
+  position: fixed;
+  top: 650px;
+  padding: 20px;
   width: 100%;
   margin: 0;
+  left: 0;
+  right: 0;
+  display: block;
 }
 
 .my-collection .shelf-bottle-details .bottle-details .comments {
