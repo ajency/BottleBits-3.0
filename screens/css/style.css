@@ -17248,6 +17248,8 @@ body.page footer {
 
 .profile {
   background: #FEF8EC;
+  height: auto;
+  padding-bottom: 10px;
 }
 
 .profile-header {
@@ -17457,6 +17459,10 @@ body.page footer {
   font-size: 24px;
   line-height: 103.97%;
   color: #000000;
+}
+
+.profile.settings {
+  height: 100vh;
 }
 
 .profile.settings .profile-header {
