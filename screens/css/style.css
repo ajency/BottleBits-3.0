@@ -15545,7 +15545,7 @@ body.page footer {
   }
   .pageWrapper .how-it-works .working-process .process:nth-child(5) {
     position: relative;
-    bottom: -8px;
+    bottom: 0px;
   }
 }
 
