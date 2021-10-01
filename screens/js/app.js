@@ -1355,7 +1355,7 @@ $(".carousel-control.right").on("click", function(){
 
 /* click action on black theme */
 $(".theme--black").on("click", function(){
-	$(".popup").css({opacity: "1", height: "100vh", transition: "opacity 400ms ease-in-out"}).fadeIn();
+	$(".popup").css({opacity: "1", height: "auto", transition: "opacity 400ms ease-in-out"}).fadeIn();
 });
 
 $(".share-popup--close .cross").on("click", function(){
@@ -1376,7 +1376,7 @@ $(".button.yellow").on("click", function(){
 	$(".my-collection .shelf .collection-blocks .shelf-wrapper .block").removeClass("yellow");
 	$(".my-collection .shelf .collection-blocks .shelf-wrapper").removeClass("yellow");
 
-	$(".popup").css({opacity: "1", height: "100vh", transition: "opacity 400ms ease-in-out"}).fadeIn();
+	$(".popup").css({opacity: "1", height: "auto", transition: "opacity 400ms ease-in-out"}).fadeIn();
 	$(".fixed-image").removeClass("yellow").addClass("brown");
 	$(".collection-blocks").removeClass("yellow");
 	$(".themes-button .cross").addClass("remove-cross");
