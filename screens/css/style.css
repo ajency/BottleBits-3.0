@@ -12807,7 +12807,7 @@ img {
   width: 100%;
   background-repeat: round;
   background-size: cover;
-  height: 730px;
+  height: 800px;
   opacity: 1;
   display: flex;
   flex-wrap: wrap;
@@ -13126,7 +13126,7 @@ img {
 @media (min-width: 768px) {
   .my-collection .shelf-wrapper--expanded .block.active-block {
     width: 500px;
-    height: 715px;
+    height: 800px;
   }
 }
 
