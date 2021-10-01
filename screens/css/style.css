@@ -12807,7 +12807,7 @@ img {
   width: 100%;
   background-repeat: round;
   background-size: cover;
-  height: 100vh;
+  height: 730px;
   opacity: 1;
   display: flex;
   flex-wrap: wrap;
@@ -13580,7 +13580,9 @@ img {
 
 .my-collection .shelf-bottle-details .bottle-details .floating-btn {
   position: sticky;
-  margin: 0 -30px;
+  padding: 20px 0;
+  width: 100%;
+  margin: 0;
 }
 
 .my-collection .shelf-bottle-details .bottle-details .comments {
@@ -13590,6 +13592,7 @@ img {
 
 .my-collection .shelf-bottle-details .bottle-details .floating-btn .primary-button {
   width: 100%;
+  margin: 0;
 }
 
 .my-collection .shelf-bottle-details .bottle-details:after {
@@ -14033,7 +14036,7 @@ img {
   text-align: center;
   padding: 2em 0;
   position: relative;
-  height: 90vh;
+  height: 700px;
   margin-top: -1px;
   background: linear-gradient(102.8deg, #181A1E 19.63%, #35373D 96.27%);
 }
