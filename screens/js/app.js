@@ -1243,7 +1243,39 @@ $( ".theme" ).on( "swiperight", function(){
 
 //Clicking themes 
 $( ".theme" ).on( "click", function(){
-	if($(".theme.theme--yellow").hasClass("theme--active-theme")){
+	if($(this).hasClass("theme--upload")){
+
+	 	$(".theme--yellow").css({transform: "translateX(140px)", transition: "transform 300ms ease-in"});
+	    $( ".theme--green" ).css({transform: "translateX(140px)", transition: "transform 300ms ease-in"});
+	    $( ".theme--brown" ).css({transform: "translateX(140px)", transition: "transform 300ms ease-in"});
+	    $( ".theme--black" ).css({transform: "translateX(140px)", transition: "transform 300ms ease-in"});
+	    $( ".theme--camera").css({transform: "translateX(140px)", transition: "transform 300ms ease-in"});
+	    $( ".theme--upload").css({transform: "translateX(140px)", transition: "transform 300ms ease-in"});
+
+	 	$(".theme").removeClass("theme--active-theme");    
+	    $(".theme--upload").addClass("theme--active-theme");
+
+	    $(".theme .active-mark").removeClass("active-mark--show");
+	    $(".single-sharing").addClass("upload");
+
+	}
+	else if($(this).hasClass("theme--camera")){
+
+	 	$(".theme--yellow").css({transform: "translateX(70px)", transition: "transform 300ms ease-in"});
+	    $( ".theme--green" ).css({transform: "translateX(70px)", transition: "transform 300ms ease-in"});
+	    $( ".theme--brown" ).css({transform: "translateX(70px)", transition: "transform 300ms ease-in"});
+	    $( ".theme--black" ).css({transform: "translateX(70px)", transition: "transform 300ms ease-in"});
+	    $( ".theme--camera").css({transform: "translateX(70px)", transition: "transform 300ms ease-in"});
+	    $( ".theme--upload").css({transform: "translateX(70px)", transition: "transform 300ms ease-in"});
+
+	 	$(".theme").removeClass("theme--active-theme");    
+	    $(".theme--camera").addClass("theme--active-theme");
+
+	    $(".theme .active-mark").removeClass("active-mark--show");
+	    $(".single-sharing").addClass("camera");
+
+	}
+	else if($(".theme.theme--yellow").hasClass("theme--active-theme")){
 
 	 	$(".theme--yellow").css({transform: "translateX(-70px)", transition: "transform 300ms ease-in"});
 	    $( ".theme--green" ).css({transform: "translateX(-70px)", transition: "transform 300ms ease-in"});
