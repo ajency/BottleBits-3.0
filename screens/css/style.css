@@ -15530,13 +15530,18 @@ body.page footer {
 
 @media (max-width: 374px) {
   .pageWrapper .how-it-works .working-process .process:nth-child(1) {
-    margin-top: 45px;
+    margin-top: 64px;
+  }
+  .pageWrapper .how-it-works .working-process .process:nth-child(3) {
+    margin-top: 20px;
   }
   .pageWrapper .how-it-works .working-process .process:nth-child(3) {
     margin-top: 15px;
+    position: relative;
+    bottom: 24px;
   }
   .pageWrapper .how-it-works .working-process .process:nth-child(4) {
-    margin-top: 15px;
+    margin-top: -40px;
   }
   .pageWrapper .how-it-works .working-process .process:nth-child(5) {
     position: relative;
@@ -15606,6 +15611,7 @@ body.page footer {
 @media (max-width: 374px) {
   .pageWrapper .how-it-works .working-process {
     background-size: contain;
+    width: 342px;
   }
 }
 
