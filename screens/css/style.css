@@ -15528,6 +15528,22 @@ body.page footer {
   }
 }
 
+@media (max-width: 374px) {
+  .pageWrapper .how-it-works .working-process .process:nth-child(1) {
+    margin-top: 45px;
+  }
+  .pageWrapper .how-it-works .working-process .process:nth-child(3) {
+    margin-top: 15px;
+  }
+  .pageWrapper .how-it-works .working-process .process:nth-child(4) {
+    margin-top: 15px;
+  }
+  .pageWrapper .how-it-works .working-process .process:nth-child(5) {
+    position: relative;
+    bottom: -8px;
+  }
+}
+
 @media (max-width: 499px) {
   .pageWrapper .how-it-works .working-process .process {
     padding-left: 25px;
