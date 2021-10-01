@@ -15587,6 +15587,12 @@ body.page footer {
   }
 }
 
+@media (max-width: 374px) {
+  .pageWrapper .how-it-works .working-process {
+    background-size: contain;
+  }
+}
+
 @media (min-width: 992px) {
   .pageWrapper .how-it-works .working-process {
     max-width: 1200px;
