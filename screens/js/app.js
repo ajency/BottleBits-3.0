@@ -1451,22 +1451,21 @@ $("input[type='checkbox']").change(function() {
     }
 });
 
-var $window = $(window),
-    $document = $(document),
-    button = $('.tnc .primary-button');
+var content = $(".pageWrapper").outerHeight() + 100;
+var button = $('.tnc .primary-button');
 
 button.css({
     opacity: 1
 });
 
-$window.on('scroll', function () {
-    if (($window.scrollTop() + $window.height()) == $document.height()) {
-        button.stop(true).animate({
-            opacity: 0
-        }, 250);
-    } else {
-        button.stop(true).animate({
-            opacity: 1
-        }, 250);
-    }
-});
+window.onscroll = function() {
+	if ((window.innerHeight + window.scrollY) >= (content)) {
+		button.stop(true).animate({
+		opacity: 0
+		}, 250);
+	} else {
+		button.stop(true).animate({
+		opacity: 1
+		}, 250);
+	}
+};
