@@ -1451,7 +1451,7 @@ $("input[type='checkbox']").change(function() {
     }
 });
 
-var content = $(".pageWrapper").outerHeight() + 100;
+var content = $(".pageWrapper").outerHeight() + 105;
 var button = $('.tnc .primary-button');
 
 button.css({
