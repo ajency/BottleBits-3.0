@@ -10655,6 +10655,8 @@ img {
 
 .shelf-block-bg .vertical-slider .shelf-block .slide-item.active.SWIPE_UP .shelf-block--content-wrapper {
   opacity: 1;
+  position: relative;
+  z-index: 1;
 }
 
 .shelf-block-bg .vertical-slider .shelf-block .slide-item.active.SWIPE_UP .description {
