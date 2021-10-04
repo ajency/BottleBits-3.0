@@ -1480,12 +1480,14 @@ $('.formSearch').on('keydown', function(){
 $(".sc-icon").on("click", function(){
 	$(".search").fadeIn(100);
 	$(".search-block").addClass("show-search-block");
+	$("#content").fadeOut();
 });
 $(".hideSearch").on("click", function(){
 	$(".search-list").fadeOut();
 	$(".search").fadeOut(100);
 	$(".search-block").removeClass("show-search-block");
 	$(".search-list li").removeClass("show-search-list");
+	$("#content").fadeIn();
 });
 
 $(function () {
