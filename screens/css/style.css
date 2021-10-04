@@ -17261,6 +17261,120 @@ body.page footer {
   text-decoration: none;
 }
 
+.pageWrapper.page-search {
+  background: #FEF8EC;
+  padding-top: 0;
+}
+
+.pageWrapper.page-search .search-block {
+  background: #E1B96B;
+  height: 80px;
+}
+
+.pageWrapper.page-search .search-block .formSearch .searchbox {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 40px 20px 15px 0;
+}
+
+.pageWrapper.page-search .search-block .formSearch .product-search {
+  background: transparent;
+  border: 0;
+  box-shadow: none;
+  font-family: 'Nunito Sans', sans-serif;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 14px;
+  line-height: 24px;
+  letter-spacing: -0.01em;
+  color: #000000;
+  padding: 0 20px;
+  width: calc(100vw - 30px);
+}
+
+.pageWrapper.page-search .search-block .formSearch .ui-textinput-clear-button {
+  display: none;
+}
+
+.pageWrapper.page-search .search-block .formSearch .hideSearch {
+  width: 14px;
+  height: 14px;
+  display: block;
+  position: relative;
+  cursor: pointer;
+  padding: 0 14px;
+}
+
+.pageWrapper.page-search .search-block .formSearch .hideSearch:before {
+  content: '';
+  height: 12px;
+  border-left: 1px solid #000000;
+  position: absolute;
+  transform: rotate(-45deg);
+  left: 9px;
+}
+
+.pageWrapper.page-search .search-block .formSearch .hideSearch:after {
+  content: '';
+  height: 12px;
+  border-left: 1px solid #000000;
+  position: absolute;
+  transform: rotate(45deg);
+  left: 9px;
+}
+
+.pageWrapper.page-search .search-block .formSearch .search-list {
+  padding: 0 25px;
+}
+
+.pageWrapper.page-search .search-block .formSearch .search-list li {
+  list-style: none;
+  padding: 30px 0;
+  border-top: 1px solid rgba(225, 185, 107, 0.5);
+}
+
+.pageWrapper.page-search .search-block .formSearch .search-list li a {
+  display: flex;
+  align-items: center;
+}
+
+.pageWrapper.page-search .search-block .formSearch .search-list li a .searchProductImage .picture {
+  width: 30px;
+  height: 60px;
+}
+
+.pageWrapper.page-search .search-block .formSearch .search-list li a .searchContent {
+  display: flex;
+  flex-direction: column;
+  padding-left: 20px;
+}
+
+.pageWrapper.page-search .search-block .formSearch .search-list li a .searchContent .searchProductTitle {
+  font-family: "AbhayaLibre-Bold";
+  font-weight: bold;
+  font-size: 18px;
+  line-height: 21px;
+  letter-spacing: -0.01em;
+  color: #000000;
+  margin-bottom: 5px;
+}
+
+.pageWrapper.page-search .search-block .formSearch .search-list li a .searchContent .searchProductInfo {
+  font-family: 'Nunito Sans', sans-serif;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 12px;
+  line-height: 16px;
+  text-align: center;
+  color: #000000;
+  opacity: 0.6;
+}
+
+.pageWrapper.page-search .search-block .formSearch .search-list li:nth-child(1) {
+  border-top: 0px;
+}
+
 .profile {
   background: #FEF8EC;
   height: auto;

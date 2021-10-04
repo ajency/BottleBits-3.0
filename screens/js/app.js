@@ -1469,3 +1469,19 @@ window.onscroll = function() {
 		}, 250);
 	}
 };
+$(".search-list").fadeOut();
+
+$('.formSearch').keydown(function(){
+    $(".search-list").fadeIn();
+});
+$(".hideSearch").on("click", function(){
+	$(".search-list").fadeOut();
+})
+$(function () {
+  $('[placeholder]').focus(function () {
+    $(this).attr('data-text', $(this).attr('placeholder'));
+    $(this).removeAttr('placeholder');
+  }).blur(function () {
+    $(this).attr('placeholder', $(this).attr('data-text'));
+  });
+});
