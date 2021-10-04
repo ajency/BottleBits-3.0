@@ -11082,6 +11082,7 @@ img {
   top: 0;
   left: 0;
   margin-top: 300px;
+  z-index: -1;
 }
 
 @media (min-width: 768px) {
