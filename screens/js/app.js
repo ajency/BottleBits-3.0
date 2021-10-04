@@ -1470,13 +1470,24 @@ window.onscroll = function() {
 	}
 };
 $(".search-list").fadeOut();
+$(".search").fadeOut();
 
-$('.formSearch').keydown(function(){
+$('.formSearch').on('keydown', function(){
     $(".search-list").fadeIn();
+	$(".search-list li").addClass("show-search-list");
+});
+
+$(".sc-icon").on("click", function(){
+	$(".search").fadeIn(100);
+	$(".search-block").addClass("show-search-block");
 });
 $(".hideSearch").on("click", function(){
 	$(".search-list").fadeOut();
-})
+	$(".search").fadeOut(100);
+	$(".search-block").removeClass("show-search-block");
+	$(".search-list li").removeClass("show-search-list");
+});
+
 $(function () {
   $('[placeholder]').focus(function () {
     $(this).attr('data-text', $(this).attr('placeholder'));
