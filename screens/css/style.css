@@ -10683,7 +10683,7 @@ img {
 
 .shelf-block-bg .vertical-slider .shelf-block .slide-item.active.SWIPE_UP .shelf-block--picture {
   right: 40%;
-  width: 135px;
+  width: 115px;
   bottom: 0px;
   margin-bottom: 90px;
   transition: right 1s cubic-bezier(0.16, 0.32, 0.21, 0.93);
