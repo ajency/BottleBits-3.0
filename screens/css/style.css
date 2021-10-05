@@ -10585,8 +10585,8 @@ img {
 .shelf-block-bg .vertical-slider .shelf-block .slide-item .shelf-block--region .bottle_story .bottle_story_details {
   position: absolute;
   right: 60px;
-  top: 68px;
-  width: 124px;
+  top: 70px;
+  width: 145px;
   font-family: 'AbhayaLibre-SemiBold';
   font-weight: 600;
   font-size: 12px;
@@ -10866,7 +10866,7 @@ img {
   height: 160px !important;
   padding-right: 48px;
   width: 140px !important;
-  bottom: -75px !important;
+  bottom: -65px !important;
 }
 
 @media (min-width: 768px) {
@@ -10927,7 +10927,7 @@ img {
 .shelf-block-bg.cart .vertical-slider .shelf-block .slide-item.active.SWIPE_UP .content .shelf-block--picture {
   height: 160px !important;
   padding-right: 60px;
-  bottom: -75px !important;
+  bottom: -65px !important;
   width: 140px !important;
   transition: bottom 1s cubic-bezier(0.48, 0.04, 0.25, 1), height 1s cubic-bezier(0.48, 0.04, 0.25, 1);
   -webkit-transition: bottom 1s cubic-bezier(0.48, 0.04, 0.25, 1), height 1s cubic-bezier(0.48, 0.04, 0.25, 1);
@@ -12118,6 +12118,7 @@ img {
   display: flex;
   align-items: center;
   justify-content: space-between;
+  position: fixed;
   padding: 8px 16px;
   background-image: url(../images/collection/title-bar.jpg);
   background-repeat: no-repeat;
@@ -12890,7 +12891,8 @@ img {
   background-repeat: round;
   background-size: cover;
   position: fixed;
-  height: 100%;
+  top: 132px;
+  height: auto;
   opacity: 1;
   display: flex;
   flex-wrap: wrap;
