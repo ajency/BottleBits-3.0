@@ -10203,6 +10203,7 @@ img {
   width: auto !important;
   margin-right: 0 !important;
   pointer-events: none;
+  opacity: 0;
 }
 
 .shelf-block-bg .shelf-block .shelf-block--wrap .shelf-block--label {
