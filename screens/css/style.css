@@ -10390,7 +10390,7 @@ img {
 
 .shelf-block-bg .vertical-slider .shelf-block .slide-item .shelf-block--region .map .map-image {
   width: 100%;
-  height: 350px;
+  height: 290px;
   object-fit: contain;
   left: 0;
   position: absolute;
@@ -10404,7 +10404,7 @@ img {
 .shelf-block-bg .vertical-slider .shelf-block .slide-item .shelf-block--region .region_details {
   position: absolute;
   right: 60px;
-  top: 30%;
+  top: 128px;
   width: 120px;
   font-family: 'AbhayaLibre-SemiBold';
   font-weight: 600;
@@ -10433,7 +10433,7 @@ img {
   background-position-y: center;
   width: 100%;
   left: 0px;
-  height: 315px;
+  height: 240px;
   position: absolute;
   top: 1%;
 }
@@ -10441,7 +10441,7 @@ img {
 .shelf-block-bg .vertical-slider .shelf-block .slide-item .shelf-block--region .disterllery .disterllery_details {
   position: absolute;
   right: 60px;
-  top: 32%;
+  top: 135px;
   width: 132px;
   font-family: 'AbhayaLibre-SemiBold';
   font-weight: 600;
@@ -10469,7 +10469,7 @@ img {
   background-position-y: center;
   width: 100%;
   left: 0px;
-  height: 295px;
+  height: 245px;
   position: absolute;
   top: -3%;
 }
@@ -10484,8 +10484,8 @@ img {
   letter-spacing: 0.01em;
   color: #000000;
   text-align: left;
-  transform: translateY(194px);
-  -webkit-transform: translateY(194px);
+  transform: translateY(156px);
+  -webkit-transform: translateY(156px);
 }
 
 .shelf-block-bg .vertical-slider .shelf-block .slide-item .shelf-block--region .disterllery2 .disterllery_details .rightbox {
@@ -10575,7 +10575,7 @@ img {
 .shelf-block-bg .vertical-slider .shelf-block .slide-item .shelf-block--region .bottle_story .map .map-image {
   object-fit: contain;
   width: 100%;
-  height: 380px;
+  height: 280px;
   left: 0px;
   position: absolute;
   top: -4% !important;
@@ -10585,8 +10585,8 @@ img {
 .shelf-block-bg .vertical-slider .shelf-block .slide-item .shelf-block--region .bottle_story .bottle_story_details {
   position: absolute;
   right: 60px;
-  top: 20%;
-  width: 120px;
+  top: 68px;
+  width: 124px;
   font-family: 'AbhayaLibre-SemiBold';
   font-weight: 600;
   font-size: 12px;
