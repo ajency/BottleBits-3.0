@@ -10365,7 +10365,7 @@ img {
 }
 
 .shelf-block-bg .vertical-slider .shelf-block .slide-item .shelf-block--region {
-  height: 200px;
+  height: 150px;
   pointer-events: auto;
   opacity: 0;
 }
@@ -10798,7 +10798,7 @@ img {
 
 .shelf-block-bg.small_block {
   position: relative !important;
-  height: 240px;
+  height: 150px;
 }
 
 .shelf-block-bg.small_block .shelf-block {
@@ -11752,7 +11752,7 @@ img {
 .cart-wrapper {
   background: white;
   height: auto;
-  position: relative;
+  position: fixed;
   z-index: -1;
 }
 
@@ -11762,11 +11762,12 @@ img {
 
 .cart-wrapper .drams-details .section-title {
   margin-top: 16px;
+  font-size: 20px;
 }
 
 .cart-wrapper .drams-details .price {
   margin: 15px 0;
-  font-size: 20px;
+  font-size: 17px;
 }
 
 .cart-wrapper .cart--buttons {
