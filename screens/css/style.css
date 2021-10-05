@@ -13735,7 +13735,8 @@ img {
   left: 0;
   right: 0;
   bottom: 0;
-  overflow: auto;
+  height: 100%;
+  overflow: hidden;
   transition: opacity 400ms cubic-bezier(0.16, 0.32, 0.21, 0.93);
 }
 
@@ -14098,7 +14099,7 @@ img {
 
 .cd-product-viewer-wrapper {
   text-align: center;
-  padding: 1.1em 0;
+  padding: 40px 0 0;
   position: absolute;
   top: 25px;
   left: 0;
