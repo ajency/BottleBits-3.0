@@ -10433,15 +10433,15 @@ img {
   background-position-y: center;
   width: 100%;
   left: 0px;
-  height: 240px;
+  height: 210px;
   position: absolute;
-  top: 1%;
+  top: 0;
 }
 
 .shelf-block-bg .vertical-slider .shelf-block .slide-item .shelf-block--region .disterllery .disterllery_details {
   position: absolute;
   right: 60px;
-  top: 135px;
+  top: 108px;
   width: 132px;
   font-family: 'AbhayaLibre-SemiBold';
   font-weight: 600;
@@ -10685,7 +10685,7 @@ img {
   right: 40%;
   width: 115px;
   bottom: 0px;
-  margin-bottom: 100px;
+  margin-bottom: 102px;
   transition: right 1s cubic-bezier(0.16, 0.32, 0.21, 0.93);
   -webkit-transition: right 1s cubic-bezier(0.16, 0.32, 0.21, 0.93);
   pointer-events: none;
