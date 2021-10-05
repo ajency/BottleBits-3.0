@@ -12900,7 +12900,7 @@ img {
 }
 
 .my-collection .shelf-wrapper--expanded .block.active-block .picture {
-  height: 100px;
+  height: 115px;
 }
 
 .my-collection .shelf-wrapper--expanded .block.active-block .picture.medium {
@@ -12940,7 +12940,7 @@ img {
   font-family: "AbhayaLibre-Bold";
   font-weight: bold;
   font-size: 14px;
-  line-height: 17px;
+  line-height: 10px;
   text-align: center;
   letter-spacing: -0.01em;
   text-transform: uppercase;
@@ -12955,11 +12955,12 @@ img {
 
 .my-collection .shelf-wrapper--expanded .block.active-block .border-image--square {
   position: relative;
+  height: 100%;
 }
 
 .my-collection .shelf-wrapper--expanded .block.active-block .border-image--square .icon {
   position: absolute;
-  left: 25px;
+  left: 10px;
   right: 0;
   margin: auto;
   top: 160px;
@@ -12974,7 +12975,7 @@ img {
 
 @media (max-width: 767px) {
   .my-collection .shelf-wrapper--expanded .block.active-block .border-image--square .icon {
-    top: 23vh;
+    top: 46%;
   }
 }
 
@@ -12988,10 +12989,10 @@ img {
   content: '';
   border: 1px dashed #412303;
   border-top: 0;
-  height: 40vh;
+  height: 74.5%;
   width: calc(100% - 94px);
   position: absolute;
-  left: 58px;
+  left: 50px;
   right: 0;
   top: 30px;
   bottom: 0;
@@ -13013,12 +13014,12 @@ img {
 .my-collection .shelf-wrapper--expanded .block.active-block .border-image--square:after {
   content: '';
   border: 1px dashed #B68149;
-  height: 40.1vh;
   width: calc(100% - 90px);
   position: absolute;
-  left: 55px;
+  left: 48px;
   right: 0;
   top: 32px;
+  height: 75%;
   bottom: 0;
 }
 
@@ -13039,6 +13040,7 @@ img {
 
 .my-collection .shelf-wrapper--expanded .block.active-block .border-image--rectangle {
   position: relative;
+  height: 100%;
 }
 
 .my-collection .shelf-wrapper--expanded .block.active-block .border-image--rectangle .icon {
@@ -13058,7 +13060,8 @@ img {
 
 @media (max-width: 767px) {
   .my-collection .shelf-wrapper--expanded .block.active-block .border-image--rectangle .icon {
-    top: 23vh;
+    top: 50%;
+    left: -4px;
   }
 }
 
@@ -13072,7 +13075,7 @@ img {
   content: '';
   border: 1px dashed #412303;
   border-top: 0;
-  height: 337px;
+  height: 84%;
   width: calc(100% - 98px);
   position: absolute;
   left: 50px;
@@ -13081,15 +13084,8 @@ img {
   bottom: 0;
 }
 
-@media (max-width: 1200px) {
-  .my-collection .shelf-wrapper--expanded .block.active-block .border-image--rectangle:before {
-    height: 270px;
-  }
-}
-
 @media (max-width: 767px) {
   .my-collection .shelf-wrapper--expanded .block.active-block .border-image--rectangle:before {
-    height: 245px;
     width: calc(100% - 92px);
     left: 47px;
   }
@@ -13098,14 +13094,12 @@ img {
 @media (max-width: 375px) {
   .my-collection .shelf-wrapper--expanded .block.active-block .border-image--rectangle:before {
     top: 20px;
-    height: 332px;
   }
 }
 
 @media (min-width: 1201px) and (max-width: 1769px) {
   .my-collection .shelf-wrapper--expanded .block.active-block .border-image--rectangle:before {
     width: calc(100% - 112px);
-    height: 268px;
     left: 56px;
     top: 40px;
   }
@@ -13114,7 +13108,6 @@ img {
 @media (min-width: 1770px) {
   .my-collection .shelf-wrapper--expanded .block.active-block .border-image--rectangle:before {
     width: calc(100% - 76px);
-    height: 253px;
     left: 40px;
   }
 }
@@ -13122,7 +13115,7 @@ img {
 .my-collection .shelf-wrapper--expanded .block.active-block .border-image--rectangle:after {
   content: '';
   border: 1px dashed #B68149;
-  height: 344px;
+  height: 87%;
   width: calc(100% - 88px);
   position: absolute;
   left: 45px;
@@ -13131,15 +13124,8 @@ img {
   bottom: 0;
 }
 
-@media (max-width: 1200px) {
-  .my-collection .shelf-wrapper--expanded .block.active-block .border-image--rectangle:after {
-    height: 278px;
-  }
-}
-
 @media (max-width: 767px) {
   .my-collection .shelf-wrapper--expanded .block.active-block .border-image--rectangle:after {
-    height: 260px;
     top: 20px;
   }
 }
@@ -13147,14 +13133,12 @@ img {
 @media (max-width: 375px) {
   .my-collection .shelf-wrapper--expanded .block.active-block .border-image--rectangle:after {
     top: 16px;
-    height: 340px;
   }
 }
 
 @media (min-width: 1201px) and (max-width: 1769px) {
   .my-collection .shelf-wrapper--expanded .block.active-block .border-image--rectangle:after {
     width: calc(100% - 100px);
-    height: 290px;
     left: 50px;
     top: 22px;
   }
@@ -13163,7 +13147,6 @@ img {
 @media (min-width: 1770px) {
   .my-collection .shelf-wrapper--expanded .block.active-block .border-image--rectangle:after {
     width: calc(100% - 72px);
-    height: 260px;
     left: 38px;
   }
 }
@@ -13197,7 +13180,7 @@ img {
   left: -15px;
   right: 0;
   margin: auto;
-  bottom: 14px;
+  bottom: 12px;
 }
 
 .my-collection .shelf-wrapper--expanded .block.active-block .small-block--child2 .product-name {
