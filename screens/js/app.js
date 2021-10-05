@@ -788,6 +788,7 @@ $(".image-rotation--header .cross").on("click", function(){
 	$(".show-details .info-tab").fadeIn();
 	$(".block-slider--image, .bottle-details, .arrows").fadeIn();
 	$("body").removeClass("rotation-sharing");
+	$(".image-rotation").addClass("hide").removeClass("show-screen-view");
 	$("footer").fadeIn();
 });
 
