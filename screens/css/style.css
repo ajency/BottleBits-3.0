@@ -10404,8 +10404,8 @@ img {
 .shelf-block-bg .vertical-slider .shelf-block .slide-item .shelf-block--region .region_details {
   position: absolute;
   right: 60px;
-  top: 128px;
-  width: 120px;
+  top: 124px;
+  width: 134px;
   font-family: 'AbhayaLibre-SemiBold';
   font-weight: 600;
   font-size: 12px;
@@ -10442,7 +10442,7 @@ img {
   position: absolute;
   right: 60px;
   top: 108px;
-  width: 132px;
+  width: 152px;
   font-family: 'AbhayaLibre-SemiBold';
   font-weight: 600;
   font-size: 12px;
@@ -10682,10 +10682,10 @@ img {
 }
 
 .shelf-block-bg .vertical-slider .shelf-block .slide-item.active.SWIPE_UP .shelf-block--picture {
-  right: 40%;
-  width: 115px;
+  right: 45%;
+  width: 100px;
   bottom: 0px;
-  margin-bottom: 102px;
+  margin-bottom: 90px;
   transition: right 1s cubic-bezier(0.16, 0.32, 0.21, 0.93);
   -webkit-transition: right 1s cubic-bezier(0.16, 0.32, 0.21, 0.93);
   pointer-events: none;
@@ -12889,24 +12889,24 @@ img {
   width: 100%;
   background-repeat: round;
   background-size: cover;
-  height: 800px;
+  position: fixed;
+  height: 100%;
   opacity: 1;
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
-  position: inherit;
 }
 
 .my-collection .shelf-wrapper--expanded .block.active-block .picture {
-  height: 150px;
+  height: 100px;
 }
 
 .my-collection .shelf-wrapper--expanded .block.active-block .picture.medium {
-  height: 180px;
+  height: 130px;
 }
 
 .my-collection .shelf-wrapper--expanded .block.active-block .picture.large {
-  height: 222px;
+  height: 170px;
 }
 
 .my-collection .shelf-wrapper--expanded .block.active-block .product-images {
@@ -12997,7 +12997,6 @@ img {
 
 @media (max-width: 375px) {
   .my-collection .shelf-wrapper--expanded .block.active-block .border-image--square:before {
-    height: 327px;
     width: calc(100% - 64px);
     left: 40px;
   }
@@ -13023,7 +13022,6 @@ img {
 
 @media (max-width: 375px) {
   .my-collection .shelf-wrapper--expanded .block.active-block .border-image--square:after {
-    height: 328px;
     width: calc(100% - 60px);
     left: 15px;
     right: 0;
