@@ -10180,7 +10180,7 @@ img {
 
 .shelf-block-bg .shelf-block {
   position: absolute;
-  height: 814px;
+  height: 100vh;
   left: 0;
   top: 0;
   padding-top: 30px;
@@ -10303,9 +10303,9 @@ img {
 
 .shelf-block-bg .shelf-block .shelf-block--wrap.active .shelf-block--picture {
   opacity: 1;
-  bottom: 110px;
+  bottom: 90px;
   right: 0;
-  height: 350px;
+  height: 280px;
   transform: translateX(0%);
   pointer-events: auto;
   transition: transform 2s cubic-bezier(0.48, 0.04, 0.25, 1), opacity 2s cubic-bezier(0.48, 0.04, 0.25, 1), bottom 2s cubic-bezier(0.48, 0.04, 0.25, 1), height 2s cubic-bezier(0.48, 0.04, 0.25, 1), right 2s cubic-bezier(0.48, 0.04, 0.25, 1);
