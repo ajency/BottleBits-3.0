@@ -13741,6 +13741,7 @@ img {
 
 .sharing-view .image-rotation.show-screen-view .cd-product-viewer-wrapper {
   top: 50px;
+  padding-top: 90px;
 }
 
 .sharing-view .image-rotation--header {
@@ -13906,7 +13907,7 @@ img {
   left: 0;
   right: 0;
   margin: 0 30px;
-  top: auto;
+  bottom: -220px;
 }
 
 .single-sharing__content .cd-product-viewer-wrapper .icon-3d-wrap-box .icon-3d-wrap {
@@ -14099,7 +14100,6 @@ img {
 .cd-product-viewer-wrapper {
   text-align: center;
   padding: 40px 0 0;
-  position: fixed;
   top: 25px;
   left: 0;
   right: 0;
