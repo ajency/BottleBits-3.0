@@ -12118,7 +12118,6 @@ img {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  position: fixed;
   padding: 8px 16px;
   background-image: url(../images/collection/title-bar.jpg);
   background-repeat: no-repeat;
@@ -12179,6 +12178,10 @@ img {
 
 .my-collection .shelf .collection-blocks {
   margin-bottom: 230px;
+}
+
+.my-collection .shelf .info-tab {
+  position: relative;
 }
 
 .my-collection .shelf .collection-blocks .shelf-wrapper {
@@ -12859,6 +12862,10 @@ img {
   margin-bottom: 0;
   flex-wrap: nowrap;
   transition: margin-bottom 200ms cubic-bezier(0.16, 0.32, 0.21, 0.93);
+}
+
+.my-collection .shelf-wrapper--expanded .info-tab {
+  position: fixed;
 }
 
 .my-collection .shelf-wrapper--expanded .info-tab a.back-to-main-shelf {
@@ -14104,7 +14111,7 @@ img {
   left: 0;
   right: 0;
   bottom: 0;
-  height: auto;
+  height: 100%;
   margin-top: -1px;
   background: linear-gradient(102.8deg, #181A1E 19.63%, #35373D 96.27%);
 }
