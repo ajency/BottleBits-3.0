@@ -1457,7 +1457,7 @@ $("input[type='checkbox']").change(function() {
     }
 });
 
-var content = $(".pageWrapper").outerHeight() + 105;
+var content = $("#content").outerHeight() + 80;
 var button = $('.tnc .primary-button');
 
 button.css({
@@ -1468,11 +1468,11 @@ window.onscroll = function() {
 	if ((window.innerHeight + window.scrollY) >= (content)) {
 		button.stop(true).animate({
 		opacity: 0
-		}, 250);
+		}, 50);
 	} else {
 		button.stop(true).animate({
 		opacity: 1
-		}, 250);
+		}, 50);
 	}
 };
 $(".search-list").fadeOut();
