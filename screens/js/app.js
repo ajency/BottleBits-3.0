@@ -1504,3 +1504,12 @@ $(function () {
     $(this).attr('placeholder', $(this).attr('data-text'));
   });
 });
+
+
+
+$(document).ready(function () {
+	var content1 = $(".rb-container").height();
+	console.log(content1);
+	$(".tab-content .disterllery_details").height(content1);
+
+});
