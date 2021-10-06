@@ -17824,13 +17824,14 @@ body::-webkit-scrollbar-thumb {
   right: 0;
   left: 0;
   width: 100%;
-  height: 500px;
   transform: translateY(0px);
   -webkit-transform: translateY(0px);
 }
 
 .tab-content .disterllery_details .rightbox .rb-container {
   width: 100%;
+  height: 50vh;
+  display: inline-block;
 }
 
 .tab-content .disterllery_details .rightbox .rb-container ul.rb li {
