@@ -13712,6 +13712,10 @@ img {
 @media (min-width: 768px) {
   .my-collection .shelf-bottle-details .vertical-slider-desktop {
     margin-top: 0;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
   }
 }
 
