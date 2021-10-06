@@ -14138,6 +14138,7 @@ img {
   display: flex;
   justify-content: center;
   align-items: center;
+  flex-direction: column;
 }
 
 .cd-product-viewer-wrapper .product-viewer {
