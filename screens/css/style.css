@@ -13750,7 +13750,7 @@ img {
 
 .sharing-view .image-rotation.show-screen-view {
   opacity: 1;
-  position: absolute;
+  position: fixed;
   top: 0;
   left: 0;
   right: 0;
@@ -13928,7 +13928,7 @@ img {
   left: 0;
   right: 0;
   margin: 0 30px;
-  bottom: -220px;
+  bottom: -160px;
 }
 
 .single-sharing__content .cd-product-viewer-wrapper .icon-3d-wrap-box .icon-3d-wrap {
