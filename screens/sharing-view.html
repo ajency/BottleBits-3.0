@@ -24,12 +24,14 @@
 				<div class="single-sharing__content">
 					<div class="cd-product-viewer-wrapper" data-frame="13" data-friction="0.45">
 						<div>
-							<figure class="product-viewer theme-product-viewer">
-								<img src="images/img-loading.png" alt="Product Preview">
-								<div class="product-sprite" data-image="images/img-sprite.png">
-									<img src="images/img-sprite.png" class="rotate-img">
-								</div>
-							</figure> 
+							<div class="productImage">
+								<figure class="product-viewer theme-product-viewer">
+									<img src="images/img-loading.png" alt="Product Preview">
+									<div class="product-sprite" data-image="images/img-sprite.png">
+										<img src="images/img-sprite.png" class="rotate-img">
+									</div>
+								</figure> 
+							</div>
 							<div class="icon-3d-wrap-box">
 								<div class="icon-3d-wrap">
 									<img src="images/icn-3d.svg" alt="icon-3d">
@@ -159,8 +161,18 @@
 		<script type="text/javascript" src="https://hammerjs.github.io/dist/hammer.js"></script>
 		<script type="text/javascript" src="https://code.jquery.com/mobile/1.5.0-alpha.1/jquery.mobile-1.5.0-alpha.1.min.js"></script>
 
+		<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/gsap/1.20.4/utils/Draggable.min.js"></script>
+
+		<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/gsap/1.20.4/TweenMax.min.js"></script>
+
 		<script src="js/main.js"></script>
 		<script src="js/app.js"></script>
+		<script type="text/javascript">
+			Draggable.create(".productImage", {
+			  type:"x,y",
+			  bounds:"svg",
+			})
+		</script>
 	</body>
 </html>
 

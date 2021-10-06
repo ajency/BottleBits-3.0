@@ -17858,3 +17858,7 @@ body::-webkit-scrollbar-thumb {
 .nav-tabs li.active a {
   color: #000000 !important;
 }
+
+.productImage {
+  width: 100%;
+}
