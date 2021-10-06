@@ -16901,9 +16901,9 @@ body.page footer {
 }
 
 .signup--popup {
-  position: absolute;
+  position: fixed;
   background: #FEF8EC;
-  top: 410px;
+  bottom: 50px;
   left: 0;
   right: 0;
   margin: 0 30px;
