@@ -180,7 +180,7 @@ jQuery(document).ready(function($){
 	}
 
 	productViewer.prototype.updateFrame = function() {
-		var transformValue = - (100 * this.visibleFrame/this.frames);
+		var transformValue = - (99.8 * this.visibleFrame/this.frames);
 		transformElement(this.slideShow, 'translateX('+transformValue+'%)');
 	}
 
