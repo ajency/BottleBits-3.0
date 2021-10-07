@@ -17575,12 +17575,13 @@ body.page footer {
 }
 
 .profile.settings {
-  height: 100vh;
+  height: 100%;
 }
 
 .profile.settings .profile-header {
   background: transparent;
-  padding-bottom: 34px;
+  padding-bottom: 0px;
+  padding-top: 5px;
 }
 
 .profile.settings .profile-header:after {
@@ -17632,7 +17633,7 @@ body.page footer {
 }
 
 .profile.settings .form {
-  margin: 50px 0 150px;
+  margin: 20px 0 0px;
   padding: 0 30px;
 }
 
@@ -17707,7 +17708,7 @@ body.page footer {
   font-size: 16px;
   line-height: 103.97%;
   color: #CBA55E;
-  margin-bottom: 40px;
+  margin-bottom: 25px;
   display: block;
   text-align: left;
 }
