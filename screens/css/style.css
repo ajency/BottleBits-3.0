@@ -16930,7 +16930,9 @@ body.page footer {
   background-position: center;
   height: 400px;
   width: 100%;
-  position: relative;
+  position: fixed;
+  left: 0;
+  right: 0;
 }
 
 .pageWrapper.login .image-layer:after {
@@ -16949,7 +16951,9 @@ body.page footer {
 }
 
 .pageWrapper.login .content-wrapper--section {
-  position: relative;
+  position: fixed;
+  left: 0;
+  right: 0;
   z-index: 1;
   padding-top: 100px;
 }
