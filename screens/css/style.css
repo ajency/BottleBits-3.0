@@ -12344,12 +12344,6 @@ img {
 
 @media (max-width: 375px) {
   .my-collection .shelf .collection-blocks .shelf-wrapper .block .large-block.product-images {
-    bottom: -10px;
-  }
-}
-
-@media (max-width: 374px) {
-  .my-collection .shelf .collection-blocks .shelf-wrapper .block .large-block.product-images {
     bottom: -9px;
   }
 }
@@ -12370,16 +12364,6 @@ img {
 @media (min-width: 768px) {
   .my-collection .shelf .collection-blocks .shelf-wrapper .block .large-block {
     height: 45%;
-  }
-}
-
-@media (max-width: 375px) {
-  .my-collection .shelf .collection-blocks .shelf-wrapper .block {
-    background-repeat: no-repeat;
-    height: 248px;
-    width: 50%;
-    position: relative;
-    margin-top: -4px;
   }
 }
 
@@ -12410,10 +12394,10 @@ img {
   }
 }
 
-@media (max-width: 374px) {
+@media (max-width: 375px) {
   .my-collection .shelf .collection-blocks .shelf-wrapper .block {
     background-repeat: no-repeat;
-    height: 237px;
+    height: 234px;
   }
 }
 
@@ -12430,13 +12414,6 @@ img {
 }
 
 @media (max-width: 375px) {
-  .my-collection .shelf .collection-blocks .shelf-wrapper .border-image--square .icon {
-    top: 90px;
-    left: 3px;
-  }
-}
-
-@media (max-width: 374px) {
   .my-collection .shelf .collection-blocks .shelf-wrapper .border-image--square .icon {
     top: 63px;
     left: 3px;
@@ -12484,13 +12461,8 @@ img {
 
 @media (max-width: 375px) {
   .my-collection .shelf .collection-blocks .shelf-wrapper .border-image--square:before {
-    top: 33px;
-  }
-}
-
-@media (max-width: 374px) {
-  .my-collection .shelf .collection-blocks .shelf-wrapper .border-image--square:before {
     height: 80px;
+    top: 33px;
   }
 }
 
@@ -12540,11 +12512,6 @@ img {
 @media (max-width: 375px) {
   .my-collection .shelf .collection-blocks .shelf-wrapper .border-image--square:after {
     top: 35px;
-  }
-}
-
-@media (max-width: 374px) {
-  .my-collection .shelf .collection-blocks .shelf-wrapper .border-image--square:after {
     height: 80px;
   }
 }
@@ -12575,12 +12542,6 @@ img {
 }
 
 @media (max-width: 375px) {
-  .my-collection .shelf .collection-blocks .shelf-wrapper .border-image--rectangle .icon {
-    top: 80px;
-  }
-}
-
-@media (max-width: 374px) {
   .my-collection .shelf .collection-blocks .shelf-wrapper .border-image--rectangle .icon {
     top: 45px;
   }
@@ -12613,14 +12574,9 @@ img {
 
 @media (max-width: 375px) {
   .my-collection .shelf .collection-blocks .shelf-wrapper .border-image--rectangle:before {
-    top: 20px;
-  }
-}
-
-@media (max-width: 374px) {
-  .my-collection .shelf .collection-blocks .shelf-wrapper .border-image--rectangle:before {
     height: 78px;
     width: calc(100% - 43px);
+    top: 20px;
   }
 }
 
@@ -12664,14 +12620,9 @@ img {
 
 @media (max-width: 375px) {
   .my-collection .shelf .collection-blocks .shelf-wrapper .border-image--rectangle:after {
-    top: 16px;
-  }
-}
-
-@media (max-width: 374px) {
-  .my-collection .shelf .collection-blocks .shelf-wrapper .border-image--rectangle:after {
     height: 84px;
     width: calc(100% - 38px);
+    top: 16px;
   }
 }
 
@@ -12740,13 +12691,6 @@ img {
 
 @media (max-width: 375px) {
   .my-collection .shelf .collection-blocks .shelf-wrapper .small-block--child2 .picture.large {
-    height: 90px;
-    bottom: 14px;
-  }
-}
-
-@media (max-width: 374px) {
-  .my-collection .shelf .collection-blocks .shelf-wrapper .small-block--child2 .picture.large {
     height: 80px;
     bottom: 70px;
     left: -9px;
@@ -12760,13 +12704,6 @@ img {
 }
 
 @media (max-width: 375px) {
-  .my-collection .shelf .collection-blocks .shelf-wrapper .small-block--child2 .picture {
-    height: 70px;
-    bottom: 12px;
-  }
-}
-
-@media (max-width: 374px) {
   .my-collection .shelf .collection-blocks .shelf-wrapper .small-block--child2 .picture {
     height: 65px;
     bottom: 70px;
@@ -17829,16 +17766,20 @@ body::-webkit-scrollbar-thumb {
   -webkit-transform: translateY(0px);
 }
 
+.tab-content .disterllery_details .rightbox {
+  height: 100%;
+  display: grid;
+}
+
 .tab-content .disterllery_details .rightbox .rb-container {
   width: 100%;
-  height: 65vh;
-  display: inline-block;
 }
 
 .tab-content .disterllery_details .rightbox .rb-container ul.rb li {
+  height: 80px;
   width: 100%;
   margin: 0;
-  padding: 0 15px 40px 20px;
+  padding: 0 15px 0 20px;
 }
 
 .nav-tabs {
