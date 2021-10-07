@@ -1515,3 +1515,16 @@ $(document).ready(function () {
 });
 
 
+
+$("#shareimg").click(function(){
+	html2canvas(document.body,{
+    allowTaint: false,
+    logging:true,
+	useCORS:true
+    }).then(
+		function(canvas){
+			imagestring = canvas.toDataURL("image/png");
+			console.log(imagestring);
+			document.body.appendChild(canvas);
+	});
+});
