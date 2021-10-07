@@ -17762,7 +17762,7 @@ body::-webkit-scrollbar-thumb {
   right: 0;
   left: 0;
   width: 100%;
-  display: inline-table;
+  display: inline;
   transform: translateY(0px);
   -webkit-transform: translateY(0px);
 }
@@ -17774,6 +17774,7 @@ body::-webkit-scrollbar-thumb {
 
 .tab-content .disterllery_details .rightbox .rb-container {
   width: 100%;
+  margin: 0;
 }
 
 .tab-content .disterllery_details .rightbox .rb-container ul.rb {
