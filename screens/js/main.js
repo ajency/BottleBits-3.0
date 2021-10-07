@@ -42,7 +42,7 @@ jQuery(document).ready(function($){
 				//sprite image has been loaded
 				self.element.addClass('loaded');
 				transformElement(self.handleFill, 'scaleX(1)');
-				//self.dragImage();
+				self.dragImage();
 				if(self.handle) self.dragHandle();
 			} else {
 				//sprite image has not been loaded - increase self.handleFill scale value
