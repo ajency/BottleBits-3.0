@@ -11951,7 +11951,9 @@ img {
 .congratulations .congratulate_bg {
   opacity: 0;
   height: auto;
-  position: relative;
+  position: fixed;
+  left: 0;
+  right: 0;
   padding-top: 80px;
   padding-bottom: 20px;
 }
@@ -11959,6 +11961,7 @@ img {
 @media (min-width: 768px) {
   .congratulations .congratulate_bg {
     height: auto;
+    position: relative;
   }
 }
 
@@ -12016,8 +12019,8 @@ img {
 .congratulations .congratulate_bg .name {
   font-family: "AbhayaLibre-ExtraBold";
   font-weight: 800;
-  font-size: 40px;
-  line-height: 47px;
+  font-size: 35px;
+  line-height: 42px;
   text-align: center;
   letter-spacing: -0.01em;
   color: #E1B96B;
@@ -12032,7 +12035,7 @@ img {
 }
 
 .congratulations .congratulate_bg .shelf-block--picture {
-  height: 270px;
+  height: 215px;
   margin: auto;
   width: auto;
   display: block;
