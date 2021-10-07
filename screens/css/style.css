@@ -17762,6 +17762,8 @@ body::-webkit-scrollbar-thumb {
   right: 0;
   left: 0;
   width: 100%;
+  padding-bottom: 100%;
+  display: inline-block;
   transform: translateY(0px);
   -webkit-transform: translateY(0px);
 }
@@ -17775,11 +17777,16 @@ body::-webkit-scrollbar-thumb {
   width: 100%;
 }
 
+.tab-content .disterllery_details .rightbox .rb-container ul.rb {
+  float: left;
+}
+
 .tab-content .disterllery_details .rightbox .rb-container ul.rb li {
   height: 80px;
   width: 100%;
   margin: 0;
   padding: 0 15px 0 20px;
+  float: left;
 }
 
 .nav-tabs {

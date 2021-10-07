@@ -1505,3 +1505,9 @@ $(function () {
   });
 });
 
+
+$(document).ready(function () {
+	var tagHeight = $('.tab-content ul').height();
+	$(".tab-content .disterllery_details").height(tagHeight);
+});
+
