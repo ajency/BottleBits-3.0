@@ -16939,9 +16939,9 @@ body.page footer {
   background-size: cover;
   background-image: url(../images/home/back-wall-bottom-bg.png);
   background-position: center;
-  height: 830px;
+  height: 100%;
   width: 100%;
-  position: absolute;
+  position: fixed;
   left: 0;
   right: 0;
   top: 0;
@@ -16951,7 +16951,7 @@ body.page footer {
 .pageWrapper.login .content-wrapper--section {
   position: relative;
   z-index: 1;
-  padding-top: 200px;
+  padding-top: 100px;
 }
 
 .pageWrapper.login .content-wrapper--section .logo {
@@ -16961,7 +16961,7 @@ body.page footer {
 }
 
 .pageWrapper.login .content-wrapper--section .form {
-  margin-top: 100px;
+  margin-top: 60px;
   padding: 0 60px;
 }
 
@@ -17047,7 +17047,7 @@ body.page footer {
 
 .pageWrapper.login .content-wrapper--section .form a .secondary-btn--gold {
   width: 100%;
-  margin: 55px auto 74px;
+  margin: 55px auto 35px;
   text-align: center;
 }
 
@@ -17072,7 +17072,7 @@ body.page footer {
   font-size: 24px;
   line-height: 103.97%;
   color: #E1B96B;
-  margin-top: 70px;
+  margin-top: 35px;
 }
 
 .pageWrapper.login .content-wrapper--section .text-link:hover, .pageWrapper.login .content-wrapper--section .text-link:focus {
