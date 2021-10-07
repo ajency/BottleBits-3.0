@@ -16921,6 +16921,9 @@ body.page footer {
 .pageWrapper.login {
   background-color: white;
   padding-top: 0;
+  position: fixed;
+  left: 0;
+  right: 0;
 }
 
 .pageWrapper.login .image-layer {
@@ -17583,6 +17586,9 @@ body.page footer {
 
 .profile.settings {
   height: 100%;
+  position: fixed;
+  left: 0;
+  right: 0;
 }
 
 .profile.settings .profile-header {
