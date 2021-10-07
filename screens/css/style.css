@@ -17778,7 +17778,7 @@ body::-webkit-scrollbar-thumb {
   right: 0;
   left: 0;
   width: 100%;
-  display: inline;
+  display: inline-block;
   transform: translateY(0px);
   -webkit-transform: translateY(0px);
 }
