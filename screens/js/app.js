@@ -1509,7 +1509,7 @@ $(function () {
 $(document).ready(function () {
 	var height =  $(".tab-content ul li").height();
 	var tagHeight = $('.tab-content ul').length * height;
-	$(".tab-content .disterllery_details").height(tagHeight);
+	$(".tab-content .disterllery_details").height(tagHeight + 180);
 });
 
 
