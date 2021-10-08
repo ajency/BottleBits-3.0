@@ -1525,9 +1525,22 @@ shareButton.on("click",function(){
 		var imagestring = canvas.toDataURL("image/png");
 		$('#b').attr("href", imagestring);
 		var link = $('#b').attr("href");
-		
+		console.log("ImageLink:"+ link);
 		document.body.appendChild(canvas);
 	});
 
 });
 
+const shareBtn = document.getElementById('.share');
+ 
+shareBtn.addEventListener('click', event => {
+  if (navigator.share) { 
+   navigator.share({
+      title: 'Share BottleBits',
+      url: 'http://join.bottlebits.com/login'
+    }).then(() => {
+      console.log('Thanks for sharing!');
+    })
+    .catch(console.error);
+    } 
+});

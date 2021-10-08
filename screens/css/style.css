@@ -13835,6 +13835,13 @@ img {
   transform: matrix(1, 0, 0, -1, 0, 0);
 }
 
+.single-sharing__header .icons {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+}
+
 .single-sharing__content {
   display: flex;
   justify-content: center;
@@ -14043,6 +14050,15 @@ img {
   padding: 6px 20px;
   transform: matrix(1, 0, 0, -1, 0, 0);
   background: linear-gradient(102.8deg, #181A1E 19.63%, #35373D 96.27%);
+}
+
+.single-sharing .floating-download-btn2 {
+  position: relative;
+  padding: 10px 5px 10px 11px;
+  border-radius: 30px;
+  transform: matrix(1, 0, 0, -1, 0, 0);
+  background: linear-gradient(102.8deg, #181A1E 19.63%, #35373D 96.27%);
+  margin-right: 10px;
 }
 
 .sharing-screen .my-collection {
