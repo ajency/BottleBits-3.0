@@ -1523,7 +1523,7 @@ $("#shareimg").on("click",function(){
     }).then(
 	function download(canvas){
 		imagestring = canvas.toDataURL("image/png");
-		console.log(imagestring);
+		const link = document.createElement("a");
 		link.href = imagestring;
 		link.download = "image.png";
 		document.body.appendChild(canvas);
