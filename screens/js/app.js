@@ -1535,13 +1535,14 @@ shareButton.on("click",function(){
     }).then(
 	function download(canvas){
 		$("canvas").remove();
+		$(".shareImg").remove();
 		var imagestring = canvas.toDataURL("image/png");
 		$('.shareImg').removeAttr("href",imagestring).attr("href", imagestring);
 		var link = $('.shareImg').attr("href");
 		console.log("ImageLink:"+ link);
 		document.body.appendChild(canvas);
+		$(".shareImg").click();
 	});
-	$(".shareImg").click();
 });
 
  
