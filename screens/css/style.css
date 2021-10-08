@@ -13839,7 +13839,7 @@ img {
   display: flex;
   justify-content: center;
   align-items: center;
-  height: calc(100% - 370px);
+  height: 75%;
   position: relative;
 }
 
@@ -13850,7 +13850,7 @@ img {
 
 .single-sharing__content .cd-product-viewer-wrapper {
   background: transparent;
-  height: 200px;
+  height: 375px;
   padding: 0;
 }
 
@@ -13871,7 +13871,7 @@ img {
   left: 0;
   right: 0;
   margin: 0 30px;
-  bottom: -215px;
+  bottom: 0px;
 }
 
 .single-sharing__content .cd-product-viewer-wrapper .icon-3d-wrap-box .icon-3d-wrap {
