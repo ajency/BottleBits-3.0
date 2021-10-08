@@ -1525,8 +1525,6 @@ shareButton.on("click",function(){
 		var imagestring = canvas.toDataURL("image/png");
 		$('#b').attr("href", imagestring);
 		var link = $('#b').attr("href");
-		console.log(link);
-		shareButton.addEventListener('click', event => {
 		  if (navigator.share) { 
 		   navigator.share({
 		      title: 'WebShare API Demo',
@@ -1536,7 +1534,6 @@ shareButton.on("click",function(){
 		    })
 		    .catch(console.error);
 		    } 
-		});
 		document.body.appendChild(canvas);
 	});
 
