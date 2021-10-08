@@ -1522,7 +1522,7 @@ shareButton.on("click",function(){
 	useCORS:true
     }).then(
 	function download(canvas){
-		var imagestring = canvas.toDataURL("image/png");
+		var imagestring = canvas.toBlob("image/png");
 		$('#b').attr("href", imagestring);
 		var link = $('#b').attr("href");
 		  if (navigator.share) { 
@@ -1532,6 +1532,7 @@ shareButton.on("click",function(){
 		    }).then(() => {
 		      console.log('Thanks for sharing!');
 		    })
+		    console.log(url);
 	    } 
 		document.body.appendChild(canvas);
 	});
