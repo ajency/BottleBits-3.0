@@ -1531,9 +1531,8 @@ shareButton.on("click",function(){
 
 });
 
-const shareBtn = document.getElementById('.share');
  
-shareBtn.on("click",function(){
+$('#share').on("click",function(){
   if (navigator.share) { 
    navigator.share({
       title: 'Share BottleBits',
