@@ -13839,7 +13839,7 @@ img {
   display: flex;
   justify-content: center;
   align-items: center;
-  height: 75%;
+  height: 77%;
   position: relative;
 }
 
@@ -14099,8 +14099,8 @@ img {
   position: relative;
   left: 6px;
   z-index: 1;
-  width: 106px;
-  height: 370px;
+  width: 92px;
+  height: 375px;
 }
 
 @media (min-width: 768px) {
