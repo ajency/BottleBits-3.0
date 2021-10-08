@@ -1515,7 +1515,7 @@ $(document).ready(function () {
 
 
 
-$("#shareimg").on("click",function(){
+$("#b").on("click",function(){
 	html2canvas(document.getElementById('div1'),{
     allowTaint: false,
     logging:true,
