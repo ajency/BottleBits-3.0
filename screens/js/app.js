@@ -1538,10 +1538,9 @@ shareButton.on("click",function(){
 		var imagestring = canvas.toDataURL("image/png");
 		$('.shareImg').attr("href", imagestring);
 		var link = $('.shareImg').attr("href");
-		
 		document.body.appendChild(canvas);
-		$(".shareImg").click();
 		console.log("ImageLink:"+ link);
+		a.download = 'image.png';
 	});
 });
 
