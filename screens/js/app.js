@@ -1514,8 +1514,8 @@ $(document).ready(function () {
 });
 
 
-
-$("#b").on("click",function(){
+var shareButton = $("#b");
+shareButton.on("click",function(){
 	html2canvas(document.getElementById('div1'),{
     allowTaint: false,
     logging:true,
@@ -1526,18 +1526,17 @@ $("#b").on("click",function(){
 		$('#b').attr("href", imagestring);
 		var link = $('#b').attr("href");
 		console.log(link);
-
-			shareButton.addEventListener('click', event => {
-			  if (navigator.share) { 
-			   navigator.share({
-			      title: 'WebShare API Demo',
-			      url: link
-			    }).then(() => {
-			      console.log('Thanks for sharing!');
-			    })
-			    .catch(console.error);
-			    } 
-			});
+		shareButton.addEventListener('click', event => {
+		  if (navigator.share) { 
+		   navigator.share({
+		      title: 'WebShare API Demo',
+		      url: link
+		    }).then(() => {
+		      console.log('Thanks for sharing!');
+		    })
+		    .catch(console.error);
+		    } 
+		});
 		document.body.appendChild(canvas);
 	});
 
