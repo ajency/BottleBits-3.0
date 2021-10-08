@@ -882,7 +882,6 @@ $(".image-rotation--header .cross").on("click", function(){
 	        "scale(" +
 	        currentScale +
 	        ")";
-	        $(".productImage").draggable('disable');
 	        $(".product-sprite").removeAttr("style");
 	    });
 	  }
