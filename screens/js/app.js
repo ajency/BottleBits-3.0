@@ -1516,20 +1516,26 @@ $(document).ready(function () {
 
 var shareButton = $("#b");
 shareButton.on("click",function(){
-
-	html2canvas(document.getElementById('div1'),{
-    allowTaint: false,
-    logging:true,
-	useCORS:true
-    }).then(
-	function download(canvas){
-		$("canvas").remove();
-		var imagestring = canvas.toDataURL("image/png");
-		$('#b').attr("href", imagestring);
+	var img = $(".uploaded-image");
+	if(img.src = "images/img-loading.png"){
+		html2canvas(document.getElementById('div1'),{
+	    allowTaint: false,
+	    logging:true,
+		useCORS:true
+	    }).then(
+		function download(canvas){
+			$("canvas").remove();
+			var imagestring = canvas.toDataURL("image/png");
+			$('#b').attr("href", imagestring);
+			var link = $('#b').attr("href");
+			console.log("ImageLink:"+ link);
+			document.body.appendChild(canvas);
+		});
+	}else{
+		var imgSrc = $(".uploaded-image").attr("src");
+		$('#b').attr("href", imgSrc);
 		var link = $('#b').attr("href");
-		console.log("ImageLink:"+ link);
-		document.body.appendChild(canvas);
-	});
+	}
 
 });
 
