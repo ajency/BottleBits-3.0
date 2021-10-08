@@ -1361,7 +1361,7 @@ $(".carousel-control.right").on("click", function(){
 });
 
 /* click action on black theme */
-$(".theme--black").on("click", function(){
+$(".theme--black, .theme--yellow, .theme--green, .theme--brown").on("click", function(){
 	$(".popup").css({opacity: "1", height: "auto", transition: "opacity 400ms ease-in-out"}).fadeIn();
 });
 
@@ -1516,6 +1516,8 @@ $(document).ready(function () {
 
 var shareButton = $("#b");
 shareButton.on("click",function(){
+	$("canvas").remove();
+	$('#b').attr("href", '#');
 	html2canvas(document.getElementById('div1'),{
     allowTaint: false,
     logging:true,
