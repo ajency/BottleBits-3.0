@@ -1517,7 +1517,7 @@ $(document).ready(function () {
 
 
 $("#shareimg").click(function(){
-	html2canvas(getElementsByClassName("single-sharing__content"),{
+	html2canvas(document.getElementsByClassName("single-sharing__content"),{
     allowTaint: false,
     logging:true,
 	useCORS:true
@@ -1525,6 +1525,6 @@ $("#shareimg").click(function(){
 		function(canvas){
 			imagestring = canvas.toDataURL("image/png");
 			console.log(imagestring);
-			document.body.appendChild(canvas);
+			document.getElementsByClassName("single-sharing__content").appendChild(canvas);
 	});
 });
