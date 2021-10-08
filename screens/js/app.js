@@ -1522,10 +1522,22 @@ $("#b").on("click",function(){
 	useCORS:true
     }).then(
 	function download(canvas){
-		imagestring = canvas.toDataURL("image/png");
-		var foo = canvas.toDataURL("image/png");
-		console.log("foo"+foo);
-		$('#b').attr("href", foo);
+		var imagestring = canvas.toDataURL("image/png");
+		$('#b').attr("href", imagestring);
+		var link = $('#b').attr("href");
+		console.log(link);
+
+			shareButton.addEventListener('click', event => {
+			  if (navigator.share) { 
+			   navigator.share({
+			      title: 'WebShare API Demo',
+			      url: link
+			    }).then(() => {
+			      console.log('Thanks for sharing!');
+			    })
+			    .catch(console.error);
+			    } 
+			});
 		document.body.appendChild(canvas);
 	});
 
