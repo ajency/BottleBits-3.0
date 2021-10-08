@@ -14,15 +14,15 @@
 		
 		<div id="content">
 
-			<div id="div1" class="single-sharing camera">
+			<div class="single-sharing camera">
 
 				<div class="single-sharing__header">
 					<div class="icons">
 						<a href="#" onclick="document.location='collection-view.html';return false;"><img src="images/arrow-left-1.svg" alt="back" class="return-back"></a>
-						<div id="shareimg" class="floating-download-btn"> Download </div>
+						<a id="b" href="#" id="shareimg" class="floating-download-btn" download> Download </a>
 					</div>
 				</div>
-				<div class="single-sharing__content">
+				<div id="div1" class="single-sharing__content">
 					<div class="cd-product-viewer-wrapper" data-frame="13" data-friction="0.45">
 						<div>
 							<div class="productImage">
@@ -122,19 +122,6 @@
 			</div>
 
 	    </div>
-		<div id="a">
-		   	<h2 style="color: #3e4b51;">
-			   Html to canvas, and canvas to proper image
-		   	</h2>
-		  	<p style="color: #3e4b51;">
-			  html2canvas script allows you to take "screenshots" of webpages or parts of it, directly on the users browser. The screenshot is based on the DOM and as such may not be 100% accurate to the real representation.
-		 	</p>
-	  	</div>
-		<a href="#" class="screenshot">Preview screenshot</a>
-	  	<div id="box" style="border: 2px solid grey; min-height:30vh;"></div>
-	  	<br>
-	  	<a id="b" href="#" download>Download Image</a>
-	  	<div id="c" style="display:none;"></div>
 
 		<link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/Swiper/3.3.1/css/swiper.css">
 		<link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
@@ -168,29 +155,6 @@
 			Draggable.create(".productImage", {
 			  type:"x,y",
 			})
-		</script>
-		<script type="text/javascript">
-			// preview image
-$('.screenshot').on('click',function(){
-	aelement=document.getElementById("a");
-	//converting to canvas
-	html2canvas(aelement,{
-		onrendered: function(canvas){
-			$('#box').html("");
-			$('#box').append(canvas);
-			getCanvas = canvas;
-			// convrting canvas to image and appening
-			var image = new Image();
-			image.src = canvas.toDataURL("image/png");
-			$('#c').append(image);
-			// setting geneated img url as href of #b
-			var foo = canvas.toDataURL("image/png");
-			console.log("foo"+foo);
-			$('#b').attr("href", foo);
-		}
-	});
-});
-
 		</script>
 	</body>
 </html>

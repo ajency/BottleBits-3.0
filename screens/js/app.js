@@ -1523,9 +1523,9 @@ $("#shareimg").on("click",function(){
     }).then(
 	function download(canvas){
 		imagestring = canvas.toDataURL("image/png");
-		const link = document.createElement("a");
-		link.href = imagestring;
-		link.download = "image.png";
+		var foo = canvas.toDataURL("image/png");
+		console.log("foo"+foo);
+		$('#b').attr("href", foo);
 		document.body.appendChild(canvas);
 	});
 
