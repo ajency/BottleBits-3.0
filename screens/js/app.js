@@ -1527,10 +1527,13 @@ shareButton.on("click",function(){
 		var link = $('#b').attr("href");
 		  if (navigator.share) { 
 		   navigator.share({
-		      title: 'BottleBits Exclusive Bar',
+		      title: 'BottleBits',
 		      url: link
+		    }).then(() => {
+		      console.log('Thanks for sharing!');
 		    })
-	    } 
+		    .catch(console.error);
+		    } 
 		document.body.appendChild(canvas);
 	});
 
