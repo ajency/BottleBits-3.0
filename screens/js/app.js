@@ -1533,17 +1533,18 @@ shareButton.on("click",function(){
 		  //     console.log('Thanks for sharing!');
 		  //   })
 		  //   .catch(console.error);
-		  //   } 
-		document.body.appendChild(canvas);
-
-			var win = window.open(link);
+		  //   }
+		  var win = window.open(link);
 			if (win) {
 			//Browser has allowed it to be opened
 			win.focus();
 			} else {
 			//Browser has blocked it
 			alert('Please allow popups for this website');
-			}
+			} 
+		document.body.appendChild(canvas);
+
+			
 	});
 
 });
