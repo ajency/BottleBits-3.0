@@ -1522,19 +1522,17 @@ shareButton.on("click",function(){
 	useCORS:true
     }).then(
 	function download(canvas){
-		var imagestring = canvas.toBlob("image/png");
-		$('#b').attr("href", imagestring);
-		var link = $('#b').attr("href");
-		  if (navigator.share) { 
-		   navigator.share({
-		      title: 'BottleBits Exclusive Bar',
-		      url: link
-		    }).then(() => {
-		      console.log('Thanks for sharing!');
-		    })
-		    console.log(url);
-	    } 
-		document.body.appendChild(canvas);
+		var imagestring =  canvas.toBlob(function(blob){
+			shareButton.attr("href", imagestring);
+			var link = shareButton.attr("href");
+		  	if (navigator.share) { 
+			   	navigator.share({
+			      title: 'BottleBits Exclusive Bar',
+			      url: link
+			    })
+		    } 
+			document.body.appendChild(canvas);
+		},'image/png');
 	});
 
 });
