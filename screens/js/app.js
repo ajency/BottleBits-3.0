@@ -1536,7 +1536,7 @@ $(document).ready(function () {
 // });
 
 function download() {
-	const image = canvas.toDataURL();
+	const image = canvas.toDataURL("image/png");
 	const link = document.createElement("div1");
 	link.href = image;
 	link.download = "image.png";
