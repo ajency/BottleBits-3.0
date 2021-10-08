@@ -1525,6 +1525,6 @@ $("#shareimg").click(function(){
 		function(canvas){
 			imagestring = canvas.toDataURL("image/png");
 			console.log(imagestring);
-			document.getElementsByClassName("single-sharing__content").appendChild(canvas);
+			document.body.appendChild(canvas);
 	});
 });
