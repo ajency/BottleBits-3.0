@@ -1526,14 +1526,6 @@ shareButton.on("click",function(){
 		$('#b').attr("href", imagestring);
 		var link = $('#b').attr("href");
 		
-		const blob = await (await fetch(link)).blob();
-		const file = new File([blob], 'fileName.png', { type: blob.type });
-		navigator.share({
-		  title: 'Hello',
-		  text: 'Check out this image!',
-		  files: [file],
-		})
-
 		document.body.appendChild(canvas);
 	});
 
