@@ -1521,7 +1521,7 @@ $("#shareimg").on("click",function(){
     logging:true,
 	useCORS:true
     }).then(
-	function(canvas){
+	function download(canvas){
 		imagestring = canvas.toDataURL("image/png");
 		console.log(imagestring);
 		link.href = imagestring;
