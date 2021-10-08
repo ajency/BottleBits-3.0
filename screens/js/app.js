@@ -1524,7 +1524,7 @@ $("#shareimg").on("click",function(){
 	function(canvas){
 		imagestring = canvas.toDataURL("image/png");
 		console.log(imagestring);
-		link.href = image;
+		link.href = imagestring;
 		link.download = "image.png";
 		document.body.appendChild(canvas);
 	});
