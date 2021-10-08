@@ -1517,7 +1517,7 @@ $(document).ready(function () {
 
 
 $("#shareimg").click(function(){
-	html2canvas(document.getElementsByClassName("single-sharing__content"),{
+	html2canvas(document.getElementById('div1'),{
     allowTaint: false,
     logging:true,
 	useCORS:true
