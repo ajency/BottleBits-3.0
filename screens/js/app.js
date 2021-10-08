@@ -1518,7 +1518,8 @@ $(document).ready(function () {
 
 var shareButton = $("#b");
 shareButton.on("click",function(){
-
+	$(".shareImg").remove();
+	$("canvas").remove();
 	var a = document.createElement('a'); 
 	var link = document.createTextNode("Download");
 	a.appendChild(link);
@@ -1534,8 +1535,7 @@ shareButton.on("click",function(){
 	useCORS:true
     }).then(
 	function download(canvas){
-		$("canvas").remove();
-		$(".shareImg").remove();
+		
 		var imagestring = canvas.toDataURL("image/png");
 		$('.shareImg').removeAttr("href",imagestring).attr("href", imagestring);
 		var link = $('.shareImg').attr("href");
