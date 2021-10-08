@@ -1515,32 +1515,19 @@ $(document).ready(function () {
 
 
 
-// $("#shareimg").click(function(){
-// 	html2canvas(document.getElementById('div1'),{
-//     allowTaint: false,
-//     logging:true,
-// 	useCORS:true
-//     }).then(
-// 		function(canvas){
-// 			imagestring = canvas.toDataURL("image/png");
-// 			console.log(imagestring);
-// 			document.body.appendChild(canvas);
-// 	});
-//   	function download() {
-// 		const image = canvas.toDataURL();
-// 		const link = document.createElement("a");
-// 		link.href = image;
-// 		link.download = "image.png";
-// 		link.click();
-// 	}
-// });
+$("#shareimg").on("click",function(){
+	html2canvas(document.getElementById('div1'),{
+    allowTaint: false,
+    logging:true,
+	useCORS:true
+    }).then(
+	function(canvas){
+		imagestring = canvas.toDataURL("image/png");
+		console.log(imagestring);
+		link.href = image;
+		link.download = "image.png";
+		document.body.appendChild(canvas);
+	});
 
-function download(canvas) {
-	const image = canvas.toDataURL("image/png");
-	const link = document.createElement("div1");
-	link.href = image;
-	link.download = "image.png";
-	link.click();
-}
+});
 
-document.getElementById("shareimg").addEventListener("click", download);
