@@ -1533,7 +1533,7 @@ shareButton.on("click",function(){
 
 const shareBtn = document.getElementById('.share');
  
-shareBtn.addEventListener('click', event => {
+shareBtn.on("click",function(){
   if (navigator.share) { 
    navigator.share({
       title: 'Share BottleBits',
