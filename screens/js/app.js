@@ -1535,7 +1535,7 @@ $(document).ready(function () {
 // 	}
 // });
 
-function download() {
+function download(canvas) {
 	const image = canvas.toDataURL("image/png");
 	const link = document.createElement("div1");
 	link.href = image;
