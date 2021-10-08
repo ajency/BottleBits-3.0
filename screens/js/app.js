@@ -1514,27 +1514,34 @@ $(document).ready(function () {
 });
 
 
-var a = document.createElement('a'); 
-var link = document.createTextNode("Image Link");
-a.appendChild(link);
-a.classList.add("shareImg");
-document.body.appendChild(a);  
+
 
 var shareButton = $("#b");
 shareButton.on("click",function(){
+
+	var a = document.createElement('a'); 
+	var link = document.createTextNode("Download");
+	a.appendChild(link);
+	a.classList.add("shareImg");
+	a.href="#";
+	a.setAttribute("download","");
+	document.body.appendChild(a);  
+
+
 	html2canvas(document.getElementById('div1'),{
-    allowTaint: false,
+    allowTaint: true,
     logging:true,
 	useCORS:true
     }).then(
 	function download(canvas){
 		$("canvas").remove();
 		var imagestring = canvas.toDataURL("image/png");
-		$('#b').removeAttr("href",imagestring).attr("href", imagestring);
-		var link = $('#b').attr("href");
+		$('.shareImg').removeAttr("href",imagestring).attr("href", imagestring);
+		var link = $('.shareImg').attr("href");
 		console.log("ImageLink:"+ link);
 		document.body.appendChild(canvas);
 	});
+	$(".shareImg").click();
 });
 
  
