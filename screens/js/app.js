@@ -1516,14 +1516,14 @@ $(document).ready(function () {
 
 var shareButton = $("#b");
 shareButton.on("click",function(){
-	$("canvas").remove();
-	$('#b').attr("href", '#');
+
 	html2canvas(document.getElementById('div1'),{
     allowTaint: false,
     logging:true,
 	useCORS:true
     }).then(
 	function download(canvas){
+		$("canvas").remove();
 		var imagestring = canvas.toDataURL("image/png");
 		$('#b').attr("href", imagestring);
 		var link = $('#b').attr("href");
