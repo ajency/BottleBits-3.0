@@ -1525,28 +1525,16 @@ shareButton.on("click",function(){
 		var imagestring = canvas.toDataURL("image/png");
 		$('#b').attr("href", imagestring);
 		var link = $('#b').attr("href");
-		  // if (navigator.share) { 
-		  //  navigator.share({
-		  //     title: 'WebShare API Demo',
-		  //     url: link
-		  //   }).then(() => {
-		  //     console.log('Thanks for sharing!');
-		  //   })
-		  //   .catch(console.error);
-		  //   }
-		  var win = window.open(link);
-			if (win) {
-			//Browser has allowed it to be opened
-			win.focus();
-			} else {
-			//Browser has blocked it
-			alert('Please allow popups for this website');
-			} 
+		  if (navigator.share) { 
+		   navigator.share({
+		      title: 'BottleBits Exclusive Bar',
+		      url: link
+		    }).then(() => {
+		      console.log('Thanks for sharing!');
+		    })
+	    } 
 		document.body.appendChild(canvas);
-
-			
 	});
 
 });
-
 
