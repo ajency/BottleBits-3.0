@@ -1522,11 +1522,11 @@ shareButton.on("click",function(){
 	useCORS:true
     }).then(
 	function download(canvas){
-		var imagestring =  canvas.toBlob(function(blob){},'image/png');
-		shareButton.attr("href", imagestring);
-		var link = shareButton.attr("href");
-	  	if (navigator.share) { 
-		   	navigator.share({
+		var imagestring = canvas.toDataURL("image/png");
+		$('#b').attr("href", imagestring);
+		var link = $('#b').attr("href");
+		  if (navigator.share) { 
+		   navigator.share({
 		      title: 'BottleBits Exclusive Bar',
 		      url: link
 		    })
