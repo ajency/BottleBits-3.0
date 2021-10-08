@@ -1515,19 +1515,18 @@ $(document).ready(function () {
 
 
 
+var a = document.createElement('a'); 
+var link = document.createTextNode("Download");
+a.appendChild(link);
+a.setAttribute("download","");
+a.classList.add("shareImg");
+a.href="#";
+document.body.appendChild(a);  
 
 var shareButton = $("#b");
 shareButton.on("click",function(){
-	$(".shareImg").remove();
+	$(".shareImg").removeAttr("href");
 	$("canvas").remove();
-	var a = document.createElement('a'); 
-	var link = document.createTextNode("Download");
-	a.appendChild(link);
-	a.classList.add("shareImg");
-	a.href="#";
-	a.setAttribute("download","");
-	document.body.appendChild(a);  
-
 
 	html2canvas(document.getElementById('div1'),{
     allowTaint: true,
@@ -1537,11 +1536,12 @@ shareButton.on("click",function(){
 	function download(canvas){
 		
 		var imagestring = canvas.toDataURL("image/png");
-		$('.shareImg').removeAttr("href",imagestring).attr("href", imagestring);
+		$('.shareImg').attr("href", imagestring);
 		var link = $('.shareImg').attr("href");
-		console.log("ImageLink:"+ link);
+		
 		document.body.appendChild(canvas);
 		$(".shareImg").click();
+		console.log("ImageLink:"+ link);
 	});
 });
 
