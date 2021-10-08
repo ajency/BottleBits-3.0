@@ -1514,6 +1514,12 @@ $(document).ready(function () {
 });
 
 
+var a = document.createElement('a'); 
+var link = document.createTextNode("Image Link");
+a.appendChild(link);
+a.classList.add("shareImg");
+document.body.appendChild(a);  
+
 var shareButton = $("#b");
 shareButton.on("click",function(){
 	html2canvas(document.getElementById('div1'),{
@@ -1524,7 +1530,7 @@ shareButton.on("click",function(){
 	function download(canvas){
 		$("canvas").remove();
 		var imagestring = canvas.toDataURL("image/png");
-		$(this).removeAttr("href",imagestring).attr("href", imagestring);
+		$('#b').removeAttr("href",imagestring).attr("href", imagestring);
 		var link = $('#b').attr("href");
 		console.log("ImageLink:"+ link);
 		document.body.appendChild(canvas);
