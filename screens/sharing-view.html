@@ -20,7 +20,7 @@
 					<div class="icons">
 						<a href="#" onclick="document.location='collection-view.html';return false;"><img src="images/arrow-left-1.svg" alt="back" class="return-back"></a>
 						<div class="icons-group">
-							<a id="b" href="#" class="floating-download-btn2"> <img src="images/icon-download.svg"> </a>
+							<a id="b" href="#" class="floating-download-btn2" download> <img src="images/icon-download.svg"> </a>
 							<a id="share"><img src="images/sharing.png"></a>
 						</div>
 					</div>
@@ -151,14 +151,21 @@
 		<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/gsap/1.20.4/utils/Draggable.min.js"></script>
 
 		<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/gsap/1.20.4/TweenMax.min.js"></script>
-
-		<script src="js/main.js"></script>
-		<script src="js/app.js"></script>
 		<script type="text/javascript">
 			Draggable.create(".productImage", {
 			  type:"x,y",
 			})
+
+			var a = document.createElement('a'); 
+			var link = document.createTextNode("Download");
+			a.appendChild(link);
+			a.classList.add("shareImg");
+			a.href="#";
+			document.body.appendChild(a);  
 		</script>
+		<script src="js/main.js"></script>
+		<script src="js/app.js"></script>
+
 	</body>
 </html>
 

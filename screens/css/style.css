@@ -10222,7 +10222,7 @@ img {
   perspective: none;
   width: auto !important;
   margin-right: 0 !important;
-  pointer-events: none;
+  pointer-events: auto;
 }
 
 .shelf-block-bg .shelf-block .shelf-block--wrap .shelf-block--label {
@@ -10297,7 +10297,7 @@ img {
 }
 
 .shelf-block-bg .shelf-block .shelf-block--wrap.prev .shelf-block--picture {
-  height: 350px;
+  height: 245px;
   transform: translateX(-140%);
   transition: transform 2s cubic-bezier(0.48, 0.04, 0.25, 1), opacity 2s cubic-bezier(0.48, 0.04, 0.25, 1), bottom 2s cubic-bezier(0.48, 0.04, 0.25, 1);
 }
@@ -10332,7 +10332,7 @@ img {
 }
 
 .shelf-block-bg .shelf-block .shelf-block--wrap.next .shelf-block--picture {
-  height: 350px;
+  height: 245px;
   transform: translateX(140%);
   transition: transform 2s cubic-bezier(0.48, 0.04, 0.25, 1), opacity 2s cubic-bezier(0.48, 0.04, 0.25, 1), bottom 2s cubic-bezier(0.48, 0.04, 0.25, 1);
 }
@@ -10354,7 +10354,7 @@ img {
     padding-top: 108px;
     width: auto !important;
     margin-right: 0 !important;
-    pointer-events: none;
+    pointer-events: auto;
   }
   .shelf-block-bg .shelf-block .shelf-block--wrap .shelf-block--label {
     margin-bottom: 15px;

@@ -67,7 +67,7 @@ $(document).ready(function(){
 		    var title = $(this).attr('data-title');  
 		    $('#title').text(title);
 
-			$('.podium').addClass('podium-animate');
+			
 
 			$(window).on('popstate', function(event) {
 				$('.carousel').find('.shelf-block--details .shelf-block--wrap').removeClass('prev');
@@ -114,7 +114,9 @@ $(document).ready(function(){
 		    	$carouselItems.removeClass('prev');
 		    	$carouselItems.removeClass('next');
 		    	$active.prev().addClass("prev");	
-		    	$active.next().addClass("next");	
+		    	$active.next().addClass("next");
+		    	$('.carousel-item .podium').removeClass("podium-animate");
+		    	$active.find('.podium').addClass("podium-animate");	
 		    	if(currIndex == 'wrap'+(itemLength)){
 	    		 	$('.shelf-block--details .shelf-block--wrap.wrap1').addClass("next");
 		    	}
@@ -1514,20 +1516,11 @@ $(document).ready(function () {
 });
 
 
-
-var a = document.createElement('a'); 
-var link = document.createTextNode("Download");
-a.appendChild(link);
-a.setAttribute("download","");
-a.classList.add("shareImg");
-a.href="#";
-document.body.appendChild(a);  
-
 var shareButton = $("#b");
 shareButton.on("click",function(){
 	$(".shareImg").removeAttr("href");
 	$("canvas").remove();
-
+	$(".shareImg").click();
 	html2canvas(document.getElementById('div1'),{
     allowTaint: true,
     logging:true,
@@ -1538,9 +1531,13 @@ shareButton.on("click",function(){
 		var imagestring = canvas.toDataURL("image/png");
 		$('.shareImg').attr("href", imagestring);
 		var link = $('.shareImg').attr("href");
+
+		$("#b").attr("href", imagestring);
+		var link2 = $("#b").attr("href");
+
 		document.body.appendChild(canvas);
-		console.log("ImageLink:"+ link);
-		a.download = 'image.png';
+		console.log("ImageLink:"+ link2);
+		
 	});
 });
 

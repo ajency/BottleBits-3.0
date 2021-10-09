@@ -1563,9 +1563,9 @@
 					$(this).prev().addClass('prev');
 					$(this).fadeIn().addClass('active');
 					$('#'+shelfblockId+'.slide-item').fadeIn().addClass('active');
+					$(this).find('.podium').addClass('podium-animate');
 					$('.vertical-slider-desktop').removeClass("hide");
 					$('.slide-dots').addClass('slide-dots-active');
-					$('#'+shelfblockId+' .podium').addClass("podium-animate");
 					$(this).next().addClass('next');
 					return false;
 				}
