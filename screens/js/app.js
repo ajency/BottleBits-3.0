@@ -1516,34 +1516,29 @@ $(document).ready(function () {
 });
 
 
-
-$(document).ready(function () {
-  	html2canvas(document.getElementById('div1'),{
-	    allowTaint: true,
-	    logging:true,
-		useCORS:true
+var shareButton = $("#b");
+shareButton.on("click",function(){
+	$(".shareImg").removeAttr("href");
+	$("canvas").remove();
+	html2canvas(document.getElementById('div1'),{
+    allowTaint: true,
+    logging:true,
+	useCORS:true
     }).then(
 	function download(canvas){
-    	var imagestring = canvas.toDataURL("image/png");
-    	$('.shareImg').attr("href", imagestring);
+		
+		var imagestring = canvas.toDataURL("image/png");
+		$('.shareImg').attr("href", imagestring);
+		var link = $('.shareImg').attr("href");
+
+		$("#b").attr("href", imagestring);
+		var link2 = $("#b").attr("href");
+
+		document.body.appendChild(canvas);
+		console.log("ImageLink:"+ link2);
+		
 	});
 });
-
-// var shareButton = $("#b");
-// shareButton.on("click",function(){
-// 	$(".shareImg").removeAttr("href");
-// 	$("canvas").remove();
-// 	$(".shareImg").click();
-		
-// 	$('.shareImg').attr("href", imagestring);
-// 	var link = $('.shareImg').attr("href");
-
-// 	$("#b").attr("href", imagestring);
-// 	var link2 = $("#b").attr("href");
-
-// 	document.body.appendChild(canvas);
-// 	console.log("ImageLink:"+ link2);
-// });
 
  
 $('#share').on("click",function(){
