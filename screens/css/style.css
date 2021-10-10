@@ -17881,7 +17881,7 @@ body::-webkit-scrollbar-thumb {
 }
 
 .material-switch > label::before {
-  background: #E1B96B;
+  background: #9e9e9e;
   box-shadow: inset 0px 0px 10px rgba(0, 0, 0, 0.5);
   border-radius: 8px;
   content: '';
@@ -17907,11 +17907,10 @@ body::-webkit-scrollbar-thumb {
 }
 
 .material-switch > input[type="checkbox"]:checked + label::before {
-  background: inherit;
-  opacity: 0.5;
+  background: #E1B96B;
 }
 
 .material-switch > input[type="checkbox"]:checked + label::after {
-  background: inherit;
+  background: #deb887;
   left: 20px;
 }
