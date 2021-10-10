@@ -858,7 +858,7 @@ $(".image-rotation--header .cross").on("click", function(){
 	  var currentTop = 0;
 
 	  // zoom
-	  mc.get("pinch").set({ enable: true });
+	  //mc.get("pinch").set({ enable: true });
 	  mc.on("pinchstart", function(ev) {
 	    // on pinch zoom we eliminate the panning event listener
 	    //so that we dont have that weird movement after we end pinching
@@ -882,7 +882,7 @@ $(".image-rotation--header .cross").on("click", function(){
 	    mc.on("pan", function(ev) {
 	      el.style.transform =
 	        "scale(" +
-	        1 +
+	        currentScale +
 	        ")";
 	    });
 	  }
