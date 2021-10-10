@@ -796,7 +796,7 @@ $(".image-rotation--header .cross").on("click", function(){
 
 /* zoom image */
 (function() {
-  var el = document.querySelector(".product-viewer");
+  var el = document.querySelector(".black-theme-product-viewer");
   if(el){
 	  var mc = new Hammer(el, {
 	    domEvents: true
@@ -807,11 +807,11 @@ $(".image-rotation--header .cross").on("click", function(){
 	  var currentTop = 0;
 
 	  // zoom
-  	var zoomToggle = $("#objzoom");
+  	var zoomToggleEvent = $("#objzoom");
 
-	zoomToggle.change(function() {
+	zoomToggleEvent.change(function() {
 
-		if (zoomToggle.is(":checked")) {
+		if (zoomToggleEvent.is(":checked")) {
 
 			mc.get("pinch").set({ enable: true });
 
