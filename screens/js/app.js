@@ -850,7 +850,7 @@ $(".image-rotation--header .cross").on("click", function(){
   if(el){
 
 	  var mc = new Hammer(el, {
-	    domEvents: true
+	    domEvents: false
 	  });
 
 	  var currentScale = 1;
@@ -858,7 +858,7 @@ $(".image-rotation--header .cross").on("click", function(){
 	  var currentTop = 0;
 
 	  // zoom
-	  mc.get("pinch").set({ enable: false });
+	  mc.get("pinch").set({ enable: true });
 	  mc.on("pinchstart", function(ev) {
 	    // on pinch zoom we eliminate the panning event listener
 	    //so that we dont have that weird movement after we end pinching
