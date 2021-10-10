@@ -850,7 +850,7 @@ $(".image-rotation--header .cross").on("click", function(){
   if(el){
 
 	  var mc = new Hammer(el, {
-	    domEvents: false
+	    domEvents: true
 	  });
 
 	  var currentScale = 1;
@@ -882,9 +882,8 @@ $(".image-rotation--header .cross").on("click", function(){
 	    mc.on("pan", function(ev) {
 	      el.style.transform =
 	        "scale(" +
-	        currentScale +
+	        1 +
 	        ")";
-	        $(".product-sprite").removeAttr("style");
 	    });
 	  }
 
