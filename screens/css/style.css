@@ -13717,6 +13717,15 @@ img {
   position: fixed;
 }
 
+.sharing-view .image-rotation--header .icons-group {
+  display: flex;
+  align-items: center;
+  position: absolute;
+  right: 40px;
+  top: 8px;
+  transform: matrix(1, 0, 0, -1, 0, 0);
+}
+
 .sharing-view .image-rotation--header .cross {
   width: 20px;
   height: 20px;

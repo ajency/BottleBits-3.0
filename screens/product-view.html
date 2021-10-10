@@ -782,6 +782,20 @@
 											<div class="sharing-view">
 												<div class="image-rotation hide">
 													<div class="image-rotation--header">
+														<div class="icons-group">
+															<div id="toggle1" class="material-switch">
+									                            <input id="objmove" name="someSwitchOption001" type="checkbox"/>
+									                            <label for="objmove" class="label-default">Move</label>
+									                        </div>
+															<div id="toggle2" class="material-switch">
+									                            <input id="objrotate" name="rotation" type="checkbox"/>
+									                            <label for="objrotate" class="label-default">Rotate</label>
+									                        </div>
+									                        <div id="toggle3" class="material-switch">
+									                            <input id="objzoom" name="pinch-zoom" type="checkbox"/>
+									                            <label for="objzoom" class="label-default">Zoom</label>
+									                        </div>
+														</div>
 														<div class="cross"></div>
 													</div>
 													<div class="cd-product-viewer-wrapper" data-frame="13" data-friction="0.45">
@@ -2236,10 +2250,28 @@
 	      	  }
 		    });
 
-			Draggable.create(".productImage", {
-			  	type:"x,y",
-			  	scroll: true,
-			})
+
+			var checkBox = $("#objmove");
+			var box = $(".productImage");
+
+			var draggable = new Draggable(box, {
+			    cursor: "default",
+			  	activeCursor: "grabbing",  
+			});
+			draggable.disable();
+
+
+			checkBox.change(function() {
+			    
+			  if (checkBox.is(":checked")) {
+			    
+			    draggable.enable();
+			    
+			  } else {
+			    
+			    draggable.disable();
+			  }
+			});
 	
 		</script>
 	</body>
