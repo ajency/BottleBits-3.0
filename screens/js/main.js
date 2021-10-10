@@ -42,11 +42,22 @@ jQuery(document).ready(function($){
 				//sprite image has been loaded
 				self.element.addClass('loaded');
 				transformElement(self.handleFill, 'scaleX(1)');
-				self.dragImage();
+
+				var checkBox = $("#objrotate");
+
+				checkBox.change(function(e) {
+
+					if (checkBox.is(":checked")) {
+						self.dragImage();
+					}
+				});
+
+
+				
 				if(self.handle) self.dragHandle();
 			} else {
 				//sprite image has not been loaded - increase self.handleFill scale value
-				var newPercentage = parseFloat(percentage) + .1;
+				var newPercentage = parseFloat(percentage);
 				if ( newPercentage < 1 ) {
 					self.loading(newPercentage);
 				} else {
