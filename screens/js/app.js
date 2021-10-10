@@ -1552,3 +1552,26 @@ $('#share').on("click",function(){
     .catch(console.error);
     } 
 });
+
+var checkBox = $("#objmove");
+var box = $(".productImage");
+
+var draggable = new Draggable(box, {
+    cursor: "default",
+  	activeCursor: "grabbing",  
+});
+draggable.disable();
+
+
+checkBox.change(function() {
+    
+  if (checkBox.is(":checked")) {
+    
+    draggable.enable();
+    
+  } else {
+    
+    draggable.disable();
+  }
+});
+
