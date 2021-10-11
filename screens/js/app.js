@@ -891,13 +891,10 @@ $(".image-rotation--header .cross").on("click", function(){
 	    mc.off("pan");
   	});
   	mc.on("pinch", function(ev) {
-	    el.style.transform =
-	      "scale(" +
-	      currentScale * ev.scale +
-	      ")";
+	    el.style.width = currentScale * ev.scale +"px";
   	});
   	mc.on("pinchend", function(ev) {
-	currentScale = currentScale * ev.scale;
+	currentScale = currentScale * ev.scale +"px";
 
 	    // once we have ended pinch zooming we fire off the panning event once again
 	    window.setTimeout(hammerPan, 50);
@@ -906,10 +903,7 @@ $(".image-rotation--header .cross").on("click", function(){
 	  // panning function
   	function hammerPan() {
 	    mc.on("pan", function(ev) {
-	      el.style.transform =
-	        "scale(" +
-	        currentScale +
-	        ")";
+	      el.style.transform = "scale(" + currentScale +")";
 	    });
   	}
 
