@@ -858,7 +858,7 @@ $(".image-rotation--header .cross").on("click", function(){
 })();
 
 (function() {
-  var el = document.querySelector(".theme-product-viewer");
+  var el = document.querySelector(".product-sprite");
   if(el){
 
 	var mc = new Hammer(el, {
