@@ -50,8 +50,13 @@ jQuery(document).ready(function($){
 					if (checkBox.is(":checked")) {
 						self.dragImage();
 						if(self.handle) self.dragHandle();
+						$(".product-sprite").removeClass("no-dragging-image").css('pointer-events','auto');
+						$(".handle").removeClass("no-handle-movement").css('pointer-events','auto');
 					}else{
-						
+						$(".product-sprite").addClass("no-dragging-image");
+						$(".no-dragging-image").css('pointer-events','none');
+						$(".handle").addClass("no-handle-movement");
+						$(".no-handle-movement").css('pointer-events','none');
 					}
 				});
 				
