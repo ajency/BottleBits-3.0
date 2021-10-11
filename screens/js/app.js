@@ -1556,8 +1556,8 @@ shareButton.on("click",function(){
 		$('.shareImg').attr("href", imagestring);
 		var link = $('.shareImg').attr("href");
 
-		$("#b").attr("href", imagestring);
-		var link2 = $("#b").attr("href");
+		$("#downloadBg").attr("src", imagestring);
+		var link2 = $("#downloadBg").attr("src");
 
 		document.body.appendChild(canvas);
 		console.log("ImageLink:"+ link2);
