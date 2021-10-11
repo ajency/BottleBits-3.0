@@ -49,12 +49,13 @@ jQuery(document).ready(function($){
 
 					if (checkBox.is(":checked")) {
 						self.dragImage();
+						if(self.handle) self.dragHandle();
+					}else{
+						
 					}
 				});
-
-
 				
-				if(self.handle) self.dragHandle();
+				
 			} else {
 				//sprite image has not been loaded - increase self.handleFill scale value
 				var newPercentage = parseFloat(percentage);
