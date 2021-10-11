@@ -1545,7 +1545,7 @@ var shareButton = $("#b");
 shareButton.on("click",function(){
 	$(".shareImg").removeAttr("href");
 	$("canvas").remove();
-	html2canvas(document.getElementById('div1'),{
+	html2canvas(document.getElementById('sharingBg'),{
     allowTaint: true,
     logging:true,
 	useCORS:true
