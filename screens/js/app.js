@@ -865,7 +865,7 @@ $(".image-rotation--header .cross").on("click", function(){
 	domEvents: true
 	});
 
-	var currentScale = 1;
+	var currentScale = 10;
 	var currentLeft = 0;
 	var currentTop = 0;
 
