@@ -878,7 +878,7 @@ function zoomout(){
 }
 
 (function() {
-  var el = document.querySelector(".theme-product-viewer");
+  var el = document.querySelector(".productImage");
   if(el){
 
 	var mc = new Hammer(el, {
