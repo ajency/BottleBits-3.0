@@ -1539,18 +1539,3 @@ $(document).ready(function () {
 	var tagHeight = $('.tab-content ul').length * height;
 	$(".tab-content .disterllery_details").height(tagHeight + 180);
 });
-
-
- 
-$('#share').on("click",function(){
-  if (navigator.share) { 
-   navigator.share({
-      title: 'Share BottleBits',
-      url: 'http://join.bottlebits.com/login'
-    }).then(() => {
-      console.log('Thanks for sharing!');
-    })
-    .catch(console.error);
-    } 
-});
-

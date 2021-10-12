@@ -222,6 +222,18 @@
 				});
 			});
 
+			$('#share').on("click",function(){
+			  if (navigator.share) { 
+			   navigator.share({
+			      title: 'Share BottleBits',
+			      url: 'http://join.bottlebits.com/login'
+			    }).then(() => {
+			      console.log('Thanks for sharing!');
+			    })
+			    .catch(console.error);
+			    } 
+			});
+
 		</script>
 		<script src="js/main.js"></script>
 		<script src="js/app.js"></script>
