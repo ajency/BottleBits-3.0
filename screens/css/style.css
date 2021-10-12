@@ -12203,7 +12203,7 @@ img {
 
 .my-collection .shelf .collection-blocks .shelf-wrapper .block {
   background-image: url(../images/collection/shelf-texture.png);
-  background-repeat: round;
+  background-repeat: no-repeat;
   background-size: contain;
   background-position-y: top;
   height: 383px;
@@ -12255,7 +12255,7 @@ img {
   content: '';
   position: absolute;
   background-image: url(../images/collection/side-support.jpg);
-  height: 384px;
+  height: 520px;
   width: 30px;
   background-size: cover;
   background-repeat: no-repeat;
@@ -12275,7 +12275,7 @@ img {
   content: '';
   position: absolute;
   background-image: url(../images/collection/side-support.jpg);
-  height: 384px;
+  height: 520px;
   width: 30px;
   background-size: cover;
   background-repeat: no-repeat;
@@ -12371,37 +12371,17 @@ img {
   }
 }
 
-@media (max-width: 2400px) {
-  .my-collection .shelf .collection-blocks .shelf-wrapper .block {
-    height: 618px;
-    background-repeat: no-repeat;
-  }
-}
-
-@media (max-width: 1806px) {
-  .my-collection .shelf .collection-blocks .shelf-wrapper .block {
-    height: 530px;
-    background-repeat: no-repeat;
-  }
-}
-
-@media (max-width: 1706px) {
-  .my-collection .shelf .collection-blocks .shelf-wrapper .block {
-    height: 495px;
-    background-repeat: round;
-  }
-}
-
-@media (max-width: 1200px) {
-  .my-collection .shelf .collection-blocks .shelf-wrapper .block {
-    height: 365px;
-  }
-}
-
 @media (max-width: 375px) {
   .my-collection .shelf .collection-blocks .shelf-wrapper .block {
     background-repeat: no-repeat;
-    height: 234px;
+    height: 238px;
+  }
+}
+
+@media (max-width: 360px) {
+  .my-collection .shelf .collection-blocks .shelf-wrapper .block {
+    background-repeat: no-repeat;
+    height: 235px;
   }
 }
 
@@ -12843,8 +12823,8 @@ img {
 .my-collection .shelf-wrapper--expanded .block.active-block {
   background-image: url(../images/collection/shelf-texture-expanded.jpg);
   width: 100%;
-  background-repeat: round;
-  background-size: cover;
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
   position: fixed;
   top: 132px;
   height: auto;
