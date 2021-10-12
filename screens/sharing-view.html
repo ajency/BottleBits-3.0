@@ -43,7 +43,7 @@
 					<div class="cd-product-viewer-wrapper" data-frame="13" data-friction="0.45">
 						<div>
 							<div class="productImage">
-								<figure id="zoom_img" class="product-viewer theme-product-viewer">
+								<figure  id="element" class="product-viewer theme-product-viewer pinch-zoom">
 									<img src="images/img-loading.png" alt="Product Preview">
 									<div class="product-sprite" data-image="images/img-sprite.png">
 										<img src="images/img-sprite.png" class="rotate-img">
@@ -166,6 +166,8 @@
 
 		<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/gsap/1.20.4/TweenMax.min.js"></script>
 
+		<script src="https://unpkg.com/pinch-zoom-js"></script>
+
 		<script type="text/javascript">
 
 
@@ -198,7 +200,40 @@
 			  }
 			});
 
+			let el = document.querySelector('#element');
+			let instance = new PinchZoom(el, options);
+			let instance = new PinchZoom(el, {
 
+			    // zoom factor
+			    tapZoomFactor: 2,
+
+			    // zoom out factor
+			    zoomOutFactor: 1.3,
+
+			    // duration in ms
+			    animationDuration: 300,
+
+			    // min/max zoom level
+			    maxZoom: 4,
+			    minZoom: 0.5,
+
+			    // draggable unzoomed image
+			    draggableUnzoomed: true,
+
+			    // locks panning of the element to a single axis
+			    lockDragAxis: false,
+
+			    // compute offsets only once
+			    setOffsetsOnce: false,
+
+			    // falls back to 2D transforms when idle
+			    use2d: true,
+
+			    // vertical/horizontal padding
+			    verticalPadding: 0,
+			    horizontalPadding: 0
+
+			});
 		</script>
 		<script src="js/main.js"></script>
 		<script src="js/app.js"></script>
