@@ -895,11 +895,11 @@ $(".image-rotation--header .cross").on("click", function(){
 	      "scale(" +
 	      currentScale * ev.scale +
 	      ")";
-	      console.log(ev.scale);
+	      console.log("ev.scale:" ev.scale);
   	});
   	mc.on("pinchend", function(ev) {
 	currentScale = currentScale * ev.scale;
-	console.log(currentScale);
+	console.log("currentScale:" currentScale);
 
 	    // once we have ended pinch zooming we fire off the panning event once again
 	    window.setTimeout(hammerPan, 50);
