@@ -858,7 +858,7 @@ $(".image-rotation--header .cross").on("click", function(){
 })();
 
 (function() {
-  var el = document.querySelector(".theme-product-viewer");
+  var el = document.querySelector(".productImage");
   if(el){
 
 	var mc = new Hammer(el, {
@@ -892,8 +892,8 @@ $(".image-rotation--header .cross").on("click", function(){
 	    mc.off("pan");
   	});
   	mc.on("pinch", function(ev) {
-	    el.style.width = ev.width+"px";
-	    el.style.height = ev.height+"px";
+	    el.style.width = currentwidth * ev.width+"px";
+	    el.style.height = currentheight * ev.height+"px";
 	    console.log("width1:"+ev.width);
 	    console.log("height1:"+ev.height);
   	});
