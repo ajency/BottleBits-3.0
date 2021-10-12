@@ -894,10 +894,14 @@ $(".image-rotation--header .cross").on("click", function(){
   	mc.on("pinch", function(ev) {
 	    el.style.width = ev.width+"px";
 	    el.style.height = ev.height+"px";
+	    console.log("width1:"+ev.width);
+	    console.log("height1:"+ev.height);
   	});
   	mc.on("pinchend", function(ev) {
 	currentwidth = currentwidth * ev.width;
 	currentheight = currentheight * ev.width;
+    console.log("width2:"+currentwidth);
+    console.log("height2:"+currentheight);
 
 	    // once we have ended pinch zooming we fire off the panning event once again
 	    window.setTimeout(hammerPan, 50);
@@ -906,8 +910,8 @@ $(".image-rotation--header .cross").on("click", function(){
 	  // panning function
   	function hammerPan() {
 	    mc.on("pan", function(ev) {
-	      el.style.width = width+"px";
-	      el.style.height = height+"px";
+	      el.style.width = currentwidth+"px";
+	      el.style.height = currentheight+"px";
 	    });
   	}
 
@@ -915,6 +919,8 @@ $(".image-rotation--header .cross").on("click", function(){
 	  	mc.on("panend", function(ev) {
 	    	currentLeft = currentLeft + ev.deltaX / currentwidth;
 	    	currentTop = currentTop + ev.deltaY / currentheight;
+	    	console.log("currentLeft:"+currentLeft);
+	    	console.log("currentLeft:"+currentTop);
 		});
 	}
 
