@@ -12843,15 +12843,17 @@ img {
 .my-collection .shelf-wrapper--expanded .block.active-block {
   background-image: url(../images/collection/shelf-texture-expanded.jpg);
   width: 100%;
-  background-repeat: round;
+  background-repeat: no-repeat;
   background-size: cover;
+  background-position: bottom;
   position: fixed;
-  top: 132px;
+  bottom: 0;
   height: auto;
   opacity: 1;
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
+  z-index: -1;
 }
 
 .my-collection .shelf-wrapper--expanded .block.active-block .picture {
