@@ -865,7 +865,8 @@ $(".image-rotation--header .cross").on("click", function(){
 	domEvents: true
 	});
 
-	var currentScale = 1;
+	var currentwidth = 32;
+	var currentheight = 370;
 	var currentLeft = 0;
 	var currentTop = 0;
 
@@ -891,15 +892,12 @@ $(".image-rotation--header .cross").on("click", function(){
 	    mc.off("pan");
   	});
   	mc.on("pinch", function(ev) {
-	    el.style.transform =
-	      "scale(" +
-	      currentScale * ev.scale +
-	      ")";
-	      console.log("ev.scale:"+ev.scale);
+	    el.style.width = ev.width+"px";
+	    el.style.height = ev.height+"px";
   	});
   	mc.on("pinchend", function(ev) {
-	currentScale = currentScale * ev.scale;
-	console.log("currentScale:"+currentScale);
+	currentwidth = currentwidth * ev.width;
+	currentheight = currentheight * ev.width;
 
 	    // once we have ended pinch zooming we fire off the panning event once again
 	    window.setTimeout(hammerPan, 50);
@@ -908,17 +906,15 @@ $(".image-rotation--header .cross").on("click", function(){
 	  // panning function
   	function hammerPan() {
 	    mc.on("pan", function(ev) {
-	      el.style.transform =
-	        "scale(" +
-	        currentScale +
-	        ")";
+	      el.style.width = width+"px";
+	      el.style.height = height+"px";
 	    });
   	}
 
   	hammerPan();
 	  	mc.on("panend", function(ev) {
-	    	currentLeft = currentLeft + ev.deltaX / currentScale;
-	    	currentTop = currentTop + ev.deltaY / currentScale;
+	    	currentLeft = currentLeft + ev.deltaX / currentwidth;
+	    	currentTop = currentTop + ev.deltaY / currentheight;
 		});
 	}
 
