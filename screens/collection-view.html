@@ -109,7 +109,7 @@
 
 			<div class="my-collection">
 				<div class="shelf">
-					<div class="collection-blocks">
+					<div id="shareCollectionBlock" class="collection-blocks">
 						<div class="info-tab">
 							<div class="title">
 								<h2>Jacob's Bar</h2>
@@ -117,7 +117,11 @@
 							<div class="icons">
 								<img src="images/sharing.png" alt="sharing" class="sharing">
 								<img src="images/customize.svg" alt="customize" class="customize">
+								<a id="b" href="#" class="floating-download-btn2" download> 
+									<img src="images/icon-download.svg"> 
+								</a>
 							</div>
+
 							<div class="tool-tip">
 								<span>Customize Bar</span>
 							</div>
@@ -361,6 +365,40 @@
 
 		<script src="js/main.js"></script>
 		<script src="js/app.js"></script>
+		<script type="text/javascript">
+			var a = document.createElement('a'); 
+			var link = document.createTextNode("Download");
+			a.appendChild(link);
+			a.classList.add("shareImg");
+			a.href="#";
+			document.body.appendChild(a); 
+
+
+			var shareButton = $("#b");
+			shareButton.on("click",function(){
+				$(".shareImg").removeAttr("href");
+				$("canvas").remove();
+				html2canvas(document.getElementById('shareCollectionBlock'),{
+			    allowTaint: true,
+			    logging:true,
+				useCORS:true
+			    }).then(
+				function download(canvas){
+					
+					var imagestring = canvas.toDataURL("image/png");
+					$('.shareImg').attr("href", imagestring);
+					var link = $('.shareImg').attr("href");
+
+					$("#b").attr("href", imagestring);
+					var link2 = $("#b").attr("href");
+
+					document.body.appendChild(canvas);
+					console.log("ImageLink:"+ link2);
+					
+				});
+			});
+
+		</script>
 	</body>
 </html>
 

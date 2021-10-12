@@ -14106,9 +14106,9 @@ img {
   background: linear-gradient(102.8deg, #181A1E 19.63%, #35373D 96.27%);
 }
 
-.single-sharing .floating-download-btn2 {
+.floating-download-btn2 {
   position: relative;
-  padding: 6px 10px 8px;
+  padding: 11px;
   border-radius: 30px;
   transform: matrix(1, 0, 0, -1, 0, 0);
   background: linear-gradient(102.8deg, #181A1E 19.63%, #35373D 96.27%);
