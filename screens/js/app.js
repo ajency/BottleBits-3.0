@@ -890,15 +890,11 @@ $(".image-rotation--header .cross").on("click", function(){
 	    //so that we dont have that weird movement after we end pinching
 	    mc.off("pan");
   	});
-  	var myImg = document.getElementById("zoomImg");
-  	var currWidth = myImg.clientWidth;
-  	console.log(currWidth);
-  	var currHeight = myImg.clientHeight;
-  	console.log(currHeight)
-
   	mc.on("pinch", function(ev) {
-	    myImg.style.width = (currWidth + 10) + "px";
-	    myImg.style.height = (currHeight + 10) + "px";
+	    el.style.transform =
+	      "scale(" +
+	      currentScale * ev.scale +
+	      ")";
   	});
   	mc.on("pinchend", function(ev) {
 	currentScale = currentScale * ev.scale;
