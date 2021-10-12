@@ -12204,7 +12204,7 @@ img {
 .my-collection .shelf .collection-blocks .shelf-wrapper .block {
   background-image: url(../images/collection/shelf-texture.png);
   background-repeat: no-repeat;
-  background-size: contain;
+  background-size: 100% 100%;
   background-position-y: top;
   height: 383px;
   width: 50%;
@@ -12292,7 +12292,7 @@ img {
 }
 
 .my-collection .shelf .collection-blocks .shelf-wrapper .block .large-block {
-  height: 47%;
+  height: 50%;
   display: block;
   width: 100%;
   position: relative;
@@ -12334,15 +12334,9 @@ img {
   }
 }
 
-@media (max-width: 1200px) {
-  .my-collection .shelf .collection-blocks .shelf-wrapper .block .large-block.product-images {
-    bottom: -7px;
-  }
-}
-
 @media (max-width: 767px) {
   .my-collection .shelf .collection-blocks .shelf-wrapper .block .large-block.product-images {
-    bottom: 1px;
+    bottom: 13px;
   }
 }
 
@@ -12367,7 +12361,7 @@ img {
 
 @media (min-width: 768px) {
   .my-collection .shelf .collection-blocks .shelf-wrapper .block .large-block {
-    height: 45%;
+    height: 47%;
   }
 }
 
@@ -12394,7 +12388,7 @@ img {
   left: 0;
   right: 0;
   margin: auto;
-  top: 88px;
+  top: 80px;
 }
 
 @media (max-width: 375px) {
@@ -12412,7 +12406,7 @@ img {
 
 @media (min-width: 1201px) {
   .my-collection .shelf .collection-blocks .shelf-wrapper .border-image--square .icon {
-    top: 115px;
+    top: 92px;
   }
 }
 
@@ -12439,7 +12433,7 @@ img {
 
 @media (max-width: 767px) {
   .my-collection .shelf .collection-blocks .shelf-wrapper .border-image--square:before {
-    top: 25px;
+    top: 18px;
   }
 }
 
@@ -12453,7 +12447,7 @@ img {
 @media (min-width: 1201px) and (max-width: 1769px) {
   .my-collection .shelf .collection-blocks .shelf-wrapper .border-image--square:before {
     width: calc(100% - 50px);
-    height: 168px;
+    height: 123px;
     left: 28px;
     top: 40px;
   }
@@ -12481,7 +12475,7 @@ img {
 
 @media (max-width: 1200px) {
   .my-collection .shelf .collection-blocks .shelf-wrapper .border-image--square:after {
-    height: 136px;
+    height: 130px;
     left: 18px;
     top: 36px;
   }
@@ -12503,7 +12497,7 @@ img {
 @media (min-width: 1201px) and (max-width: 1769px) {
   .my-collection .shelf .collection-blocks .shelf-wrapper .border-image--square:after {
     width: calc(100% - 46px);
-    height: 169px;
+    height: 126px;
     left: 26px;
     top: 40px;
   }
@@ -12539,7 +12533,7 @@ img {
 
 @media (min-width: 1201px) {
   .my-collection .shelf .collection-blocks .shelf-wrapper .border-image--rectangle .icon {
-    top: 110px;
+    top: 82px;
   }
 }
 
@@ -12547,7 +12541,7 @@ img {
   content: '';
   border: 1px dashed #412303;
   border-top: 0;
-  height: 140.5px;
+  height: 147px;
   width: calc(100% - 40px);
   position: absolute;
   left: 22px;
@@ -12576,7 +12570,7 @@ img {
 @media (min-width: 1201px) and (max-width: 1769px) {
   .my-collection .shelf .collection-blocks .shelf-wrapper .border-image--rectangle:before {
     width: calc(100% - 48px);
-    height: 169px;
+    height: 117px;
     left: 26px;
     top: 40px;
   }
@@ -12593,7 +12587,7 @@ img {
 .my-collection .shelf .collection-blocks .shelf-wrapper .border-image--rectangle:after {
   content: '';
   border: 1px dashed #B68149;
-  height: 148px;
+  height: 155px;
   width: calc(100% - 36px);
   position: absolute;
   left: 20px;
@@ -12622,7 +12616,7 @@ img {
 @media (min-width: 1201px) and (max-width: 1769px) {
   .my-collection .shelf .collection-blocks .shelf-wrapper .border-image--rectangle:after {
     width: calc(100% - 43px);
-    height: 190px;
+    height: 138px;
     left: 23px;
     top: 22px;
   }
@@ -12720,13 +12714,13 @@ img {
 
 @media (max-width: 1200px) {
   .my-collection .shelf .collection-blocks .shelf-wrapper .small-block--child2 {
-    height: 191px;
+    height: 192px;
   }
 }
 
 @media (min-width: 1201px) {
   .my-collection .shelf .collection-blocks .shelf-wrapper .small-block--child2 {
-    height: 235px;
+    height: 194px;
   }
 }
 
@@ -13202,7 +13196,7 @@ img {
   .my-collection .shelf .fixed-image--block.mobile-visible {
     display: block;
     width: 100%;
-    height: auto;
+    height: 285px;
   }
 }
 
@@ -14088,7 +14082,7 @@ img {
 
 .floating-download-btn2 {
   position: relative;
-  padding: 11px;
+  padding: 10px;
   border-radius: 30px;
   transform: matrix(1, 0, 0, -1, 0, 0);
   background: linear-gradient(102.8deg, #181A1E 19.63%, #35373D 96.27%);
