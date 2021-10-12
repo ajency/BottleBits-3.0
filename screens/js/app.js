@@ -1541,30 +1541,6 @@ $(document).ready(function () {
 });
 
 
-var shareButton = $("#b");
-shareButton.on("click",function(){
-	$(".shareImg").removeAttr("href");
-	$("canvas").remove();
-	html2canvas(document.getElementById('sharingBg'),{
-    allowTaint: true,
-    logging:true,
-	useCORS:true
-    }).then(
-	function download(canvas){
-		
-		var imagestring = canvas.toDataURL("image/png");
-		$('.shareImg').attr("href", imagestring);
-		var link = $('.shareImg').attr("href");
-
-		$("#b").attr("href", imagestring);
-		var link2 = $("#b").attr("href");
-
-		document.body.appendChild(canvas);
-		console.log("ImageLink:"+ link2);
-		
-	});
-});
-
  
 $('#share').on("click",function(){
   if (navigator.share) { 
