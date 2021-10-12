@@ -857,8 +857,28 @@ $(".image-rotation--header .cross").on("click", function(){
 
 })();
 
+function zoomin(){
+    var myImg = document.getElementById("zoom_img");
+    var currWidth = myImg.clientWidth;
+    if(currWidth >= 1000){
+        alert("You’re fully zoomed in!");
+    } else{
+        myImg.style.width = (currWidth + 100) + "px";
+    } 
+}
+
+function zoomout(){
+    var myImg = document.getElementById("zoom_img");
+    var currWidth = myImg.clientWidth;
+    if(currWidth >= 50){
+        alert("That’s as small as it gets.");
+    } else{
+        myImg.style.width = (currWidth - 100) + "px";
+    }
+}
+
 (function() {
-  var el = document.querySelector(".product-sprite");
+  var el = document.querySelector(".theme-product-viewer");
   if(el){
 
 	var mc = new Hammer(el, {
@@ -891,10 +911,8 @@ $(".image-rotation--header .cross").on("click", function(){
 	    mc.off("pan");
   	});
   	mc.on("pinch", function(ev) {
-	    el.style.transform =
-	      "scale(" +
-	      currentScale * ev.scale +
-	      ")";
+	   zoomin();
+	   zoomout();
   	});
   	mc.on("pinchend", function(ev) {
 	currentScale = currentScale * ev.scale;
