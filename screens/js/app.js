@@ -911,7 +911,7 @@ function zoomout(){
 	    mc.off("pan");
   	});
   	mc.on("pinch", function(ev) {
-  		zoomout();
+	   zoomin();
   	});
   	mc.on("pinchend", function(ev) {
 	currentScale = currentScale * ev.scale;
