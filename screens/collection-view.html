@@ -380,9 +380,11 @@
 				$(".shareImg").removeAttr("href");
 				$("canvas").remove();
 				html2canvas(document.getElementById('shareCollectionBlock'),{
-			    allowTaint: true,
-			    logging:true,
-				useCORS:true
+				allowTaint: true,
+				useCORS: true,
+				logging: false,
+				height: window.outerHeight + window.innerHeight,
+				windowHeight: window.outerHeight + window.innerHeight, 
 			    }).then(
 				function download(canvas){
 					
