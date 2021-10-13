@@ -858,7 +858,7 @@ $(".image-rotation--header .cross").on("click", function(){
 })();
 
 (function() {
-  var el = document.querySelector(".theme-product-viewer");
+	var el = document.querySelector(".theme-product-viewer");
   if(el){
 
 	var mc = new Hammer(el, {
@@ -868,6 +868,8 @@ $(".image-rotation--header .cross").on("click", function(){
 	var currentScale = 1;
 	var currentLeft = 0;
 	var currentTop = 0;
+	var actheight = $(".product-sprite").height();
+	var actwidth = $(".product-sprite").width();
 
 	// zoom
 	var zoomToggle = $("#objzoom");
@@ -891,10 +893,27 @@ $(".image-rotation--header .cross").on("click", function(){
 	    mc.off("pan");
   	});
   	mc.on("pinch", function(ev) {
-	    el.style.transform =
-	      "scale(" +
-	      currentScale * ev.scale +
-	      ")";
+	    //el.style.transform =
+	    //  "scale(" +
+	    //  currentScale * ev.scale +
+	     // ")";
+		proheight = $(".product-sprite").height() * currentScale * ev.scale;
+		proWidth = $(".product-sprite").width()* currentScale * ev.scale;
+		 //imgheight = $(".spriteimg").height() * currentScale * ev.scale;
+		 //imgWidth = $(".spriteimg").width()* currentScale * ev.scale;
+		 if((proheight > actheight/2) && (proheight < actheight*5)){
+			imgheight = proheight;
+			imgWidth = proWidth;
+			divHeight = proheight;
+			divWidth = proWidth/13;
+			$("#zoomtarget").css('height', divHeight+'px');
+			$("#zoomtarget").css('width', divWidth+'px');
+			$(".product-sprite").css('width', proWidth+'px');
+			$(".product-sprite").css('height', proheight+'px');
+			$(".spriteimg").css('width', imgWidth+'px');
+			$(".spriteimg").css('height', imgheight+'px');
+		 }
+
   	});
   	mc.on("pinchend", function(ev) {
 	currentScale = currentScale * ev.scale;
@@ -906,10 +925,26 @@ $(".image-rotation--header .cross").on("click", function(){
 	  // panning function
   	function hammerPan() {
 	    mc.on("pan", function(ev) {
-	      el.style.transform =
-	        "scale(" +
-	        currentScale +
-	        ")";
+	      //el.style.transform =
+	      //  "scale(" +
+	      //  currentScale +
+	      //  ")";
+		  proheight = $(".product-sprite").height() * currentScale * ev.scale;
+		  proWidth = $(".product-sprite").width()* currentScale * ev.scale;
+		   //imgheight = $(".spriteimg").height() * currentScale * ev.scale;
+		   //imgWidth = $(".spriteimg").width()* currentScale * ev.scale;
+		   if((proheight > actheight/2) && (proheight < actheight*5)){
+			  imgheight = proheight;
+			  imgWidth = proWidth;
+			  divHeight = proheight;
+			  divWidth = proWidth/13;
+			  $("#zoomtarget").css('height', divHeight+'px');
+			  $("#zoomtarget").css('width', divWidth+'px');
+			  $(".product-sprite").css('width', proWidth+'px');
+			  $(".product-sprite").css('height', proheight+'px');
+			  $(".spriteimg").css('width', imgWidth+'px');
+			  $(".spriteimg").css('height', imgheight+'px');
+		   }
 	    });
   	}
 
