@@ -13651,7 +13651,7 @@ img {
 
 @media (max-width: 767px) {
   .my-collection .shelf {
-    height: 100vh;
+    height: 100%;
     width: 100%;
   }
 }
