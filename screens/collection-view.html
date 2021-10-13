@@ -340,6 +340,8 @@
 			</div>
 
 	    </div>
+	    <div id="canvas_view" class="canvas-view hide">
+	    </div>
 
 		<link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/Swiper/3.3.1/css/swiper.css">
 		<link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
@@ -390,14 +392,14 @@
 				function download(canvas){
 					
 					var imagestring = canvas.toDataURL("image/png");
-					$("canvas").addClass("hide");
+
 					$('.shareImg').attr("href", imagestring);
 					var link = $('.shareImg').attr("href");
 
 					$("#b").attr("href", imagestring);
 					var link2 = $("#b").attr("href");
-
-					document.body.appendChild(canvas);
+					var canvasView = $("#canvas_view");
+					canvasView.appendChild(canvas);
 					console.log("ImageLink:"+ link2);
 					
 				});
