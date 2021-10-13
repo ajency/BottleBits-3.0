@@ -398,8 +398,10 @@
 
 					$("#b").attr("href", imagestring);
 					var link2 = $("#b").attr("href");
-					var canvasView = $("#canvas_view");
+
+					var canvasView =document.getElementById("canvas_view");
 					canvasView.appendChild(canvas);
+
 					console.log("ImageLink:"+ link2);
 					
 				});
