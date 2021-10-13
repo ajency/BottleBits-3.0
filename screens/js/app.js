@@ -906,12 +906,12 @@ $(".image-rotation--header .cross").on("click", function(){
 			imgWidth = proWidth;
 			divHeight = proheight;
 			divWidth = proWidth/13;
-			$("#zoomtarget").css('height', divHeight+'px');
-			$("#zoomtarget").css('width', divWidth+'px');
-			$(".product-sprite").css('width', proWidth+'px');
-			$(".product-sprite").css('height', proheight+'px');
-			$(".spriteimg").css('width', imgWidth+'px');
-			$(".spriteimg").css('height', imgheight+'px');
+			$("#zoomtarget").css({'height': divHeight+'px', 'transition':'height 400ms ease-in'});
+			$("#zoomtarget").css({'width': divWidth+'px', 'transition':'width 400ms ease-in'});
+			$(".product-sprite").css({'width': proWidth+'px', 'transition':'width 400ms ease-in'});
+			$(".product-sprite").css({'height': proheight+'px', 'transition':'height 400ms ease-in'});
+			$(".spriteimg").css({'width': imgWidth+'px', 'transition':'width 400ms ease-in'});
+			$(".spriteimg").css({'height': imgheight+'px', 'transition':'height 400ms ease-in'});
 		 }
 
   	});
@@ -938,12 +938,12 @@ $(".image-rotation--header .cross").on("click", function(){
 			  imgWidth = proWidth;
 			  divHeight = proheight;
 			  divWidth = proWidth/13;
-			  $("#zoomtarget").css('height', divHeight+'px');
-			  $("#zoomtarget").css('width', divWidth+'px');
-			  $(".product-sprite").css('width', proWidth+'px');
-			  $(".product-sprite").css('height', proheight+'px');
-			  $(".spriteimg").css('width', imgWidth+'px');
-			  $(".spriteimg").css('height', imgheight+'px');
+			  $("#zoomtarget").css({'height': divHeight+'px', 'transition':'height 400ms ease-in'});
+			  $("#zoomtarget").css({'width': divWidth+'px', 'transition':'width 400ms ease-in'});
+			  $(".product-sprite").css({'width': proWidth+'px', 'transition':'width 400ms ease-in'});
+			  $(".product-sprite").css({'height': proheight+'px', 'transition':'height 400ms ease-in'});
+			  $(".spriteimg").css({'width': imgWidth+'px', 'transition':'width 400ms ease-in'});
+			  $(".spriteimg").css({'height': imgheight+'px', 'transition':'height 400ms ease-in'});
 		   }
 	    });
   	}
