@@ -12795,6 +12795,7 @@ img {
 .my-collection .shelf-wrapper--expanded {
   margin-bottom: 0;
   flex-wrap: nowrap;
+  background-color: black;
   transition: margin-bottom 200ms cubic-bezier(0.16, 0.32, 0.21, 0.93);
   height: 100vh;
 }
