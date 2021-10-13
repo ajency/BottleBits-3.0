@@ -906,8 +906,8 @@ $(".image-rotation--header .cross").on("click", function(){
 			imgWidth = proWidth;
 			divHeight = proheight;
 			divWidth = proWidth/13;
-		  	$("#zoomtarget").css({'height': divHeight+'px', 'transition':'height 400ms ease-in'});
-		  	$("#zoomtarget").css({'width': divWidth+'px','transition':'height 400ms ease-in'});
+			$("#zoomtarget").css('height', divHeight+'px');
+			$("#zoomtarget").css('width', divWidth+'px');
 			$(".product-sprite").css('width', proWidth+'px');
 			$(".product-sprite").css('height', proheight+'px');
 			$(".spriteimg").css('width', imgWidth+'px');
@@ -934,17 +934,17 @@ $(".image-rotation--header .cross").on("click", function(){
 		   //imgheight = $(".spriteimg").height() * currentScale * ev.scale;
 		   //imgWidth = $(".spriteimg").width()* currentScale * ev.scale;
 		   if((proheight > actheight/2) && (proheight < actheight*5)){
-				imgheight = proheight;
-				imgWidth = proWidth;
-				divHeight = proheight;
-				divWidth = proWidth/13;
-				$("#zoomtarget").css({'height': divHeight+'px', 'transition':'height 400ms ease-in'});
-				$("#zoomtarget").css({'width': divWidth+'px','transition':'height 400ms ease-in'});
-				$(".product-sprite").css('width', proWidth+'px');
-				$(".product-sprite").css('height', proheight+'px');
-				$(".spriteimg").css('width', imgWidth+'px');
-				$(".spriteimg").css('height', imgheight+'px');
-		   	}
+			  imgheight = proheight;
+			  imgWidth = proWidth;
+			  divHeight = proheight;
+			  divWidth = proWidth/13;
+			  $("#zoomtarget").css('height', divHeight+'px');
+			  $("#zoomtarget").css('width', divWidth+'px');
+			  $(".product-sprite").css('width', proWidth+'px');
+			  $(".product-sprite").css('height', proheight+'px');
+			  $(".spriteimg").css('width', imgWidth+'px');
+			  $(".spriteimg").css('height', imgheight+'px');
+		   }
 	    });
   	}
 
