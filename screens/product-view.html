@@ -109,7 +109,7 @@
 		<div id="content">
 
 			<div class="my-collection">
-				<div id="shareCollectionBlock"  class="shelf">
+				<div id="shareCollectionBlock" class="shelf">
 					
 					<div class="shelf-wrapper--expanded">
 						<div class="info-tab" data-html2canvas-ignore>
@@ -119,11 +119,13 @@
 								</a>
 							</div>
 							<div class="icons">
+		
+								<img src="images/sharing.png" alt="sharing" class="sharing">
+								<img src="images/customize.svg" alt="customize" class="customize">
+
 								<a id="b" href="#" class="floating-download-btn2" download> 
 									<img src="images/icon-download.svg"> 
 								</a>
-								<img src="images/sharing.png" alt="sharing" class="sharing">
-								<img src="images/customize.svg" alt="customize" class="customize">
 							</div>
 							<div class="tool-tip">
 								<span>Customize Bar</span>
@@ -2290,9 +2292,9 @@
 				$(".shareImg").removeAttr("href");
 				$("canvas").remove();
 				html2canvas(document.getElementById('shareCollectionBlock'),{
-			    allowTaint: true,
-			    logging:true,
-				useCORS:true
+				    allowTaint: true,
+				    logging:true,
+					useCORS:true
 			    }).then(
 				function download(canvas){
 					
