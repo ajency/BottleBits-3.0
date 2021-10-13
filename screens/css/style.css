@@ -13143,6 +13143,13 @@ img {
 
 .my-collection .shelf .fixed-image {
   position: relative;
+  display: block;
+}
+
+@media (max-width: 767px) {
+  .my-collection .shelf .fixed-image {
+    height: 264px;
+  }
 }
 
 .my-collection .shelf .fixed-image img {
