@@ -14107,6 +14107,10 @@ img {
   margin-right: 10px;
 }
 
+.single-sharing .floating-download-btn2 img {
+  transform: matrix(1, 0, 0, -1, 0, 0);
+}
+
 .sharing-screen .my-collection {
   padding: 0;
 }
