@@ -12265,6 +12265,12 @@ img {
   transition: background-image 300ms cubic-bezier(0.48, 0.04, 0.25, 1);
 }
 
+@media (max-width: 375px) {
+  .my-collection .shelf .collection-blocks .shelf-wrapper .block:nth-child(odd):before {
+    height: 246px;
+  }
+}
+
 @media (min-width: 768px) {
   .my-collection .shelf .collection-blocks .shelf-wrapper .block:nth-child(odd):before {
     height: 562px;
@@ -12283,6 +12289,12 @@ img {
   right: 0px;
   z-index: -2;
   transition: background-image 300ms cubic-bezier(0.48, 0.04, 0.25, 1);
+}
+
+@media (max-width: 375px) {
+  .my-collection .shelf .collection-blocks .shelf-wrapper .block:nth-child(even):before {
+    height: 246px;
+  }
 }
 
 @media (min-width: 768px) {
@@ -12756,7 +12768,7 @@ img {
 
 @media (max-width: 375px) {
   .my-collection .shelf .collection-blocks {
-    margin-bottom: 230px;
+    margin-bottom: 0px;
   }
 }
 

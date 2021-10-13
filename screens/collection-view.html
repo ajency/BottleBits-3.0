@@ -380,16 +380,17 @@
 				$(".shareImg").removeAttr("href");
 				$("canvas").remove();
 				html2canvas(document.getElementById('shareCollectionBlock'),{
-				allowTaint: true,
-				useCORS: true,
-				logging: false,
-				height: window.outerHeight + window.innerHeight,
-				windowHeight: window.outerHeight + window.innerHeight, 
-				type: 'view'
+					allowTaint: true,
+					useCORS: true,
+					logging: false,
+					height: window.outerHeight + window.innerHeight,
+					windowHeight: window.outerHeight + window.innerHeight, 
+					type: 'view'
 			    }).then(
 				function download(canvas){
 					
 					var imagestring = canvas.toDataURL("image/png");
+					$("canvas").addClass("hide");
 					$('.shareImg').attr("href", imagestring);
 					var link = $('.shareImg').attr("href");
 
