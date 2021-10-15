@@ -193,7 +193,7 @@ if ($(window).width() < 767) {
 
 	    jquerySwipeHandler.handleSwipe(".disterllery", [
 	     jquerySwipeHandler.SWIPE_DOWN
-	    ], function (direction) {
+	    ], function (direction, event) {
 		  	//console.log("swipe: ", direction);
 			$(".region").removeClass("slide_up");
 			$(".disterllery").addClass("showDisterlleryDetails");
@@ -204,12 +204,6 @@ if ($(window).width() < 767) {
 			$(".disterllery").removeClass("showDisterlleryDetails");
 		});
 
-	    jquerySwipeHandler.handleSwipe(".disterllery", [
-	     jquerySwipeHandler.CLICK
-	    ], function (direction) {
-		  	console.log("swipe: ", direction);
-		});
-
 
 	    jquerySwipeHandler.handleSwipe(".disterllery", [
 	     jquerySwipeHandler.SWIPE_UP
@@ -217,30 +211,40 @@ if ($(window).width() < 767) {
 		  	//console.log("swipe: ", direction);
 		  	$(".disterllery").removeClass("showDisterlleryDetails").addClass("hideDisterlleryDetails");
 			$(".disterllery2").addClass("showDisterlleryDetails1");
-
 			$(".tabs .dest1").removeClass("selected");
 			$(".tabs .dist2").addClass("selected");
-
 			$('.slide-dots .dot:nth-child(3)').removeClass('dot-active');
 			$('.slide-dots .dot:nth-child(4)').addClass('dot-active');
 		});
 
-	    jquerySwipeHandler.handleSwipe(".disterllery2", [
+	    jquerySwipeHandler.handleSwipe(".disterllery", [
 	     jquerySwipeHandler.CLICK
 	    ], function (direction) {
-		  	console.log("swipe: ", direction);
+	    	$(".region").addClass("slide_up");
+		  	$(".disterllery").removeClass("showDisterlleryDetails").addClass("hideDisterlleryDetails");
+			$(".disterllery2").addClass("showDisterlleryDetails1");
+			$(".tabs .region").removeClass("selected");
+			$(".tabs .dest1").removeClass("selected");
+			$(".tabs .dist2").addClass("selected");
+			$('.slide-dots .dot:nth-child(2)').removeClass('dot-active');
+			$('.slide-dots .dot:nth-child(3)').removeClass('dot-active');
+			$('.slide-dots .dot:nth-child(4)').addClass('dot-active');
+		  
 		});
+
 
 	    jquerySwipeHandler.handleSwipe(".disterllery2", [
 	     jquerySwipeHandler.SWIPE_DOWN
 	    ], function (direction) {
 		  	//console.log("swipe: ", direction);
+
 		  	$(".disterllery").removeClass("hideDisterlleryDetails").addClass("showDisterlleryDetails");
 		  	$(".disterllery2").removeClass("showDisterlleryDetails1");
 		  	$(".tabs .dest1").addClass("selected");
 		  	$(".tabs .dist2").removeClass("selected");
 			$('.slide-dots .dot:nth-child(4)').removeClass('dot-active');
 			$('.slide-dots .dot:nth-child(3)').addClass('dot-active');
+			return false;
 		});
 
 
@@ -256,18 +260,28 @@ if ($(window).width() < 767) {
 			$('.slide-dots .dot:nth-child(5)').addClass('dot-active');
 		});
 
-	    jquerySwipeHandler.handleSwipe(".bottle_story", [
+
+	    jquerySwipeHandler.handleSwipe(".disterllery2", [
 	     jquerySwipeHandler.CLICK
 	    ], function (direction) {
-		  	console.log("swipe: ", direction);
+	    	$(".disterllery").removeClass("showDisterlleryDetails");
+		  	$(".disterllery2").removeClass("showDisterlleryDetails1").addClass("hideDisterlleryDetails1");
+			$(".bottle_story").addClass("showBottleStoryDetails");
+			$(".tabs .dest1").removeClass("selected");
+			$(".tabs .bottleStory").addClass("selected");
+			$('.slide-dots .dot:nth-child(3)').removeClass('dot-active');
+			$('.slide-dots .dot:nth-child(4)').removeClass('dot-active');
+			$('.slide-dots .dot:nth-child(5)').addClass('dot-active');
 		  
 		});
+
 
 
 	    jquerySwipeHandler.handleSwipe(".bottle_story", [
 	     jquerySwipeHandler.SWIPE_DOWN
 	    ], function (direction) {
 		  	//console.log("swipe: ", direction);
+
 			$(".disterllery2").removeClass("hideDisterlleryDetails1").addClass("showDisterlleryDetails1");
 			$(".bottle_story").removeClass("showBottleStoryDetails");
 			$(".tabs .dist2").addClass("selected");
@@ -292,6 +306,26 @@ if ($(window).width() < 767) {
 			$('.slide-dots .dot:nth-child(5)').removeClass('dot-active');
 			$('.slide-dots .dot:nth-child(6)').addClass('dot-active');
 
+		});
+
+	    jquerySwipeHandler.handleSwipe(".bottle_story", [
+	     jquerySwipeHandler.CLICK
+	    ], function (direction) {
+
+			$(".bottle_story").removeClass("showBottleStoryDetails").addClass("hideBottleStory");
+			$(".disterllery2").removeClass("showDisterlleryDetails1");
+			$(".show_bg").addClass("small_block");
+			$(".tabs .dist2").removeClass("selected");
+			$(".tabs .bottleStory").removeClass("selected");
+			$(".tabs .details").addClass("selected");
+			$(".podium").removeClass("podium-animate");
+			$(".bottle-details").removeClass("hide");
+			$("header").css({position: "fixed"});
+			$(".slide-item.active .content").css({position: "fixed"});
+			$('.slide-dots .dot:nth-child(4)').removeClass('dot-active')
+			$('.slide-dots .dot:nth-child(5)').removeClass('dot-active');
+			$('.slide-dots .dot:nth-child(6)').addClass('dot-active');
+		  
 		});
 	});
 }
