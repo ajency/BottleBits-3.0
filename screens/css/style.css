@@ -10672,6 +10672,8 @@ img {
   padding-top: 130px;
   transition: padding-top 1s cubic-bezier(0.48, 0.04, 0.25, 1);
   -webkit-transition: padding-top 1s cubic-bezier(0.48, 0.04, 0.25, 1);
+  pointer-events: auto;
+  touch-action: none;
 }
 
 .shelf-block-bg .vertical-slider .shelf-block .slide-item.active.SWIPE_UP .shelf-block--content-wrapper {

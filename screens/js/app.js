@@ -327,6 +327,41 @@ if ($(window).width() < 767) {
 			$('.slide-dots .dot:nth-child(6)').addClass('dot-active');
 		  
 		});
+
+	    jquerySwipeHandler.handleSwipe(".slide-item", [
+	     jquerySwipeHandler.SWIPE_DOWN
+	    ], function (direction) {
+		  	//console.log("swipe: ", direction);
+
+			$(".bottle_story").removeClass("hideBottleStory").addClass("showBottleStoryDetails");
+			$(".show_bg").removeClass("small_block");
+			$(".tabs .bottleStory").addClass("selected");
+			$(".tabs .details").removeClass("selected");
+			$(".podium").addClass("podium-animate");
+			$(".bottle-details").addClass("hide");
+			$(".slide-item.active .content").css({position: "unset"});
+			$('.slide-dots .dot:nth-child(4)').removeClass('dot-active')
+			$('.slide-dots .dot:nth-child(5)').addClass('dot-active');
+			$('.slide-dots .dot:nth-child(6)').removeClass('dot-active');
+
+		});
+
+	    jquerySwipeHandler.handleSwipe(".slide-item", [
+	     jquerySwipeHandler.CLICK
+	    ], function (direction) {
+	    	
+			$(".bottle_story").removeClass("hideBottleStory").addClass("showBottleStoryDetails");
+			$(".show_bg").removeClass("small_block");
+			$(".tabs .bottleStory").addClass("selected");
+			$(".tabs .details").removeClass("selected");
+			$(".podium").addClass("podium-animate");
+			$(".bottle-details").addClass("hide");
+			$(".slide-item.active .content").css({position: "unset"});
+			$('.slide-dots .dot:nth-child(4)').removeClass('dot-active')
+			$('.slide-dots .dot:nth-child(5)').addClass('dot-active');
+			$('.slide-dots .dot:nth-child(6)').removeClass('dot-active');
+		  
+		});
 	});
 }
 
