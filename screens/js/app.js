@@ -178,7 +178,7 @@ if ($(window).width() < 767) {
 
 
 	    jquerySwipeHandler.handleSwipe(".region", [
-	     jquerySwipeHandler.SWIPE_DOWN, jquerySwipeHandler.SWIPE_UP
+	     jquerySwipeHandler.SWIPE_UP
 	    ], function (direction) {
 		  	//console.log("swipe: ", direction);
 			$(".region").addClass("slide_up");
@@ -190,20 +190,62 @@ if ($(window).width() < 767) {
 			$(".shadow").removeClass("hide").fadeIn(1000);
 		});
 
+
 	    jquerySwipeHandler.handleSwipe(".disterllery", [
-	     jquerySwipeHandler.SWIPE_DOWN, jquerySwipeHandler.SWIPE_UP
+	     jquerySwipeHandler.SWIPE_DOWN
+	    ], function (direction) {
+		  	//console.log("swipe: ", direction);
+			$(".region").removeClass("slide_up");
+			$(".disterllery").addClass("showDisterlleryDetails");
+			$(".tabs .region").addClass("selected");
+			$(".tabs .dest1").removeClass("selected");
+			$('.slide-dots .dot:nth-child(2)').addClass('dot-active');
+			$('.slide-dots .dot:nth-child(3)').removeClass('dot-active');
+			$(".disterllery").removeClass("showDisterlleryDetails");
+		});
+
+	    jquerySwipeHandler.handleSwipe(".disterllery", [
+	     jquerySwipeHandler.CLICK
+	    ], function (direction) {
+		  	console.log("swipe: ", direction);
+		});
+
+
+	    jquerySwipeHandler.handleSwipe(".disterllery", [
+	     jquerySwipeHandler.SWIPE_UP
 	    ], function (direction) {
 		  	//console.log("swipe: ", direction);
 		  	$(".disterllery").removeClass("showDisterlleryDetails").addClass("hideDisterlleryDetails");
 			$(".disterllery2").addClass("showDisterlleryDetails1");
+
 			$(".tabs .dest1").removeClass("selected");
 			$(".tabs .dist2").addClass("selected");
+
 			$('.slide-dots .dot:nth-child(3)').removeClass('dot-active');
 			$('.slide-dots .dot:nth-child(4)').addClass('dot-active');
 		});
 
 	    jquerySwipeHandler.handleSwipe(".disterllery2", [
-	     jquerySwipeHandler.SWIPE_DOWN, jquerySwipeHandler.SWIPE_UP
+	     jquerySwipeHandler.CLICK
+	    ], function (direction) {
+		  	console.log("swipe: ", direction);
+		});
+
+	    jquerySwipeHandler.handleSwipe(".disterllery2", [
+	     jquerySwipeHandler.SWIPE_DOWN
+	    ], function (direction) {
+		  	//console.log("swipe: ", direction);
+		  	$(".disterllery").removeClass("hideDisterlleryDetails").addClass("showDisterlleryDetails");
+		  	$(".disterllery2").removeClass("showDisterlleryDetails1");
+		  	$(".tabs .dest1").addClass("selected");
+		  	$(".tabs .dist2").removeClass("selected");
+			$('.slide-dots .dot:nth-child(4)').removeClass('dot-active');
+			$('.slide-dots .dot:nth-child(3)').addClass('dot-active');
+		});
+
+
+	    jquerySwipeHandler.handleSwipe(".disterllery2", [
+	     jquerySwipeHandler.SWIPE_UP
 	    ], function (direction) {
 		  	//console.log("swipe: ", direction);
 		  	$(".disterllery2").removeClass("showDisterlleryDetails1").addClass("hideDisterlleryDetails1");
@@ -215,7 +257,28 @@ if ($(window).width() < 767) {
 		});
 
 	    jquerySwipeHandler.handleSwipe(".bottle_story", [
-	     jquerySwipeHandler.SWIPE_DOWN, jquerySwipeHandler.SWIPE_UP
+	     jquerySwipeHandler.CLICK
+	    ], function (direction) {
+		  	console.log("swipe: ", direction);
+		  
+		});
+
+
+	    jquerySwipeHandler.handleSwipe(".bottle_story", [
+	     jquerySwipeHandler.SWIPE_DOWN
+	    ], function (direction) {
+		  	//console.log("swipe: ", direction);
+			$(".disterllery2").removeClass("hideDisterlleryDetails1").addClass("showDisterlleryDetails1");
+			$(".bottle_story").removeClass("showBottleStoryDetails");
+			$(".tabs .dist2").addClass("selected");
+			$(".tabs .bottleStory").removeClass("selected");
+			$('.slide-dots .dot:nth-child(5)').removeClass('dot-active');
+			$('.slide-dots .dot:nth-child(4)').addClass('dot-active');
+
+		});
+
+	    jquerySwipeHandler.handleSwipe(".bottle_story", [
+	     jquerySwipeHandler.SWIPE_UP
 	    ], function (direction) {
 		  	//console.log("swipe: ", direction);
 			$(".bottle_story").removeClass("showBottleStoryDetails").addClass("hideBottleStory");

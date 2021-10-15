@@ -11162,6 +11162,7 @@ img {
   left: -30px;
   right: 0;
   margin: auto;
+  cursor: pointer;
 }
 
 .slide-dots .dot:last-child {
