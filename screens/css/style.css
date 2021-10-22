@@ -17951,9 +17951,10 @@ body::-webkit-scrollbar-thumb {
 }
 
 .swipe-animation {
-  background: rgba(255, 255, 255, 0.01);
+  background: rgba(255, 255, 255, 0.1);
   box-shadow: 17px 9px 10px rgba(0, 0, 0, 0.24), inset 1px 1px 1px rgba(255, 255, 255, 0.6), inset 0px 12px 14px rgba(255, 255, 255, 0.45), inset 1px -10px 12px rgba(0, 0, 0, 0.13);
   backdrop-filter: blur(30px);
+  -webkit-backdrop-filter: blur(30px);
   position: fixed;
   left: 0;
   right: 0;
