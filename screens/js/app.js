@@ -17,6 +17,16 @@ $(document).ready(function(){
 	$(".my-collection").addClass('loading');
 	$(".sharing-view-block").addClass('loading');
 
+
+	/* added Id's to the each blog on catalog page  */
+	var i=0;
+	$(".shelf .block").each(function(){
+	    i++;
+	    var newID='block'+i;
+	    $(this).attr('id',newID);
+	});
+
+
 	var block = $('.shelf .shelf-block')
 	var blockLength = block.length;
 
